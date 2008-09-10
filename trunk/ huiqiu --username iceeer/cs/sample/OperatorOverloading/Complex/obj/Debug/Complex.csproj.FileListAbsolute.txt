@@ -1,0 +1,10 @@
+F:\DEV\cs\CSharpSamples\LanguageSamples\OperatorOverloading\Complex\bin\Debug\Complex.exe
+F:\DEV\cs\CSharpSamples\LanguageSamples\OperatorOverloading\Complex\bin\Debug\Complex.pdb
+F:\DEV\cs\CSharpSamples\LanguageSamples\OperatorOverloading\Complex\obj\Debug\ResolveAssemblyReference.cache
+F:\DEV\cs\CSharpSamples\LanguageSamples\OperatorOverloading\Complex\obj\Debug\Complex.exe
+F:\DEV\cs\CSharpSamples\LanguageSamples\OperatorOverloading\Complex\obj\Debug\Complex.pdb
+F:\DEV\cs\Demo\OperatorOverloading\Complex\bin\Debug\Complex.exe
+F:\DEV\cs\Demo\OperatorOverloading\Complex\bin\Debug\Complex.pdb
+F:\DEV\cs\Demo\OperatorOverloading\Complex\obj\Debug\ResolveAssemblyReference.cache
+F:\DEV\cs\Demo\OperatorOverloading\Complex\obj\Debug\Complex.exe
+F:\DEV\cs\Demo\OperatorOverloading\Complex\obj\Debug\Complex.pdb
