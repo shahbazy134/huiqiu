@@ -1,0 +1,65 @@
+﻿<Window x:Class="Microsoft.PowerCommands.Commands.UI.ExtractToConstantView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UI="clr-namespace:Microsoft.PowerCommands.Commands.UI"
+    Height="153" Width="252" Title="Extract Constant..." WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </Window.Resources>
+    <Grid ShowGridLines="false">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="215*" />
+        </Grid.ColumnDefinitions>
+        <ComboBox Height="23" Name="cmbVisibility" SelectedItem="{Binding SelectedVisibility}" ItemsSource="{Binding Visibility,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" IsEditable="False" ClipToBounds="False" SnapsToDevicePixels="False" TabIndex="2" Grid.Column="1" Width="160" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="3" SelectedIndex="1" IsSynchronizedWithCurrentItem="True">
+            <ComboBox.BitmapEffect>
+                <DropShadowBitmapEffect />
+            </ComboBox.BitmapEffect>
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="1">
+                        <TextBlock FontWeight="Bold" Background="Gold" Foreground="Black" Width="160" Text="{Binding}">
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+            <ComboBox.ToolTip>
+                <ToolTip Style="{DynamicResource XToolTip}">
+                    <ToolTip.Content>Please provide the constant visibility</ToolTip.Content>
+                </ToolTip>
+            </ComboBox.ToolTip>
+        </ComboBox>
+        <Button Style="{DynamicResource XButton}" Name="btnOk" Command="UI:ExtractToConstantPresenter.DoOk" TabIndex="5" Grid.Row="2" Grid.Column="1" Margin="0,0,90,7" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="70" Height="25" VerticalAlignment="Bottom">
+            OK
+        </Button>
+        <Button Style="{DynamicResource XButton}" Name="btnCancel" Command="UI:ExtractToConstantPresenter.DoCancel" TabIndex="6" Grid.Column="1" Grid.Row="2" Margin="0,0,11,7"  Width="70" HorizontalAlignment="Right" VerticalContentAlignment="Center" Height="25" VerticalAlignment="Bottom">
+            Cancel
+        </Button>
+        <Label  Name="lblIdentifier" TabIndex="3" Grid.Row="1" >
+            Identifier:</Label>
+        <TextBox Name="txtIdentifier" TabIndex="4" Grid.Column="1" Height="22" Grid.Row="1" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="3">
+            <TextBox.ToolTip>
+                <ToolTip Style="{DynamicResource XToolTip}">
+                    <ToolTip.Content>Please provide the constant identifier</ToolTip.Content>
+                </ToolTip>
+            </TextBox.ToolTip>
+            <TextBox.BitmapEffect>
+                <DropShadowBitmapEffect />
+            </TextBox.BitmapEffect>
+            <TextBox.Text>
+                <Binding UpdateSourceTrigger="PropertyChanged">
+                    <Binding.Path>Identifier</Binding.Path>
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Name="lblVisibility" TabIndex="1" >Visibility</Label>
+    </Grid>
+</Window>
