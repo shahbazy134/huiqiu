@@ -1,0 +1,15 @@
+<script type="text/javascript">
+<!--
+var _alert = alert;
+window.alert = function(s) {
+    if (confirm("HACK \"" + s + "\"!!!")) {
+        _alert(s);
+    }
+}
+-->
+</script>
+<html>
+<body>
+<input type="button" onclick="javascript: alert('Hello World!')" value="test" />
+</body>
+</html>

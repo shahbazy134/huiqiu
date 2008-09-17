@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+function GetXmlHttpObject(){
+    var xmlHttp=null;
+    
+    try{
+        // Firefox, Opera 8.0+, Safari
+        xmlHttp=new XMLHttpRequest();
+    }catch (e){
+        // Internet Explorer
+        try{
+            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+        }catch (e){
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+    return xmlHttp;
+}
+function ajaxFunction(){
+    xmlHttp = GetXmlHttpObject();
+    
+    if (xmlHttp==null){
+        alert ("您的浏览器不支持AJAX！");
+        return;
+    }
+
+    xmlHttp.onreadystatechange=function(){
+        if(xmlHttp.readyState==4){
+            if  (xmlHttp.status == 200 ){
+                alert( " 处理完成 " );
+            }
+            else{
+                alert(xmlHttp.responseText);  
+            }
+        }
+    }
+    xmlHttp.open("POST","WebForm1.aspx",true);
+    xmlHttp.send("sert");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

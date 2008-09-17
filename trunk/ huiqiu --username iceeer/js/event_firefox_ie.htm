@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Ê×Ò³</title>
+<script type="text/javascript">
+function clickgotopwd(evt)
+{
+    evt = (evt) ? evt : ((window.event) ? window.event : "")
+    if (evt) {
+        if(evt.keyCode==13) {
+        objpwd = document.getElementById("userpwd");
+        objpwd.focus();
+        objpwd.select();
+        }
+    }
+}
+function clickgotook(evt)
+{
+    evt = (evt) ? evt : ((window.event) ? window.event : "")
+    if (evt) {
+        if(evt.keyCode==13) {
+            objfrm = document.getElementById("frmlog");
+            objfrm.submit();
+        }
+    }
+}
+</script>
+</head>
+
+<body>
+    <form id="frmlog" action="#">
+    <table>
+        <tr>
+            <td>
+                <input id="username" onkeypress="clickgotopwd(event);" type="text" />
+            </td>
+            <td>
+                <input id="userpwd" onkeypress="clickgotook(event);" type="password" />
+            </td>
+            <td>
+                <button type="button" id="btnlogin" value="OK" />
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
