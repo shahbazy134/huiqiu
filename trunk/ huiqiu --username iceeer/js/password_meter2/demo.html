@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<form id="myform">
+			<h1>Password Strength Meter - Demo v2.0</h1> 
+			<script type="text/javascript" src="pwd_strength.js"></script> 
+
+			<b>Password:</b>
+			<br /> 
+			<input type="password" id="mypassword" name="mypassword" onkeyup="runPassword(this.value, 'mypassword');" />
+			<br />
+			<br />
+			<b>Password Strength:</b>
+			<br /> 
+			<div style="width: 100px;"> 
+				<div id="mypassword_text" style="font-size: 10px;"></div>
+				<div id="mypassword_bar" style="font-size: 1px; height: 2px; width: 0px; border: 1px solid white;"></div> 
+			</div>
+		</form>
+	</body>
+</html>
