@@ -1,0 +1,15 @@
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChineseCharDemo.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChineseCharDemo.pdb
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChnCharInfo.dll
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChnCharInfo.xml
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\ResolveAssemblyReference.cache
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\ChineseCharDemo.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\ChineseCharDemo.pdb
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\obj\Debug\ChineseCharDemo.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\obj\Debug\ChineseCharDemo.pdb
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\bin\Debug\ChineseCharDemo.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\bin\Debug\ChineseCharDemo.pdb
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\bin\Debug\ChnCharInfo.xml
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+F:\My Documents\Windows_Live_FolderShare\DEV\lib\CHSPinYinConv\ChineseCharDemo\obj\Debug\ResolveAssemblyReference.cache

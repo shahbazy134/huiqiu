@@ -1,0 +1,8 @@
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\DemoConsole.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\DemoConsole.pdb
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChnCharInfo.dll
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\ChnCharInfo.xml
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\ResolveAssemblyReference.cache
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\DemoConsole.exe
+F:\My Documents\Windows_Live_FolderShare\DEV\DemoConsole\obj\Debug\DemoConsole.pdb

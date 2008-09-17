@@ -1,0 +1,24 @@
+F:\WLID Client Sample\src\bin\Debug\WindowsLiveIDClientSample.exe
+F:\WLID Client Sample\src\bin\Debug\WindowsLiveIDClientSample.pdb
+F:\WLID Client Sample\src\obj\Debug\ResolveAssemblyReference.cache
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.BlogWindow.resources
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.DetailsWindow.resources
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.MainWindow.resources
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.OptionsWindow.resources
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.Properties.Resources.resources
+F:\WLID Client Sample\src\obj\Debug\Windows Live ID Client Sample.csproj.GenerateResource.Cache
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.exe
+F:\WLID Client Sample\src\obj\Debug\WindowsLiveIDClientSample.pdb
+F:\DEV\mashup_live\WindowsLiveIDClientSample\src\obj\Debug\WindowsLiveIDClientSample.exe
+F:\DEV\mashup_live\WindowsLiveIDClientSample\src\obj\Debug\WindowsLiveIDClientSample.pdb
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.exe
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.pdb
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\bin\Debug\WindowsLiveIDClientSample.exe
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\bin\Debug\WindowsLiveIDClientSample.pdb
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\ResolveAssemblyReference.cache
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.BlogWindow.resources
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.DetailsWindow.resources
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.MainWindow.resources
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.OptionsWindow.resources
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\WindowsLiveIDClientSample.Properties.Resources.resources
+F:\DEV\mashup_live\WindowsLiveIDClient\demo\obj\Debug\Windows Live ID Client Sample.csproj.GenerateResource.Cache
