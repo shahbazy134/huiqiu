@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>JS圆角 Demo</title>
+
+    <script type="text/JavaScript" src="rounded_corners_lite.inc.js"></script>
+
+    <style type="text/css">
+        html, body
+        {
+            height: 100%;
+            text-align: center;
+            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 0px;
+        }
+        .myBox
+        {
+            margin: 0 auto;
+            border: 0px solid #ffffff;
+            color: #000000;
+            width: 90%;
+            padding: 20px;
+            text-align: left;
+            background-color: #FFFFFF;
+            border: 5px #CCCCCC solid;
+        }
+        .inBox
+        {
+            margin: 5 auto;
+            border: 0px solid #ffffff;
+            color: #ffffff;
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+            text-align: left; /*border: 3px solid #ffffff;*/
+            background-image: url(grass.jpg);
+            background-repeat: no-repeat;
+        }
+        .view
+        {
+            text-align: center;
+            width: 100%;
+        }
+        .vwTable
+        {
+            width: 100%;
+            background-color: white;
+            border-left: 1px #999999 solid;
+            border-top: 1px #999999 solid;
+        }
+        .vwTitle
+        {
+            border-bottom: 1px #999999 solid;
+            background-color: #F2F2F2;
+            height: 22px;
+        }
+        .vwTitleName
+        {
+            border-bottom: 1px #999999 solid;
+            border-right: 1px #999999 solid;
+        }
+        .vwRow0
+        {
+            height: 22px;
+            background-color: #FFFFFF;
+            vertical-align: middle;
+            height: 22px;
+        }
+        .vwRow1
+        {
+            height: 22px;
+            background-color: #d6e7f3;
+            vertical-align: middle;
+            height: 22px;
+        }
+        .vwCell
+        {
+            border-bottom: 1px #999999 solid;
+            border-right: 1px #999999 solid;
+        }
+    </style>
+
+    <script type="text/JavaScript">
+
+  window.onload = function()
+  {
+      /*
+      The new 'validTags' setting is optional and allows
+      you to specify other HTML elements that curvyCorners
+      can attempt to round.
+
+      The value is comma separated list of html elements
+      in lowercase.
+
+      validTags: ["div", "form"]
+
+      The above example would enable curvyCorners on FORM elements.
+      */
+      settings = {
+          tl: { radius: 20 },
+          tr: { radius: 20 },
+          bl: { radius: 20 },
+          br: { radius: 20 },
+          antiAlias: true,
+          autoPad: true,
+          validTags: ["div"]
+      }
+
+      /*
+      Usage:
+
+      newCornersObj = new curvyCorners(settingsObj, classNameStr);
+      newCornersObj = new curvyCorners(settingsObj, divObj1[, divObj2[, divObj3[, . . . [, divObjN]]]]);
+      */
+      var myBoxObject = new curvyCorners(settings, "myBox");
+      myBoxObject.applyCornersToAll();
+      var inBoxObject = new curvyCorners(settings, "inBox");
+      inBoxObject.applyCornersToAll();
+  }
+  
+    </script>
+
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="myBox">
+        1．我两岁的时候口头禅是：我小时候……
+        <br />
+        2．你根本不知道，我是天上派来的天女，我有很多兵，我把他们都埋在花盆下面，还有，我还有一个魔法戒指，是张露萍将军给我的，就是我手上这个，看，就是绿色的这个，可以变出许多虾兵虾将，可以打败你，然后把你掐死，吃了，一根毛都不剩！</p>
+        <br />
+        3．我用上述这段话吓跑了几个企图欺负我的男孩，那会儿热播电视剧《张露萍》以及《西游记》。
+        <br />
+        4．我妈生我的时候，单位上房子紧张，她就睡在废弃的锅炉房里，幸福地期待着我的到来。白天还有燕儿来绕梁，说是个好预兆，只是到了晚上门关不严，风吹过，门哒得“咵咵”响惊了她。我二舅说，枪可以闭邪，就把他的配枪放在我妈的枕头下面。幸好没走火呦！这与我后来宝里宝器（傻乎乎）的性格恐怕有直接的关系。
+        <br />
+        5．我出生的时候据说是哭得来一边一凼眼泪水，接生的医生说：人家都是干嚎，这个娃娃怪，水分恁个多！不哭了， 在秤盘上，我做出了人生的第一个动作：将大拇指塞到嘴头，吮得“啪啪啪”的响。
+        <br />
+        6．为了庆祝我的出生，外婆寄来一件她亲手缝制的斗篷，大红缎面，绣着大朵大朵的牡丹花。
+        <br />
+        7．白雪公主三次都不听小矮人的劝，上了黑心皇后的当，差点遭整死，简直是活该，不长记性。尤其是最后一次，人家吃过一口的苹果都要吃，还“白雪公主”，十分不讲卫生！蠢得像猪一样，死了算了。
+        <br /><br />
+        <div class="view">
+            <table class="vwTable" cellpadding="0" cellspacing="0">
+                <tr class="vwTitle">
+                    <td class="vwTitleName">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwTitleName">
+                        序号
+                    </td>
+                    <td class="vwTitleName">
+                        日期
+                    </td>
+                    <td class="vwTitleName">
+                        标题
+                    </td>
+                    <td class="vwTitleName">
+                        处理状态
+                    </td>
+                    <td class="vwTitleName">
+                        当前处理人
+                    </td>
+                </tr>
+                <tr class="vwRow0">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+                <tr class="vwRow1">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+                <tr class="vwRow0">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+                <tr class="vwRow1">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+                <tr class="vwRow0">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+                <tr class="vwRow1">
+                    <td class="vwCell">
+                        <input type="checkbox" name="checkbox" value="checkbox" />
+                    </td>
+                    <td class="vwCell">
+                        1
+                    </td>
+                    <td class="vwCell">
+                        2008-03-24
+                    </td>
+                    <td class="vwCell">
+                        测试测试
+                    </td>
+                    <td class="vwCell">
+                        正在起草
+                    </td>
+                    <td class="vwCell">
+                        ×××
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <br />
+        <div class="inBox">
+        </div>
+        <br />
+        <br />
+    </div>
+</body>
+</html>
