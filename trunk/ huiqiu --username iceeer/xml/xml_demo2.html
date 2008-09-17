@@ -1,0 +1,39 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var text="<note>";
+text=text+"<to>Tove</to>";
+text=text+"<from>Jani</from>";
+text=text+"<heading>Reminder</heading>";
+text=text+"<body>Don't forget me this weekend!</body>";
+text=text+"</note>";
+
+// 用于 IE 的代码：
+if (window.ActiveXObject)
+  {
+  var doc=new ActiveXObject("Microsoft.XMLDOM");
+  doc.async="false";
+  doc.loadXML(text);
+  }
+
+// 用于 Mozilla, Firefox, Opera, 等浏览器的代码：
+else
+  {
+  var parser=new DOMParser();
+  var doc=parser.parseFromString(text,"text/xml");
+  }
+  
+// documentElement 提交根元素：
+var x=doc.documentElement;
+
+document.write("Text of first child element: ");
+document.write(x.childNodes[0].childNodes[0].nodeValue);
+document.write("<br />");
+document.write("Text of second child element: ");
+document.write(x.childNodes[1].childNodes[0].nodeValue);
+</script>
+
+</body>
+</html>
