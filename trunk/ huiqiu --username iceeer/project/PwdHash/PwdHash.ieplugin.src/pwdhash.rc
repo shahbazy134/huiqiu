@@ -1,0 +1,240 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Stanford University"
+            VALUE "FileDescription", "Encrypts passwords for maximum security"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "pwdhash.dll"
+            VALUE "LegalCopyright", "(c) 2004 Stanford University. All rights reserved."
+            VALUE "OriginalFilename", "pwdhash.dll"
+            VALUE "ProductName", "PwdHash Internet Explorer Plugin"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_PWDHASH             REGISTRY                "pwdhash.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_STATUSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOGEX 0, 0, 236, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Password Hashing Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,72,69,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,126,69,50,16
+    GROUPBOX        "",IDC_STATIC,7,7,222,57
+    CONTROL         "&Enable password hashing",IDC_ENABLE_PASSWORD_HASHING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,5,97,14
+    EDITTEXT        IDC_GLOBAL_PASSWORD,162,21,59,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "&Use global &password for extra security:",
+                    IDC_USE_GLOBAL_PASSWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,22,135,10
+    CONTROL         "Use &F2 to protect passwords",IDC_F2_MODE,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,25,36,106,
+                    10
+    PUSHBUTTON      "Help",IDHELP,179,69,50,16
+    PUSHBUTTON      "Rules",IDRULES,172,43,50,16
+    CONTROL         "&Record entered passwords",IDC_RECORD_PASS,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,25,50,101,
+                    10
+END
+
+IDD_STATUSDLG DIALOGEX 0, 0, 199, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Domain:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,9,15,27,8,WS_EX_RIGHT
+    EDITTEXT        IDC_DOMAIN,68,13,120,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Hashed:",IDC_HASHING,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,115,32,28,8
+    CONTROL         "Password field:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,10,32,52,8
+    CONTROL         "No",IDC_PASSWORD_YESNO,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,65,32,20,8,WS_EX_TRANSPARENT
+    CONTROL         "No",IDC_HASHING_YESNO,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,149,32,18,8,WS_EX_TRANSPARENT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONRED             ICON                    "TrafficLightRed.ico"
+IDI_ICONGREEN           ICON                    "TrafficLightGreen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_STATUSDLG      HTML                    "StatusDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "PwdHash"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DISABLE_HASHING_WARNING_TITLE "Disable PwdHash?"
+    IDS_DISABLE_HASHING_WARNING_MESSAGE 
+                            "You have chosen to turn off PwdHash for this password field. Your entry will not be protected and could be intercepted. You should do this only if you are typing something other than a password (e.g. a social security number) into this field. Are you sure you want to do this?"
+    IDS_ALREADY_TYPED_PASSWORD_WARNING_MESSAGE 
+                            "You have typed your password into a non-password field.  PwdHash could not protect the password and it may have already been intercepted; we strongly recommend you change it immediately.  Would you like to clear the field now?"
+    IDS_ALREADY_TYPED_PASSWORD_WARNING_TITLE "Password Entry Detected"
+    IDS_UNPROTECTED_PASSWORD_WARNING_MESSAGE 
+                            "To enable PwdHash protection, please press F2 before typing your password. Click ""Don't hash"" if you want to allow the site to view your secret data (such as a social security number or a password you set up without using PwdHash). You may disable PwdHash warnings in the ""Tools, Password Hashing Options"" menu."
+    IDS_UNPROTECTED_PASSWORD_WARNING_TITLE 
+                            "Unprotected Password Entry Detected"
+    IDS_PROTECT_TEXTFIELD_MESSAGE 
+                            "You have tried to turn protection on in a non-password field. PwdHash is unable to protect information in these fields."
+    IDS_PROTECT_TEXTFIELD_TITLE "Invalid Protection Attempt"
+    IDS_UNPROTECTED_PASSWORD_WARNING_BUTTONS "I will press F2\nDon't hash"
+    IDS_DROP_WARNING_TITLE  "Drag & Drop Attempt"
+    IDS_DROP_WARNING_MESSAGE 
+                            "We can't protect text that is dragged into a password field. Please paste or type in the text."
+    IDS_PASTE_WARNING_TITLE "Paste Attempt"
+    IDS_PASTE_WARNING_MESSAGE 
+                            "Please press F2 to protect the password field before pasting in your password."
+    IDS_PROTECT_NONPASSWORD_FIELD_WARNING 
+                            "You are not at the start of a password field.\nIt is possible, though unlikely, that the site trying to steal your password.\n\nDo not enter your PwdHash password into this page."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
