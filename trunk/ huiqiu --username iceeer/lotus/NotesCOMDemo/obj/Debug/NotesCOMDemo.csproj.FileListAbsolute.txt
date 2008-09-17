@@ -1,0 +1,11 @@
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\bin\Debug\NotesCOMDemo.exe
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\bin\Debug\NotesCOMDemo.pdb
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\bin\Debug\Interop.lotus.dll
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\ResolveAssemblyReference.cache
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\Interop.lotus.dll
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.csproj.ResolveComReference.cache
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.Form1.resources
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.Properties.Resources.resources
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.csproj.GenerateResource.Cache
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.exe
+F:\My Documents\Windows_Live_FolderShare\lotus\NotesCOMDemo\obj\Debug\NotesCOMDemo.pdb
