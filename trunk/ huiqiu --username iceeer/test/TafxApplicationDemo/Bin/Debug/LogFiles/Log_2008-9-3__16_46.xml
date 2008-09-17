@@ -1,0 +1,51 @@
+<?xml-stylesheet type="text/xsl" href="TAFXLog.xsl"?>
+<LogFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Filename>F:\My Documents\Windows_Live_FolderShare\DEV\test\TafxApplicationDemo\Bin\Debug\LogFiles\Log_2008-9-3__16_46.xml</Filename>
+  <ProjectName>TafxApplicationDemo</ProjectName>
+  <TAFXVersion>1.0.750.0</TAFXVersion>
+  <Date>2008-9-3</Date>
+  <Time>16:46:42</Time>
+  <LogEntries>
+    <LogEntry Message="Logging started 16:46:23" Level="Information" />
+    <LogEntry Message="Running tests in object, TestFixture1" Level="Information" />
+    <LogEntry Message="Running test method, Test1" Level="Information" />
+    <LogEntry Message="ACTION #1: Click on TitleBar" Level="Information" />
+    <LogEntry Message="Attaching object, CalcApplication" Level="Event" />
+    <LogEntry Message="Object, CalcApplication is attached" Level="Event" />
+    <LogEntry Message="Attaching object, 计算器Window" Level="Event" />
+    <LogEntry Message="Finding window [Child, Class = 'SciCalc', ProcessId = '316'] of parent: 'with control id 0' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 141 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, 计算器Window is attached" Level="Event" />
+    <LogEntry Message="Attaching object, TitleBar" Level="Event" />
+    <LogEntry Message="Waiting for MSAA object: [, Role = 'TitleBar', Index = 1] - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 140 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, TitleBar is attached" Level="Event" />
+    <LogEntry Message="ACTION #2: Click on Button1" Level="Information" />
+    <LogEntry Message="Attaching object, Button1" Level="Event" />
+    <LogEntry Message="Finding window [Child, Text = '1'] of parent: '计算器' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 32 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, Button1 is attached" Level="Event" />
+    <LogEntry Message="ACTION #3: Click on ButtonPlus" Level="Information" />
+    <LogEntry Message="Attaching object, ButtonPlus" Level="Event" />
+    <LogEntry Message="Finding window [Child, Text = '+'] of parent: '计算器' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 31 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, ButtonPlus is attached" Level="Event" />
+    <LogEntry Message="ACTION #4: Click on Button1" Level="Information" />
+    <LogEntry Message="ACTION #5: Click on ButtonEquals" Level="Information" />
+    <LogEntry Message="Attaching object, ButtonEquals" Level="Event" />
+    <LogEntry Message="Finding window [Child, Text = '='] of parent: '计算器' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 31 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, ButtonEquals is attached" Level="Event" />
+    <LogEntry Message="ACTION #6: Click on Button2" Level="Information" />
+    <LogEntry Message="Attaching object, Button2" Level="Event" />
+    <LogEntry Message="Finding window [Child, Text = '2'] of parent: '计算器' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 31 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, Button2 is attached" Level="Event" />
+    <LogEntry Message="Attaching object, TextBox1" Level="Event" />
+    <LogEntry Message="Finding window [Child, ControlId = '403'] of parent: '计算器' - Timeout: 15000 ms" Level="Event" />
+    <LogEntry Message="Took 16 ms (15000 ms)." Level="Event" />
+    <LogEntry Message="Object, TextBox1 is attached" Level="Event" />
+    <LogEntry Message="Test Failed: The Text property of TextBox1 was expected to be '2. ' but was '2 '." Level="Error" />
+    <LogEntry Message="Test finished - Error" Level="Error" />
+  </LogEntries>
+</LogFile>
