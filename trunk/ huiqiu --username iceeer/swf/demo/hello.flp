@@ -1,0 +1,4 @@
+﻿<flash_project name="hello" version="1">
+    <project_file path="./hello.fla" filetype="fla" profile="" />
+    <project_file path="./hello.as" filetype="as" />
+</flash_project>
