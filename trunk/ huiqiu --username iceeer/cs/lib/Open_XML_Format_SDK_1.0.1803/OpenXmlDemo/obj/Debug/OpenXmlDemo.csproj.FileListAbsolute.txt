@@ -1,7 +1,0 @@
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\obj\Debug\ResolveAssemblyReference.cache
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\bin\Debug\OpenXmlDemo.exe
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\bin\Debug\OpenXmlDemo.pdb
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\bin\Debug\DocumentFormat.OpenXml.dll
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\bin\Debug\DocumentFormat.OpenXml.xml
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\obj\Debug\OpenXmlDemo.exe
-F:\My Documents\Windows_Live_FolderShare\DEV\lib\Open_XML_Format_SDK_1.0.1803\OpenXmlDemo\obj\Debug\OpenXmlDemo.pdb
