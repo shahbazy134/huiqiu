@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateModel" 
+        xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Bound="false">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>New Model...</Caption>
+  <Description>Adds a new model.</Description>
+  <HostData>
+    <Icon ID="9648" />
+    <CommandBar Name="Project Add"/>
+  </HostData>  
+  <Arguments>
+    <xi:include href="../Common/CommonArguments.xml"
+					  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+    <Argument Name="ModelType" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateModel.ModelType, Microsoft.Practices.ServiceFactory.GuidancePackage">
+      <ValueProvider Type="Evaluator" Expression="$(Microsoft.Practices.ServiceFactory.Recipes.CreateModel.ModelType.ServiceModel)">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="ModelName">
+      <ValueProvider Type="Evaluator" Expression="$(ModelType.ToString())">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="ModelProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="Microsoft.Practices.RecipeFramework.Library.ValueProviders.FirstSelectedProject, Microsoft.Practices.RecipeFramework.Library"/>
+    </Argument>
+    <Argument Name="NamespacePrefix" Required="false"/>
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0">
+      <Pages>
+        <Page Type="Microsoft.Practices.ServiceFactory.Recipes.CreateModel.Presentation.ModelPropertiesView, Microsoft.Practices.ServiceFactory.GuidancePackage"
+              Height="100" Width="510">
+          <Title>Specify model options</Title>
+          <LinkTitle>Model options</LinkTitle>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions>
+    <Action Name="CreateModel" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateModel.CreateModelAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+      <Input Name="ModelType" RecipeArgument="ModelType"/>
+      <Input Name="ModelName" RecipeArgument="ModelName"/>
+      <Input Name="ModelProject" RecipeArgument="ModelProject"/>
+      <Input Name="NamespacePrefix" RecipeArgument="NamespacePrefix"/>
+    </Action>
+  </Actions>
+</Recipe>

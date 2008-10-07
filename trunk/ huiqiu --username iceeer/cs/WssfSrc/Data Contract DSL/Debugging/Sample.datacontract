@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataContractModel dslVersion="1.0.0.0" name="" implementationTechnology="" xmlns="http://schemas.microsoft.com/dsltools/DataContract">
+  <dataContracts>
+    <dataContractElement name="ExampleElement" objectExtenderContainer="">
+      <dataElements>
+        <dataElement name="adfasd" type="Double" />
+      </dataElements>
+      <targetDataContractelements>
+        <dataContractElementMoniker name="//DataContractElement2" />
+      </targetDataContractelements>
+    </dataContractElement>
+    <dataContractElement name="DataContractElement2" objectExtenderContainer="" />
+  </dataContracts>
+</dataContractModel>

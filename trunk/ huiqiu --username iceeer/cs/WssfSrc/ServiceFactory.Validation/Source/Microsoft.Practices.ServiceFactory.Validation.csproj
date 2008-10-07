@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAFE2F77-E851-429D-9651-9C9389C81200}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.ServiceFactory.Validation</RootNamespace>
+    <AssemblyName>Microsoft.Practices.ServiceFactory.Validation</AssemblyName>
+    <WarningLevel>4</WarningLevel><SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\ProductKey.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Modeling.Dsl.Service, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.Modeling.Dsl.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractElementCollectionValidator.cs" />
+    <Compile Include="CollectionTypeValidator.cs" />
+    <Compile Include="ClientApplicationCollectionValidator.cs" />
+    <Compile Include="ClassHasDefaultConstructorValidator.cs" />
+    <Compile Include="HostModelContainsUniqueProxyNamesAcrossClientsValidator.cs" />
+    <Compile Include="HostModelContainsUniqueServiceReferencesAcrossHostsValidator.cs" />
+    <Compile Include="ModelElementCollectionValidator.cs" />
+    <Compile Include="NonRecursiveDataContractValidator.cs" />
+    <Compile Include="NonEmptyDataContractValidator.cs" />
+    <Compile Include="UniqueMessagePartsCollectionValidator.cs" />
+    <Compile Include="ExistingProjectValidator.cs" />
+    <Compile Include="EmptyAddressCollectionValidator.cs" />
+    <Compile Include="EndpointPropertyCollectionValidator.cs" />
+    <Compile Include="NotEmptyEndpointCollectionValidator.cs" />
+    <Compile Include="ProxyCollectionValidator.cs" />
+    <Compile Include="EndpointCollectionValidator.cs" />
+    <Compile Include="ServiceDescriptionCollectionValidator.cs" />
+    <Compile Include="HostApplicationCollectionValidator.cs" />
+    <Compile Include="FaultCollectionCrossModelValidator.cs" />
+    <Compile Include="XsdElementFaultCollectionValidator.cs" />
+    <Compile Include="ImplementationTechnologyAndSerializerValidator.cs" />
+    <Compile Include="ImplementationTechnologyAndSerializerCrossModelValidator.cs" />
+    <Compile Include="IsWrappedValidator.cs" />
+    <Compile Include="NonEmptyNamespaceValidator.cs" />
+    <Compile Include="UniqueOrderPropertyCollectionValidator.cs" />
+    <Compile Include="NonEmptyDataContractCollectionBaseCollectionTypeValidator.cs" />
+    <Compile Include="CrossServiceContractModelTIandPMTValidator.cs" />
+    <Compile Include="ServiceAndServiceImplementationTechnologyCrossModelValidator.cs" />
+    <Compile Include="CrossDataContractModelTIandPMTValidator.cs" />
+    <Compile Include="DataContractEnumDataElementCollectionValidator.cs" />
+    <Compile Include="DataContractDataElementCollectionValidator.cs" />
+    <Compile Include="FaultContractDataElementCollectionValidator.cs" />
+    <Compile Include="NotEmptyEnumDataElementCollectionValidator.cs" />
+    <Compile Include="NotEmptyDataElementCollectionValidator.cs" />
+    <Compile Include="OnlyOneTrueValuePropertyCollectionValidator.cs" />
+    <Compile Include="OperationActionValidator.cs" />
+    <Compile Include="NotEmptyOperationCollectionValidator.cs" />
+    <Compile Include="NotEmptyCollectionValidator.cs" />
+    <Compile Include="PredicateValidator.cs" />
+    <Compile Include="ServiceContractElementCollectionValidator.cs" />
+    <Compile Include="ExtenderObjectValidator.cs" />
+    <Compile Include="OperationElementIsOneWayValidator.cs" />
+    <Compile Include="PropertyCollectionValidator.cs" />
+    <Compile Include="MessageContractElementCollectionValidator.cs" />
+    <Compile Include="ServiceElementCollectionValidator.cs" />
+    <Compile Include="MessagePartElementCollectionValidator.cs" />
+    <Compile Include="FileExistsValidator.cs" />
+    <Compile Include="FileExtensionValidator.cs" />
+    <Compile Include="FileNameValidator.cs" />
+    <Compile Include="IdentifierValidator.cs" />
+    <Compile Include="LocationValidator.cs" />
+    <Compile Include="ElementObjectCollectionValidator.cs" />
+    <Compile Include="ElementObjectValidator.cs" />
+    <Compile Include="ConfigurableObjectCollectionValidator.cs" />
+    <Compile Include="ConfigurableObjectValidator.cs" />
+    <Compile Include="CrossModelReferenceValidator.cs" />
+    <Compile Include="FaultElementCollectionValidator.cs" />
+    <Compile Include="OperationElementCollectionValidator.cs" />
+    <Compile Include="UniqueNamedElementCollectionValidator.cs" />
+    <Compile Include="NamespaceValidator.cs" />
+    <Compile Include="NonEmptyStringValidator.cs" />
+    <Compile Include="ProjectItemIsUniqueValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UniquePropertyCollectionValidator.cs" />
+    <Compile Include="UriNamespaceValidator.cs" />
+    <Compile Include="UriValidator.cs" />
+    <Compile Include="XsdElementValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data Contract DSL\Dsl\DataContractDsl.csproj">
+      <Project>{E31971C3-A635-43E8-BCA5-F2F5BAD0052B}</Project>
+      <Name>DataContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Host Designer DSL\Dsl\HostDesignerDsl.csproj">
+      <Project>{C235B0F0-B751-4673-9707-2BC114250EA2}</Project>
+      <Name>HostDesignerDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.CodeGeneration\Source\Microsoft.Practices.Modeling.CodeGeneration.csproj">
+      <Project>{0CC719CB-8863-4810-BBB2-4F94D513A0FF}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Common\Source\Microsoft.Practices.Modeling.Common.csproj">
+      <Project>{2734A231-3B33-4F05-A122-9B35565AC7E9}</Project>
+      <Name>Microsoft.Practices.Modeling.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Dsl.Integration\Microsoft.Practices.Modeling.Dsl.Integration.csproj">
+      <Project>{80DE8B2F-9CAD-490C-98B1-FC3564BF8D33}</Project>
+      <Name>Microsoft.Practices.Modeling.Dsl.Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Contract DSL\Dsl\ServiceContractDsl.csproj">
+      <Project>{3E9005DB-5EA1-4BEC-BEC2-3E0324395C73}</Project>
+      <Name>ServiceContractDsl</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceFactory.Description\Source\Microsoft.Practices.ServiceFactory.Description.csproj">
+      <Project>{CDCFFE54-0B4F-40BA-B124-453A2CB7129A}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Description</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VisualStudio.Helper\Source\Microsoft.Practices.VisualStudio.Helper.csproj">
+      <Project>{8404D99F-9A3E-467F-A4D0-5F5D5C15A075}</Project>
+      <Name>Microsoft.Practices.VisualStudio.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\" mkdir "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"
+copy /y/v/b "$(TargetPath)" "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

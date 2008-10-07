@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment>
+    <ComponentGroup Id="FxCopRules">
+      <ComponentRef Id="WcfSemanticRules" />
+    </ComponentGroup>
+    
+    <DirectoryRef Id="FxCopRulesDirectory">
+      <Component Id="WcfSemanticRules" Guid="3067424F-AF45-4E1E-8FF4-D714F3A8479D" DiskId="1">
+        <File Id="FileId_B3AD2F2824E04278B3B6D36CDAA50853" Name="WcfSemFx.dll" LongName="Microsoft.Practices.FxCop.Rules.WcfSemantic.dll" src="..\..\..\Guidance Package\bin\Release\"/>        
+      </Component>
+    </DirectoryRef>
+    
+	</Fragment>
+</Wix>

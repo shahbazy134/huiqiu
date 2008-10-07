@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipe Name="RunCodeAnalysisRules" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude" Bound="false">
+	<!--<DocumentationLinks>
+		<Link Kind="Documentation" Caption="How to: Perform Code Analysis" Url="ms-help://MS.VSCC.v80/MS.VSIPCC.v80/ms.wssf.2006Dec/WSSF/html/12-190-How_to_Perform_Semantic_Code_Analysis_Using_the_WCF_Guidance_Package.htm" />
+	</DocumentationLinks>-->
+	<xi:include href="../Common/CommonTypeAliases.xml" xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Run WCF Semantic Code Analysis</Caption>
+	<Description>Performs semantic code analysis rules for Windows Communication Foundation code and configuration files.</Description>
+	<HostData>
+		<Icon ID="5687" />
+		<CommandBar Menu="Project" />
+		<CommandBar Menu="WebProject" />
+	</HostData>
+	<Arguments>
+		<Argument Name="HostProject" Type="EnvDTE.Project, EnvDTE" Required="true">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="CurrentProjectProvider" />
+		</Argument>
+	</Arguments>
+	<Actions>
+		<Action Name="RunCodeAnalysisRulesAction" Type="Microsoft.Practices.ServiceFactory.Recipes.CodeAnalysis.RunCodeAnalysisRulesAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="Project" RecipeArgument="HostProject" />
+		</Action>
+	</Actions>
+</Recipe>

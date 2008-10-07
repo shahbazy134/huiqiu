@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Arguments xmlns="http://schemas.microsoft.com/pag/gax-core">
+    <Argument Name="safeprojectname"/>
+    <Argument Name="ServiceContractProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).ServiceContracts">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+
+    <Argument Name="ServiceImplementationProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).ServiceImplementation">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="BusinessLogicProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).BusinessLogic">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="BusinessEntitiesProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).BusinessEntities">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="DataAccessProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).DataAccess">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+
+    <Argument Name="DataAccessProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Resource Access\$(DataAccessProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="BusinessEntitiesProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Business Logic\$(BusinessEntitiesProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="BusinessLogicProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Business Logic\$(BusinessLogicProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    <Argument Name="ServiceImplementationProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Service Interface\$(ServiceImplementationProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+
+    <Argument Name="ServiceContractsProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Service Interface\$(ServiceContractProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+  </Arguments>
+  
+  <Actions xmlns="http://schemas.microsoft.com/pag/gax-core">
+    <Action Name="PopulateProjectMappingTable" Type="Microsoft.Practices.ServiceFactory.Actions.PopulateProjectMappingTableAction, Microsoft.Practices.ServiceFactory.GuidancePackage" ProjectPath="\GeneratedCode">
+      <Input Name="SolutionFolderName" RecipeArgument="safeprojectname"/>
+    </Action>
+
+    <Action Name="AddReference2ToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="BusinessLogicProject" />
+    </Action>
+
+    <Action Name="AddReference3ToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="BusinessEntitiesProject" />
+    </Action>
+
+    <Action Name="AddReference4ToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="ServiceContractsProject" />
+    </Action>
+
+    <Action Name="AddReferenceBusinessEntitiesToBusinessLogicProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="BusinessLogicProject" />
+      <Input Name="ReferencedProject" RecipeArgument="BusinessEntitiesProject" />
+    </Action>
+
+    <Action Name="AddReferenceDataAccessBusinessLogicProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="BusinessLogicProject" />
+      <Input Name="ReferencedProject" RecipeArgument="DataAccessProject" />
+    </Action>
+  </Actions>
+</Recipe>

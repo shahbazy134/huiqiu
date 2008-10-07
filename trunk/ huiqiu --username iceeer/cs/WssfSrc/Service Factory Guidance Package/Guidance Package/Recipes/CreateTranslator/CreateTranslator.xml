@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateTranslator" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude" Bound="false">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+              xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Create Translator</Caption>
+  <Description>Create classes to manage the translation between contract classes and business entities.</Description>
+  <HostData>
+    <Icon ID="9648" />
+    <CommandBar Name="Project"/>
+  </HostData>
+  <Arguments>
+    <xi:include href="../Common/CommonArguments.xml"
+                  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+    <Argument Name="ServiceImplementationProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.CurrentProjectProvider, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+    </Argument>
+    <Argument Name="ServiceImplementationNamespace">
+      <ValueProvider Type="Evaluator"
+                 Expression="$(ServiceImplementationProject.Properties.Item('DefaultNamespace').Value.ToString())"/>
+    </Argument>
+    <Argument Name="FirstType" Type="System.Type"/>
+    <Argument Name="FirstClassName">
+      <ValueProvider Type="Microsoft.Practices.ServiceFactory.ValueProviders.ClassNameProvider, Microsoft.Practices.ServiceFactory.GuidancePackage"
+                     FullyQualifiedClassName="FirstType">
+        <MonitorArgument Name="FirstType"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="SecondType" Type="System.Type"/>
+    <Argument Name="SecondClassName">
+      <ValueProvider Type="Microsoft.Practices.ServiceFactory.ValueProviders.ClassNameProvider, Microsoft.Practices.ServiceFactory.GuidancePackage"
+                     FullyQualifiedClassName="SecondType">
+        <MonitorArgument Name="SecondType"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="MappingClassName">
+      <ValueProvider Type="Evaluator" Expression="TranslateBetween$(FirstClassName)And$(SecondClassName)">
+        <MonitorArgument Name="FirstClassName"/>
+        <MonitorArgument Name="SecondClassName"/>
+      </ValueProvider>
+    </Argument>
+    <Argument Name="PropertyMappings" Type="Microsoft.Practices.ServiceFactory.Helpers.MappedPropertyCollection, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+    <Argument Name="TranslatorClassFileName">
+      <ValueProvider Type="Evaluator" Expression="$(MappingClassName).cs">
+        <MonitorArgument Name="MappingClassName"/>
+      </ValueProvider>
+    </Argument>
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0">
+      <Pages>
+        <Page Type="Microsoft.Practices.ServiceFactory.Recipes.CreateTranslator.Presentation.CreateTranslatorPropertiesPage, Microsoft.Practices.ServiceFactory.GuidancePackage"
+              Height="400" Width="700">
+          <Title>Contract Type Mapper Generator</Title>
+          <LinkTitle>Contract Type Mapper Generator</LinkTitle>
+          <Help>Create the mappings between properties in two classes.</Help>
+        </Page>
+        <Page Type="Microsoft.Practices.ServiceFactory.Recipes.CreateTranslator.Presentation.CreateTranslatorMappingsPage, Microsoft.Practices.ServiceFactory.GuidancePackage">
+          <Title>Create Property Mappings</Title>
+          <LinkTitle>Create Property Mappings</LinkTitle>
+          <Help>Create the mappings between properties in two classes.</Help>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions>
+    <Action Name="GenerateTranslatorClass" 
+      Type="Microsoft.Practices.RecipeFramework.VisualStudio.Library.Templates.TextTemplateAction, Microsoft.Practices.RecipeFramework.VisualStudio.Library"
+      Template="TextTemplates\CS\TypeTranslator.tt">
+      <Input Name="FirstType" RecipeArgument="FirstType"/>
+      <Input Name="SecondType" RecipeArgument="SecondType" />
+      <Input Name="ClassName" RecipeArgument="MappingClassName" />
+      <Input Name="PropertyMappings" RecipeArgument="PropertyMappings" />
+      <Input Name="Namespace" RecipeArgument="ServiceImplementationNamespace"/>
+      <Output Name="Content" />
+    </Action>
+    <Action Name="DeleteExistingTranslatorClass" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.DeleteItemIfExistsFromProjectAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" >
+      <Input Name="ItemName" RecipeArgument="TranslatorClassFileName" />
+      <Input Name="Project" RecipeArgument="ServiceImplementationProject" />
+    </Action>
+    <Action Name="CreateTranslatorClassFileFromClass" Type="AddItemFromStringAction" 
+          Open="false" ItemName="GeneratedCode" >
+      <Input Name="Content" ActionOutput="GenerateTranslatorClass.Content"/>
+      <Input Name="TargetFileName" RecipeArgument="TranslatorClassFileName"/>
+      <Input Name="Project" RecipeArgument="ServiceImplementationProject"/>
+      <Output Name="ProjectItem"/>
+    </Action>
+    <Action Name="CompileServiceImplementationProject" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.CompileProjectAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Input Name="Project" RecipeArgument="ServiceImplementationProject"/>
+    </Action>
+  </Actions>
+</Recipe>

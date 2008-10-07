@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment>
+		<DirectoryRef Id="INSTALLDIR">
+			<Directory Id="DslIntegrationServiceInstall">
+				<Component Id="DslIntegrationService_GAC" Guid="ca8df04a-a056-4749-86ac-f1b84fcf835f" DiskId="1">
+					<?include DslIntegrationServiceRegistryFragment.wxi ?>
+					<File Id="File_Microsoft.Practices.Modeling.Dsl.Service_GAC"
+								Name="PD_Int.dll"
+								KeyPath="yes"
+								LongName="Microsoft.Practices.Modeling.Dsl.Service.dll"
+								Source="..\..\..\..\Lib\"
+								Vital="yes"
+								Assembly=".net"
+								ProcessorArchitecture="msil"
+								AssemblyManifest="File_Microsoft.Practices.Modeling.Dsl.Service_GAC">
+						<AssemblyName Id="Name" Value="Microsoft.Practices.Modeling.Dsl.Service" />
+						<AssemblyName Id="Version" Value="3.1.0.0" />
+						<AssemblyName Id="Culture" Value="neutral" />
+						<AssemblyName Id="PublicKeyToken" Value="31bf3856ad364e35" />
+						<AssemblyName Id="FileVersion" Value="3.1.0.0"/>
+						<AssemblyName Id="ProcessorArchitecture" Value="MSIL" />
+					</File>
+				</Component>
+			</Directory>
+		</DirectoryRef>
+
+		<ComponentGroup Id="DslIntegrationServiceComponents">
+			<ComponentRef Id="DslIntegrationService_GAC"/>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

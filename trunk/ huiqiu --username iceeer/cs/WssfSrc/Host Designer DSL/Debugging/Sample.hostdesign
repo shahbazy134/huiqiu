@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hostDesignerModel dslVersion="1.0.0.0" Id="e6abd8b0-219c-4aeb-9127-610c1d0d70d9" xmlns="http://schemas.microsoft.com/dsltools/HostDesigner">
+  <hostapplications>
+    <hostApplication name="HostApplication1" implementationProject="00000000-0000-0000-0000-000000000000">
+      <servicedescriptions>
+        <serviceMELReference name="ServiceMELReference1">
+          <endpoints>
+            <endpoint Id="0101ed4e-460d-4005-ac02-69c55ad1af42" />
+          </endpoints>
+        </serviceMELReference>
+        <serviceMELReference name="ServiceMELReference2">
+          <endpoints>
+            <endpoint Id="30efd1b2-369f-43bf-9208-17bfd473ecdf" />
+            <endpoint Id="99a9c974-0161-4f36-a788-225903703ae2" />
+          </endpoints>
+        </serviceMELReference>
+      </servicedescriptions>
+    </hostApplication>
+  </hostapplications>
+  <clientapplications>
+    <clientApplication name="ClientApplication1" implementationProject="00000000-0000-0000-0000-000000000000">
+      <proxies>
+        <proxy Id="bef7ef79-4cf7-47a7-a510-410ebc1a5168">
+          <endpoint>
+            <proxyReferencesEndpoint transportType="Http">
+              <endpointMoniker Id="30efd1b2-369f-43bf-9208-17bfd473ecdf" />
+            </proxyReferencesEndpoint>
+          </endpoint>
+        </proxy>
+        <proxy Id="f7b112dd-37a4-476d-bb8e-e7d45f975c1f">
+          <endpoint>
+            <proxyReferencesEndpoint transportType="Http">
+              <endpointMoniker Id="0101ed4e-460d-4005-ac02-69c55ad1af42" />
+            </proxyReferencesEndpoint>
+          </endpoint>
+        </proxy>
+      </proxies>
+    </clientApplication>
+    <clientApplication name="ClientApplication2" implementationProject="00000000-0000-0000-0000-000000000000">
+      <proxies>
+        <proxy Id="03956650-0f9c-40b0-a0b7-abc80ea1b293">
+          <endpoint>
+            <proxyReferencesEndpoint transportType="Http">
+              <endpointMoniker Id="30efd1b2-369f-43bf-9208-17bfd473ecdf" />
+            </proxyReferencesEndpoint>
+          </endpoint>
+        </proxy>
+        <proxy Id="ef031610-25e2-40db-9d94-b8fb6e0d2165">
+          <endpoint>
+            <proxyReferencesEndpoint transportType="Http">
+              <endpointMoniker Id="99a9c974-0161-4f36-a788-225903703ae2" />
+            </proxyReferencesEndpoint>
+          </endpoint>
+        </proxy>
+      </proxies>
+    </clientApplication>
+  </clientapplications>
+</hostDesignerModel>

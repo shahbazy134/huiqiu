@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80028C30-9CEE-4E28-9A42-99F5026EF6CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataContractDsl.Functional.Tests</RootNamespace>
+    <AssemblyName>DataContractDsl.Functional.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Modeling.Dsl.Service, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.Modeling.Dsl.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Library, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Lib\Microsoft.Practices.RecipeFramework.Library.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.VisualStudio.QualityTools.UnitTestFramework\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataElementFixture.cs" />
+    <Compile Include="DataContractHasChildrenContractsBuilderFixture.cs" />
+    <Compile Include="DataContractModelFixture.cs" />
+    <Compile Include="ExtendedTypeDescriptorProviderFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataContractFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Extenders\ServiceFactory.Extenders.DataContract.Asmx\Source\Microsoft.Practices.ServiceFactory.Extenders.DataContract.Asmx.csproj">
+      <Project>{FCC9B65E-162A-4701-9419-15E275403BD5}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Extenders.DataContract.Asmx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Extenders\ServiceFactory.Extenders.DataContract.Wcf\Source\Microsoft.Practices.ServiceFactory.Extenders.DataContract.Wcf.csproj">
+      <Project>{AECE0DDD-7CC6-406B-B91C-7A308EC9E33F}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Extenders.DataContract.Wcf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.CodeGeneration.Strategies\Source\Microsoft.Practices.Modeling.CodeGeneration.Strategies.csproj">
+      <Project>{1A2A690E-5FF2-4C6F-880B-247157DC10FD}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration.Strategies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.CodeGeneration\Source\Microsoft.Practices.Modeling.CodeGeneration.csproj">
+      <Project>{0CC719CB-8863-4810-BBB2-4F94D513A0FF}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.Common\Source\Microsoft.Practices.Modeling.Common.csproj">
+      <Project>{2734A231-3B33-4F05-A122-9B35565AC7E9}</Project>
+      <Name>Microsoft.Practices.Modeling.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.ExtensionProvider\Source\Microsoft.Practices.Modeling.ExtensionProvider.csproj">
+      <Project>{755D4D6E-C0D4-4E99-B37F-A02F5D8BBCDB}</Project>
+      <Name>Microsoft.Practices.Modeling.ExtensionProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ServiceFactory.RecipeFramework.Extensions\Source\Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions.csproj">
+      <Project>{3710B9E7-BCA9-4BBC-9F3F-86C82BBE6E9B}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UnitTestLibrary\Source\Microsoft.Practices.UnitTestLibrary.csproj">
+      <Project>{9A64FB7C-4490-4D04-9C6E-71274BDF1849}</Project>
+      <Name>Microsoft.Practices.UnitTestLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dsl\DataContractDsl.csproj">
+      <Project>{E31971C3-A635-43E8-BCA5-F2F5BAD0052B}</Project>
+      <Name>DataContractDsl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

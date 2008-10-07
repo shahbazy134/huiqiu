@@ -1,0 +1,128 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{823CDF62-A297-4BC4-8832-75BD761D0763}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.ServiceFactory.Extenders.ServiceContract.Wcf</RootNamespace>
+    <AssemblyName>Microsoft.Practices.ServiceFactory.Extenders.ServiceContract.Wcf</AssemblyName><AssemblyOriginatorKeyFile>..\..\..\ProductKey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGeneration\XsdElementFaultLink.cs" />
+    <Compile Include="CodeGeneration\XsdMessageContractElementLink.cs" />
+    <Compile Include="CodeGeneration\MessageContractLink.cs" />
+    <Compile Include="CodeGeneration\ServiceContractLink.cs" />
+    <Compile Include="CodeGeneration\ServiceLink.cs" />
+    <Compile Include="CodeGeneration\XsdMessageContractLink.cs" />
+    <Compile Include="WCFDataContractMessagePart.cs" />
+    <Compile Include="WCFMessagePartBase.cs" />
+    <Compile Include="WCFPrimitiveMessagePart.cs" />
+    <Compile Include="WCFXsdElementFault.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceContractWCFExtensionProvider.cs" />
+    <Compile Include="WCFMessageContract.cs" />
+    <Compile Include="WCFOperationContract.cs" />
+    <Compile Include="WCFService.cs" />
+    <Compile Include="WCFServiceContract.cs" />
+    <Compile Include="WCFXsdMessageContract.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modeling.CodeGeneration.Strategies\Source\Microsoft.Practices.Modeling.CodeGeneration.Strategies.csproj">
+      <Project>{1A2A690E-5FF2-4C6F-880B-247157DC10FD}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration.Strategies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.CodeGeneration\Source\Microsoft.Practices.Modeling.CodeGeneration.csproj">
+      <Project>{0CC719CB-8863-4810-BBB2-4F94D513A0FF}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.Common\Source\Microsoft.Practices.Modeling.Common.csproj">
+      <Project>{2734A231-3B33-4F05-A122-9B35565AC7E9}</Project>
+      <Name>Microsoft.Practices.Modeling.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modeling.ExtensionProvider\Source\Microsoft.Practices.Modeling.ExtensionProvider.csproj">
+      <Project>{755D4D6E-C0D4-4E99-B37F-A02F5D8BBCDB}</Project>
+      <Name>Microsoft.Practices.Modeling.ExtensionProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service Contract DSL\Dsl\ServiceContractDsl.csproj">
+      <Project>{3E9005DB-5EA1-4BEC-BEC2-3E0324395C73}</Project>
+      <Name>ServiceContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\VisualStudio.Helper\Source\Microsoft.Practices.VisualStudio.Helper.csproj">
+      <Project>{8404D99F-9A3E-467F-A4D0-5F5D5C15A075}</Project>
+      <Name>Microsoft.Practices.VisualStudio.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(ProjectDir)..\..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\" mkdir "$(ProjectDir)..\..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"
+copy /y/v/b "$(TargetPath)" "$(ProjectDir)..\..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateSolution" xmlns="http://schemas.microsoft.com/pag/gax-core"
+                                 xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Create Solution</Caption>
+  <Description>Creates a new Service Factory solution.</Description>
+  <Arguments>
+    <xi:include href="../Common/CommonArguments.xml"
+					  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Arguments/gax:Argument)" />
+  </Arguments>
+  <Actions>
+    <Action Name="CreateMappingFileAction"
+						Type="Microsoft.Practices.ServiceFactory.Recipes.CreateSolution.CreateMappingFileAction, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+  </Actions>
+</Recipe>

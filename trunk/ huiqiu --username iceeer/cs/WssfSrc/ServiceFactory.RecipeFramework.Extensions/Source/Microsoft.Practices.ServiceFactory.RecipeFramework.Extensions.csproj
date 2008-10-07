@@ -1,0 +1,176 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3710B9E7-BCA9-4BBC-9F3F-86C82BBE6E9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions</RootNamespace>
+    <AssemblyName>Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions</AssemblyName><SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\ProductKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Practices.Common, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ComponentModel, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Common, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.RecipeFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Library, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Visual Studio 2005 SDK\2007.02\VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.9.0, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Visual Studio 2005 SDK\2007.02\VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\System.Workflow.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\VSLangProj.dll</HintPath>
+    </Reference>
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyLoader.cs" />
+    <Compile Include="AssemblyResolver.cs" />
+    <Compile Include="ConfigurationService.cs" />
+    <Compile Include="Editors\ListEditor.cs" />
+    <Compile Include="Editors\TypeBrowser\PublicNonSystemTypeFilter.cs" />
+    <Compile Include="Editors\TypeBrowser\PublicPrimitiveTypeFilter.cs" />
+    <Compile Include="Editors\TypeBrowser\PublicTypeFilter.cs" />
+    <Compile Include="Editors\TypeBrowser\PublicTypeWithDefaultConstructorFilter.cs" />
+    <Compile Include="Editors\TypeBrowser\FilteredTypeBrowser.cs" />
+    <Compile Include="Editors\TypeBrowser\TypeFilterPropertyDescriptor.cs" />
+    <Compile Include="Editors\TypeEditor\PrimitiveCLRTypeEditorConfig.cs" />
+    <Compile Include="Editors\TypeBrowser\TypeFilterProvider.cs" />
+    <Compile Include="Editors\TypeEditor\PrimitiveTypesCodeModelEditorFilter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAccessRegistry.cs" />
+    <Compile Include="ProjectMapping\Configuration\ProjectMappingEntry.cs" />
+    <Compile Include="ProjectMapping\Configuration\ProjectMappingInformation.cs" />
+    <Compile Include="ProjectMapping\Configuration\ProjectMappingTable.cs" />
+    <Compile Include="ProjectMapping\Configuration\Role.cs" />
+    <Compile Include="ProjectMapping\ProjectMappingManagerMonitor.cs" />
+    <Compile Include="ProjectMapping\Design\ProjectMappingTableConverter.cs" />
+    <Compile Include="ProjectMapping\ProjectMappingAlreadyExistsException.cs" />
+    <Compile Include="ProjectMapping\ProjectMappingTableAlreadyExistsException.cs" />
+    <Compile Include="ProjectMapping\ProjectMappingTableNotFoundException.cs" />
+    <Compile Include="ProjectMapping\ProjectNotFoundException.cs" />
+    <Compile Include="ProjectMapping\Helpers\Constants.cs" />
+    <Compile Include="ProjectMapping\Helpers\GuidGuard.cs" />
+    <Compile Include="ProjectMapping\IProjectMappingManager.cs" />
+    <Compile Include="ProjectMapping\ProjectMappingManager.cs" />
+    <Compile Include="ProjectMapping\Serialization\GenericSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryAccessor.cs" />
+    <Compile Include="UISolutionHierarchy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectMapping\ProjectMapping.xsd">
+      <SubType>
+      </SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProjectMapping\ProjectMapping.xsx">
+      <DependentUpon>ProjectMapping.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VisualStudio.Helper\Source\Microsoft.Practices.VisualStudio.Helper.csproj">
+      <Project>{8404D99F-9A3E-467F-A4D0-5F5D5C15A075}</Project>
+      <Name>Microsoft.Practices.VisualStudio.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\" mkdir "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"
+copy /y/v/b "$(TargetPath)" "$(ProjectDir)..\..\Service Factory Guidance Package\Guidance Package\$(OutDir)Lib\"
+
+copy /y/v/b "$(TargetDir)ProjectMapping\ProjectMapping.xsd" "$(DevEnvDir)..\..\Xml\Schemas\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

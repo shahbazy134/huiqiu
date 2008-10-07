@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="PopulateProjectMappingTable"
+        xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Bound="false">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				      xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Populate Project Mapping Table</Caption>
+  <Description>Populates a Project Mapping Table with all the projects in the current solution folder.</Description>
+  <HostData>
+    <Icon ID="183"/>
+    <CommandBar Menu="SolutionFolder" />
+  </HostData>
+  <Arguments>
+    <Argument Name="CurrentSolutionFolder" Type="EnvDTE.Project, EnvDTE" Required="true">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="CurrentProjectProvider"/>
+    </Argument>
+    <Argument Name="SolutionFolderUniqueName">
+      <ValueProvider Type="Evaluator" Expression="$(CurrentSolutionFolder.UniqueName)">
+        <MonitorArgument Name="CurrentSolutionFolder" />
+      </ValueProvider>
+    </Argument>
+    <Argument Name="MappingTableName">
+      <Converter Type="ValidFolderNameConverter" />
+      <ValueProvider Type="Evaluator" Expression="$(CurrentSolutionFolder.Name)">
+        <MonitorArgument Name="CurrentSolutionFolder" />
+      </ValueProvider>
+    </Argument>
+  </Arguments>
+  <GatheringServiceData>
+    <Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0">
+      <Pages>
+        <Page>
+          <Title>Populate Project Mapping Table</Title>
+          <LinkTitle>Mapping Table</LinkTitle>
+          <Fields>
+            <Field ValueName="MappingTableName" Label="Mapping Table Name">
+              <Tooltip>Friendly name to assign to mapping table that will contain all the projects under the selected solution folder.</Tooltip>
+            </Field>
+          </Fields>
+        </Page>
+      </Pages>
+    </Wizard>
+  </GatheringServiceData>
+  <Actions>
+		<Action Name="PopulateProjectMappingTable" Type="Microsoft.Practices.ServiceFactory.Actions.PopulateProjectMappingTableAction, Microsoft.Practices.ServiceFactory.GuidancePackage"
+						ProjectPath="\GeneratedCode">
+			<Input Name="SolutionFolderName" RecipeArgument="SolutionFolderUniqueName"/>
+			<Input Name="MappingTableName" RecipeArgument="MappingTableName"/>
+		</Action>
+  </Actions>
+</Recipe>

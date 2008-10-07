@@ -1,0 +1,826 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C84323DD-A7C8-4801-B6B4-462F6B7C7AF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.ServiceFactory</RootNamespace>
+    <AssemblyName>Microsoft.Practices.ServiceFactory.GuidancePackage</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\..\ProductKey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <WarningLevel>4</WarningLevel><FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1668</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1668</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Practices.Common, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ComponentModel, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Modeling.Dsl.Service, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.Modeling.Dsl.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Common, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.RecipeFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.Library, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.RecipeFramework.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.RecipeFramework.VisualStudio, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.WizardFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.9.0, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IdentityModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\System.Workflow.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.WizardFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(DevEnvDir)Microsoft.WizardFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionBase.cs" />
+    <Compile Include="Actions\PopulateProjectMappingTableAction.cs" />
+    <Compile Include="Actions\SaveConfigurationAction.cs" />
+    <Compile Include="Helpers\CustomPageHelper.cs" />
+    <Compile Include="Helpers\MappedProperty.cs" />
+    <Compile Include="Helpers\MappedPropertyCollection.cs" />
+    <Compile Include="Helpers\PublicPropertyCollection.cs" />
+    <Compile Include="Helpers\PublicPropertyListItem.cs" />
+    <Compile Include="Helpers\TFSHelper.cs" />
+    <Compile Include="Library\Presentation\Base\IModel.cs" />
+    <Compile Include="Library\Presentation\Base\IView.cs" />
+    <Compile Include="Library\Presentation\Base\ModelBase.cs" />
+    <Compile Include="Library\Presentation\Base\ViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library\Presentation\Models\DteProjectItemModel.cs" />
+    <Compile Include="Library\Presentation\Models\DteProjectModel.cs" />
+    <Compile Include="Library\Presentation\Models\DteTypeModel.cs" />
+    <Compile Include="Library\Validation\ValidFolderNameConverter.cs" />
+    <Compile Include="Library\Validation\DefaultValidationResultReport.cs" />
+    <Compile Include="Library\Validation\ErrorProviderValidationResultReport.cs" />
+    <Compile Include="Library\Validation\IValidationResultReport.cs" />
+    <Compile Include="Library\Validation\RequestDataEventArgs.cs" />
+    <Compile Include="Library\Validation\ValidFileNameConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\CreateModel\Presentation\ModelPropertiesView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModelPropertiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ValidationResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\CreateTranslator\Presentation\CreateTranslatorMappingsPage.resx">
+      <DependentUpon>CreateTranslatorMappingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\CreateTranslator\Presentation\CreateTranslatorPropertiesPage.resx">
+      <DependentUpon>CreateTranslatorPropertiesPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigBehaviorPage.resx">
+      <DependentUpon>SecureClientConfigBehaviorPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigPage.resx">
+      <DependentUpon>SecureClientConfigPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Recipes\CodeAnalysis\RunCodeAnalysisRules.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\Common\CreateService.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateASMXClientProxy\CreateASMXClientProxy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateTranslator\CreateTranslator.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateWCFClientProxy\CreateWCFClientProxy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateWCFService\CreateWCFService.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateASMXService\CreateASMXService.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\GenerateServiceCode\GenerateServiceCode.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\OrderAllDataMembers\OrderAllDataMembers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Information.png" />
+    <Content Include="Templates\Items\HostDesignerModel.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Items\HostDesignerModel.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\ResultsGrid.resx">
+      <DependentUpon>ResultsGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\ResultsGrid.resx">
+      <DependentUpon>ResultsGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ProjectFactory.reg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Recipes\CodeAnalysis\RunCodeAnalysisRulesAction.cs" />
+    <Compile Include="Recipes\CreateASMXClientProxy\AddServiceReferenceAction.cs" />
+    <Compile Include="Recipes\CreateModel\Constants.cs" />
+    <Compile Include="Recipes\CreateModel\CreateModelAction.cs" />
+    <Compile Include="Recipes\CreateModel\ModelType.cs" />
+    <Compile Include="Recipes\CreateModel\Presentation\IModelPropertiesModel.cs" />
+    <Compile Include="Recipes\CreateModel\Presentation\ModelPropertiesModel.cs" />
+    <Compile Include="Recipes\CreateModel\UnfoldItemTemplateAction.cs" />
+    <Compile Include="Recipes\CreateSolution\CreateMappingFileAction.cs" />
+    <Compile Include="Recipes\CreateModel\Presentation\IModelPropertiesView.cs" />
+    <Compile Include="Recipes\CreateModel\Presentation\ModelPropertiesPresenter.cs" />
+    <Compile Include="Recipes\CreateModel\Presentation\ModelPropertiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recipes\CreateModel\Presentation\ModelPropertiesView.Designer.cs">
+      <DependentUpon>ModelPropertiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\GenerateArtifactAction.cs" />
+    <Compile Include="Library\Validation\ValidLocationConverter.cs" />
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorMappingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorMappingsPage.Designer.cs">
+      <DependentUpon>CreateTranslatorMappingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorPropertiesModel.cs" />
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorPropertiesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorPropertiesPage.Designer.cs">
+      <DependentUpon>CreateTranslatorPropertiesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorMappingPresenter.cs" />
+    <Compile Include="Recipes\CreateTranslator\Presentation\CreateTranslatorPropertiesPresenter.cs" />
+    <Compile Include="Recipes\CreateTranslator\Presentation\ICreateTranslatorMappingView.cs" />
+    <Compile Include="Recipes\CreateTranslator\Presentation\ICreateTranslatorPropertiesView.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\AddClientProxyAction.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\ISecureClientConfigBehaviorView.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\ISecureClientConfigView.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigBehaviorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigBehaviorPage.designer.cs">
+      <DependentUpon>SecureClientConfigBehaviorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigBehaviorPresenter.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigModel.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigPage.designer.cs">
+      <DependentUpon>SecureClientConfigPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recipes\CreateWCFClientProxy\Presentation\SecureClientConfigPresenter.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\SetBehaviorOnClientConfigAction.cs" />
+    <Compile Include="Recipes\CreateWCFClientProxy\UpdateClientConfigAction.cs" />
+    <Compile Include="Recipes\OrderAllDataMembers\OrderAllDataMembersAction.cs" />
+    <Compile Include="References\ClientProxyShapeReference.cs" />
+    <Compile Include="References\AnyStandardProjectReference.cs" />
+    <Compile Include="References\OrderAllDataMembersReference.cs" />
+    <Compile Include="References\ProjectIsInRoleReference.cs" />
+    <Compile Include="References\ShapeHasArtifactLinksReference.cs" />
+    <Compile Include="References\SolutionReference.cs" />
+    <Compile Include="References\HasArtifactLinksReference.cs" />
+    <Compile Include="References\ServiceFactoryProductReference.cs" />
+    <Compile Include="Properties\ValidationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Validation\ValidationEventArgs.cs" />
+    <Compile Include="References\SolutionFolderHasProjectsReference.cs" />
+    <Content Include="Templates\Projects\ASMXBusinessEntity\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessLogic\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\MainForm.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Program.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Properties\Resources.Designer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\ResultsGrid.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\ResultsGrid.designer.cs">
+      <DependentUpon>ResultsGrid.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataAccess\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataType\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceContract\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceImplementation\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessEntity\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessLogic\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\MainForm.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Program.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Properties\Resources.Designer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\ResultsGrid.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\ResultsGrid.designer.cs">
+      <DependentUpon>ResultsGrid.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataAccess\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataContract\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFFaultContract\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFMessageContract\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceContract\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceImplementation\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="ValueProviders\ClassNameParser.cs" />
+    <Compile Include="ValueProviders\ClassNameProvider.cs" />
+    <Compile Include="ValueProviders\ClientProxyFolderNameProvider.cs" />
+    <Compile Include="ValueProviders\CodeLanguageConfigurableProvider.cs" />
+    <Compile Include="ValueProviders\ConfigurationProvider.cs" />
+    <Compile Include="ValueProviders\HostModelClientProjectProvider.cs" />
+    <Compile Include="ValueProviders\HostModelEndpointAddressProvider.cs" />
+    <Compile Include="ValueProviders\HostModelServiceReferenceNameProvider.cs" />
+    <Compile Include="ValueProviders\ModelFilesProvider.cs" />
+    <Compile Include="ValueProviders\ProjectByPathExpressionProvider.cs" />
+    <Compile Include="ValueProviders\ProjectNamespaceProvider.cs" />
+    <Compile Include="ValueProviders\SelectedProjectProviderBase.cs" />
+    <None Include="Templates\Items\DataContractModel.datacontract.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Items\DataContractModel.datacontract">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Items\HostDesignerModel.host">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Items\ServiceModel.servicecontract">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Recipes\Binding.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\Common\CodeGeneration.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\Common\CommonTypeAliases.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\Common\CommonArguments.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\Common\AllCodeGeneration.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateSolution\CreateSolution.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\CreateModel\CreateModel.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\p&amp;p.jpg" />
+    <None Include="Resources\SF.gif" />
+    <None Include="Resources\LargeIcons.jpg" />
+    <None Include="Resources\SmallIcons.jpg" />
+    <Content Include="Recipes\GenerateCode\GenerateCode.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recipes\PopulateProjectMappingTable\PopulateProjectMappingTable.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ruleset.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="ruleset.xslt" />
+    <Content Include="Templates\Items\DataContractModel.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Items\DataContractModel.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Items\ServiceModel.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Items\ServiceModel.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Overview\header.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Overview\Intro.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMX.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMX.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessEntity\BusinessEntity.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessEntity\BusinessEntity.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessEntity\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessLogic\BusinessLogic.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessLogic\BusinessLogic.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXBusinessLogic\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Client.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\Client.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataAccess\DataAccess.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataAccess\DataAccess.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataAccess\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataType\DataType.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataType\DataType.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXDataType\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXHost\Host.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXHost\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceContract\ServiceContract.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceContract\ServiceContract.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceContract\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceImplementation\ServiceImplementation.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceImplementation\ServiceImplementation.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXServiceImplementation\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCF.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCF.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessEntity\BusinessEntity.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessEntity\BusinessEntity.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessEntity\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessLogic\BusinessLogic.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessLogic\BusinessLogic.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFBusinessLogic\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Client.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\Client.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataAccess\DataAccess.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataAccess\DataAccess.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataAccess\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataContract\DataContract.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataContract\DataContract.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFDataContract\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFFaultContract\FaultContract.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFFaultContract\FaultContract.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFFaultContract\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFHost\Host.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFHost\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFMessageContract\MessageContract.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFMessageContract\MessageContract.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceContract\ServiceContract.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceContract\ServiceContract.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceContract\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceImplementation\ServiceImplementation.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceImplementation\ServiceImplementation.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFServiceImplementation\__TemplateIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Solutions\Projects\Model\Model.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Solutions\Projects\Model\Model.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXClient\app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXHost\Host.webproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXHost\vwd.webinfo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\ASMXHost\web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFClient\app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFHost\Host.webproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFHost\vwd.webinfo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Projects\WCFHost\web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Templates\Items\ServiceModel.servicecontract.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\Solutions\Projects\Model\Model.ssfproduct">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Templates\Solutions\ServicesGuidancePackage.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Solutions\ServicesGuidancePackage.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Service Factory Guidance Package.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Templates\TextTemplates\CS\TypeTranslator.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LastGenOutput>TypeTranslator1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Extenders\ServiceFactory.Extenders.HostDesigner.Wcf\Source\Microsoft.Practices.ServiceFactory.Extenders.HostDesigner.Wcf.csproj">
+      <Project>{458BAF5A-9A01-4038-A7CE-222F885FDCE1}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Extenders.HostDesigner.Wcf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Host Designer DSL\Dsl\HostDesignerDsl.csproj">
+      <Project>{C235B0F0-B751-4673-9707-2BC114250EA2}</Project>
+      <Name>HostDesignerDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.CodeGeneration\Source\Microsoft.Practices.Modeling.CodeGeneration.csproj">
+      <Project>{0CC719CB-8863-4810-BBB2-4F94D513A0FF}</Project>
+      <Name>Microsoft.Practices.Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Common\Source\Microsoft.Practices.Modeling.Common.csproj">
+      <Project>{2734A231-3B33-4F05-A122-9B35565AC7E9}</Project>
+      <Name>Microsoft.Practices.Modeling.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Dsl.Integration\Microsoft.Practices.Modeling.Dsl.Integration.csproj">
+      <Project>{80DE8B2F-9CAD-490C-98B1-FC3564BF8D33}</Project>
+      <Name>Microsoft.Practices.Modeling.Dsl.Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data Contract DSL\Dsl\DataContractDsl.csproj">
+      <Project>{E31971C3-A635-43E8-BCA5-F2F5BAD0052B}</Project>
+      <Name>DataContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.ExtensionProvider\Source\Microsoft.Practices.Modeling.ExtensionProvider.csproj">
+      <Project>{755D4D6E-C0D4-4E99-B37F-A02F5D8BBCDB}</Project>
+      <Name>Microsoft.Practices.Modeling.ExtensionProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceFactory.Description\Source\Microsoft.Practices.ServiceFactory.Description.csproj">
+      <Project>{CDCFFE54-0B4F-40BA-B124-453A2CB7129A}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Description</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceFactory.Validation\Source\Microsoft.Practices.ServiceFactory.Validation.csproj">
+      <Project>{CAFE2F77-E851-429D-9651-9C9389C81200}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VisualStudio.Helper\Source\Microsoft.Practices.VisualStudio.Helper.csproj">
+      <Project>{8404D99F-9A3E-467F-A4D0-5F5D5C15A075}</Project>
+      <Name>Microsoft.Practices.VisualStudio.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Contract DSL\Dsl\ServiceContractDsl.csproj">
+      <Project>{3E9005DB-5EA1-4BEC-BEC2-3E0324395C73}</Project>
+      <Name>ServiceContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceFactory.RecipeFramework.Extensions\Source\Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions.csproj">
+      <Project>{3710B9E7-BCA9-4BBC-9F3F-86C82BBE6E9B}</Project>
+      <Name>Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF Semantic CodeAnalysis\Source\Microsoft.Practices.FxCop.Rules.WcfSemantic.csproj">
+      <Project>{08D72E7D-0C20-402D-9A4A-EE4C8838D0C2}</Project>
+      <Name>Microsoft.Practices.FxCop.Rules.WcfSemantic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\Projects\ASMXHost\App_Code\" />
+    <Folder Include="Templates\Projects\WCFClient\Service References\" />
+    <Folder Include="Templates\Projects\WCFHost\App_Code\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PostBuildEvent>@echo Register the project...
+
+regedit /s "$(ProjectDir)\ProjectFactory.reg"
+
+@echo GAC DIS and register the package...
+reg query "HKLM\SOFTWARE\Microsoft\Microsoft SDKs\Windows" /v CurrentInstallFolder &gt; key.txt 2&gt;null.txt
+for /F "tokens=2* delims=	 " %25%25A IN (key.txt) DO @SET windowsSdkPath=%25%25B
+
+echo Windows SDK Path is %25windowsSdkPath%25
+
+"%25windowsSdkPath%25\bin\gacutil" -i "$(ProjectDir)..\..\Lib\Microsoft.Practices.Modeling.Dsl.Service.dll"
+
+reg query HKLM\SOFTWARE\Microsoft\VisualStudio\VSIP\9.0 /v InstallDir &gt; key.txt 2&gt;null.txt
+for /F "tokens=2* delims=	 " %25%25A IN (key.txt) DO @SET sdkPath=%25%25B
+del key.txt
+del null.txt
+@echo "%25SdkPath%25"
+
+"%25SdkPath%25\VisualStudioIntegration\Tools\bin\regpkg.exe" /root:Software\Microsoft\VisualStudio\9.0Exp /RANU "$(ProjectDir)..\..\Lib\Microsoft.Practices.Modeling.Dsl.Service.dll"
+
+@echo Copy assemblies loaded by AssemblyResolver to Lib
+
+if not exist "$(TargetDir)\Lib\" mkdir "$(TargetDir)\Lib\"
+copy /y "$(ProjectDir)..\..\Lib\Microsoft.Practices.ObjectBuilder.dll" "$(TargetDir)\Lib\"
+copy /y "$(ProjectDir)..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" "$(TargetDir)\Lib\"
+copy /y "$(ProjectDir)..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll" "$(TargetDir)\Lib\"
+copy /y "$(ProjectDir)..\..\Lib\Microsoft.Practices.RecipeFramework.Extensions.dll" "$(TargetDir)\Lib\"
+
+@echo Create manifest for release install
+
+set fxPath="$(FrameworkDir)"
+"%25fxPath%25\msbuild.exe" "$(ProjectDir)UpdateManifest.proj"
+copy /y "$(ProjectDir)Service Factory Guidance Package (binary release).xml" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

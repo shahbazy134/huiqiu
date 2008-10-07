@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Arguments>
+		<Argument Name="ModelRootElement" Type="Microsoft.VisualStudio.Modeling.ModelElement, Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<ValueProvider Type="Microsoft.Practices.Modeling.Dsl.Integration.ValueProviders.DesignerModelRootProvider, Microsoft.Practices.Modeling.Dsl.Integration"/>
+		</Argument>
+	</Arguments>
+	<Actions>
+		<Action Name="GenerateAllArtifactsAction"
+            Type="Microsoft.Practices.ServiceFactory.Actions.GenerateAllArtifactsAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="SelectedElement" RecipeArgument="ModelRootElement"/>
+		</Action>
+	</Actions>
+</Recipe>

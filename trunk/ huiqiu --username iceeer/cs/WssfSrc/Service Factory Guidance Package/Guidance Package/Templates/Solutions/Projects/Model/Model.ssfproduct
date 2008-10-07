@@ -1,0 +1,20 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+	<PropertyGroup>
+		<ProjectGuid>$guid1$</ProjectGuid>
+		<RootNamespace>$safeprojectname$</RootNamespace>
+		<AssemblyName>$safeprojectname$</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+	</ItemGroup>
+	<PropertyGroup>
+		<SFBasePath>$(DevEnvDir)\PublicAssemblies</SFBasePath>
+	</PropertyGroup>
+	<!-- Since this project flavor isnt supposed to be build, we do nothing in the following Targets -->
+	<Target Name="Build">
+	</Target>
+	<Target Name="Clean">
+	</Target>
+	<Target Name="Rebuild">
+	</Target>
+</Project>

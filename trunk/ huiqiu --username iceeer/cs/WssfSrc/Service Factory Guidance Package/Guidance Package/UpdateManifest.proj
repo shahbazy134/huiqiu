@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+	
+	<!--
+		Create a version of the GP manifest that refers to the regular VS hive.
+	-->
+	<Target Name="Build">
+		<Copy SourceFiles="Service Factory Guidance Package.xml"
+			DestinationFiles="Service Factory Guidance Package (binary release).xml" />
+		<ReplaceString Path="Service Factory Guidance Package (binary release).xml"
+			OldValue="Hive=9.0Exp /RANU"
+			NewValue="Hive=9.0" />
+	</Target>
+
+	<UsingTask TaskName="Microsoft.Practices.Build.File.ReplaceString" AssemblyFile="..\..\Lib\Microsoft.Practices.Build.dll" />
+</Project>

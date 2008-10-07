@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="OrderAllDataMembers"
+        xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Bound="false">
+	<xi:include href="../Common/CommonTypeAliases.xml"
+						xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Order All Data Members</Caption>
+	<Description>Populates the WCF “Order” property for each of the data members from zero to count-1.</Description>
+	<HostData>
+		<Icon ID="11"/>
+		<!-- Constants.DataContractCommandSetId -->
+		<CommandBar Guid="44157ffb-0ae0-44e4-858c-366754e3dcc9" ID="65536"/>
+	</HostData>
+	<Arguments>
+		<Argument Name="ModelRootElement" Type="Microsoft.VisualStudio.Modeling.ModelElement, Microsoft.VisualStudio.Modeling.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<ValueProvider Type="Microsoft.Practices.Modeling.Dsl.Integration.ValueProviders.DesignerModelRootProvider, Microsoft.Practices.Modeling.Dsl.Integration"/>
+		</Argument>
+	</Arguments>
+	<Actions>
+		<Action Name="OrderAllDataMembersAction"
+            Type="Microsoft.Practices.ServiceFactory.Recipes.OrderAllDataMembers.OrderAllDataMembersAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="SelectedElement" RecipeArgument="ModelRootElement"/>
+		</Action>
+	</Actions>
+</Recipe>

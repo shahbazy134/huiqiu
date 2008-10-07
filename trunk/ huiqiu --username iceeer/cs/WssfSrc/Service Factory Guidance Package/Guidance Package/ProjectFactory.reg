@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\9.0Exp\Configuration\Projects\{1df4d691-79fd-4e3e-b7a6-a1a5dc772bbd}]
+@="ModelProjectFactory"
+"DisplayName"="Service Factory"
+"DisplayProjectFileExtensions"="Service Factory Product(*.ssfproduct)"
+"DefaultProjectExtension"="ssfproduct"
+"PossibleProjectExtensions"="ssfproduct"
+"Language(VsTemplate)"="ServicesSoftwareFactoryProduct"
+
+
+

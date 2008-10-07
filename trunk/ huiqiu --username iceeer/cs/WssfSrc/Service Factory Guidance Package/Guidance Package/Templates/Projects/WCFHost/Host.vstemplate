@@ -1,0 +1,32 @@
+﻿<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Host</Name>
+		<Description>Host</Description>
+		<ProjectType>Web</ProjectType>
+		<ProjectSubType>CSharp</ProjectSubType>
+		<SortOrder>20</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>Host</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<EnableEditOfLocationField>true</EnableEditOfLocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Host.webproj" ReplaceParameters="false">
+			<Folder Name="App_Code" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="web.config">web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="vwd.webinfo">vwd.webinfo</ProjectItem>
+		</Project>
+	</TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0">
+    </Template>
+  </WizardData>
+</VSTemplate>

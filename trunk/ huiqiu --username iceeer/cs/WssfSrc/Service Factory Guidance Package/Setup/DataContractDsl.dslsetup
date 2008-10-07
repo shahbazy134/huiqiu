@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This file is a manifest that defines how a domain-specific language is installed. The text template files 
+(.tt) in this project use the information in this file to generate WiX files (.wxs). 
+
+Some values in this file are copied from the domain-specific language definition (.dsl).
+If the .dsl file could not be found, you will need to edit this manifest to correct values for some attributes.
+For more specific information, see the Error List window.
+-->
+<installerDefinition
+        xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/InstallerDefinitionModel"
+			  defaultDirectoryName="DataContract"
+			  productVersion="3.1.0"
+        productCode="36d907d0-a565-4a8d-bc49-5496802cf86f"
+        upgradeCode="ea342388-d67e-47ec-820b-48942974e5bb"
+        localeId="1033">
+  <dslPackage name="DataContractDslPackage" project="DSLs/Data Contract/DataContractDslPackage" assemblyPath="Microsoft.Practices.ServiceFactory.DataContracts.DslPackage.dll" registryRoot="Software\Microsoft\VisualStudio\9.0">
+    <fileExtensions>
+      <fileExtension name="datacontract" extension="datacontract" descriptionKey="FileDescription" hasIcon="true" iconId="0"/>
+    </fileExtensions>
+    <supportingAssemblies>
+      <supportingAssembly name="DataContractDsl" project="DSLs/Data Contract/DataContractDsl" assemblyPath="Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll" />
+    </supportingAssemblies>
+  </dslPackage>
+  <vsItemTemplates>
+  </vsItemTemplates>
+  <dslSchemas>
+    <dslSchema project="DSLs/Data Contract/DataContractDsl" filePath="GeneratedCode\DataContractSchema.xsd"/>
+  </dslSchemas>
+</installerDefinition>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GuidancePackage xmlns="http://schemas.microsoft.com/pag/gax-core"
+		xmlns:xi="http://www.w3.org/2001/XInclude"
+		Name="ServicesGuidancePackage"
+		Caption="Service Factory: Modeling Edition"
+		Description="Service Factory Modeling Edition"
+		BindingRecipe="BindingRecipe"
+		Guid="018f05c0-b2d8-4116-8665-41f3db4640ba"
+		SchemaVersion="1.0">
+	<Overview Url="Templates\Overview\intro.htm" />
+	<HostData>
+		<RegistrationSettings>/Hive=9.0</RegistrationSettings>
+		<Menu Name="SolutionFolder" Text="Service Factory: Modeling Edition" Priority="1">
+			<CommandBar Name="Solution Folder"/>
+		</Menu>
+		<Menu Name="Project" Text="Service Factory: Modeling Edition" Priority="1">
+			<CommandBar Name="Project"/>
+		</Menu>
+		<Menu Name="WebProject" Text="Service Factory: Modeling Edition" Priority="1">
+			<CommandBar Name="Web Project"/>
+		</Menu>
+	</HostData>
+	<Recipes>
+		<xi:include href="Recipes/Binding.xml"/>
+		<xi:include href="Recipes/CreateSolution/CreateSolution.xml"/>
+		<xi:include href="Recipes/CreateModel/CreateModel.xml"/>
+		<xi:include href="Recipes/GenerateCode/GenerateCode.xml"/>
+		<xi:include href="Recipes/PopulateProjectMappingTable/PopulateProjectMappingTable.xml"/>
+		<xi:include href="Recipes/CreateASMXService/CreateASMXService.xml"/>
+		<xi:include href="Recipes/CreateWCFService/CreateWCFService.xml"/>
+		<xi:include href="Recipes/CreateTranslator/CreateTranslator.xml"/>
+		<xi:include href="Recipes/CodeAnalysis/RunCodeAnalysisRules.xml"/>
+		<xi:include href="Recipes/CreateWCFClientProxy/CreateWCFClientProxy.xml"/>
+    <xi:include href="Recipes/CreateASMXClientProxy/CreateASMXClientProxy.xml"/>
+    <xi:include href="Recipes/GenerateServiceCode/GenerateServiceCode.xml"/>
+		<xi:include href="Recipes/OrderAllDataMembers/OrderAllDataMembers.xml"/>
+	</Recipes>
+</GuidancePackage>

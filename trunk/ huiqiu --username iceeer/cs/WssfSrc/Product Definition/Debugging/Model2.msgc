@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messageContractModel dslVersion="1.0.0.0" Id="4743dca6-953f-4734-8b35-94b756889954" implementationTechnology="" xmlns="http://schemas.microsoft.com/dsltools/MessageContract">
+  <elements>
+    <singlePartMessageElement name="Message1" type="" objectExtenderContainer="" project="Debugging.ssfproduct" />
+  </elements>
+</messageContractModel>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="BindingRecipe"
+				xmlns="http://schemas.microsoft.com/pag/gax-core"
+				xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="Common/CommonTypeAliases.xml"
+							  xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Creates unbound references to the guidance package</Caption>
+	<Actions>
+		<Action Name="CreateModelRef" Type="RefCreator" AssetName="CreateModel"
+				ReferenceType="Microsoft.Practices.ServiceFactory.References.ServiceFactoryProductReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+		<Action Name="GenerateCodeRef" Type="RefCreator" AssetName="GenerateCode"
+				ReferenceType="Microsoft.Practices.ServiceFactory.References.HasArtifactLinksReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+		<Action Name="PopulateProjectMappingTableRef" Type="RefCreator" AssetName="PopulateProjectMappingTable"
+				ReferenceType="Microsoft.Practices.ServiceFactory.References.SolutionFolderHasProjectsReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+		<Action Name="CreateASMXServiceRef" Type="RefCreator" AssetName="Projects\ASMX.vstemplate"
+			ReferenceType="Microsoft.Practices.ServiceFactory.References.SolutionReference, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+		<Action Name="CreateWCFServiceRef" Type="RefCreator" AssetName="Projects\WCF.vstemplate"
+			ReferenceType="Microsoft.Practices.ServiceFactory.References.SolutionReference, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+		<Action Name="CreateTranslatorRef" Type="RefCreator" AssetName="CreateTranslator"
+				  ReferenceType="Microsoft.Practices.ServiceFactory.References.ProjectIsInRoleReference, Microsoft.Practices.ServiceFactory.GuidancePackage"
+			Role="ServiceRole"/>
+		<Action Name="RunCodeAnalysisRulesRef" Type="RefCreator" AssetName="RunCodeAnalysisRules"
+				ReferenceType="AnyStandardProjectReference" />
+		<Action Name="CreateWCFClientProxyRef" Type="RefCreator" AssetName="CreateWCFClientProxy" ShapeName="ProxyPortShape" ImplementationTechnology="WCF"
+		  ReferenceType="Microsoft.Practices.ServiceFactory.References.ClientProxyShapeReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+    <Action Name="CreateASMXClientProxyRef" Type="RefCreator" AssetName="CreateASMXClientProxy" ShapeName="ProxyPortShape" ImplementationTechnology="ASMX"
+		  ReferenceType="Microsoft.Practices.ServiceFactory.References.ClientProxyShapeReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+    <Action Name="GenerateServiceCodeRef" Type="RefCreator" AssetName="GenerateServiceCode" ShapeName="ServiceDescriptionShape"
+		  ReferenceType="Microsoft.Practices.ServiceFactory.References.ShapeHasArtifactLinksReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+		<Action Name="OrderAllDataMembersRef" Type="RefCreator" AssetName="OrderAllDataMembers"
+				ReferenceType="Microsoft.Practices.ServiceFactory.References.OrderAllDataMembersReference, Microsoft.Practices.ServiceFactory.GuidancePackage"/>
+  </Actions>
+</Recipe>

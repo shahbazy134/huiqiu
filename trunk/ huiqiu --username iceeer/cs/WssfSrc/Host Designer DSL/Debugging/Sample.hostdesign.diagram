@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" isCompleteView="false" name="Sample">
+  <hostDesignerModelMoniker Id="e6abd8b0-219c-4aeb-9127-610c1d0d70d9" />
+  <nestedChildShapes>
+    <hostApplicationShape Id="c68eaf7a-d62e-459a-b557-c4b9d398efbd" absoluteBounds="1.5, 0.875, 1.5, 1">
+      <hostApplicationMoniker name="/e6abd8b0-219c-4aeb-9127-610c1d0d70d9/HostApplication1" />
+    </hostApplicationShape>
+    <serviceDescriptionShape Id="1f0936da-81db-4fc5-bcdc-a3c5637ddf3c" absoluteBounds="2, 2.25, 1.5, 1">
+      <serviceMELReferenceMoniker name="/e6abd8b0-219c-4aeb-9127-610c1d0d70d9/HostApplication1/ServiceMELReference1" />
+      <relativeChildShapes>
+        <endpointPortShape Id="6304cc73-f503-464e-baf8-4c28bece7b5c" absoluteBounds="3.375, 2.84375, 0.25, 0.25">
+          <endpointMoniker Id="0101ed4e-460d-4005-ac02-69c55ad1af42" />
+        </endpointPortShape>
+      </relativeChildShapes>
+    </serviceDescriptionShape>
+    <serviceConnector edgePoints="[(2.5 : 1.875); (2.5 : 2.25)]" manuallyRouted="false" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="fcb7dde6-61aa-4b26-832a-bd9c8244de30">
+      <nodes>
+        <hostApplicationShapeMoniker Id="c68eaf7a-d62e-459a-b557-c4b9d398efbd" />
+        <serviceDescriptionShapeMoniker Id="1f0936da-81db-4fc5-bcdc-a3c5637ddf3c" />
+      </nodes>
+    </serviceConnector>
+    <serviceDescriptionShape Id="663b5005-a8fb-4153-856a-fe5bdbf5e4a1" absoluteBounds="1.75, 3.5, 1.5, 1">
+      <serviceMELReferenceMoniker name="/e6abd8b0-219c-4aeb-9127-610c1d0d70d9/HostApplication1/ServiceMELReference2" />
+      <relativeChildShapes>
+        <endpointPortShape Id="ad5716a2-39c3-4e96-bb30-66d29b861317" absoluteBounds="3.125, 3.75, 0.25, 0.25">
+          <endpointMoniker Id="30efd1b2-369f-43bf-9208-17bfd473ecdf" />
+        </endpointPortShape>
+        <endpointPortShape Id="1ab4512e-87d1-4f28-b3a7-8f7e97bb1e20" absoluteBounds="3.125, 4.09375, 0.25, 0.25">
+          <endpointMoniker Id="99a9c974-0161-4f36-a788-225903703ae2" />
+        </endpointPortShape>
+      </relativeChildShapes>
+    </serviceDescriptionShape>
+    <serviceConnector edgePoints="[(1.84375 : 1.875); (1.84375 : 3.5)]" manuallyRouted="false" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="fcb7dde6-61aa-4b26-832a-bd9c8244de30">
+      <nodes>
+        <hostApplicationShapeMoniker Id="c68eaf7a-d62e-459a-b557-c4b9d398efbd" />
+        <serviceDescriptionShapeMoniker Id="663b5005-a8fb-4153-856a-fe5bdbf5e4a1" />
+      </nodes>
+    </serviceConnector>
+    <cilentApplicationShape Id="cbc309c9-cdb9-4a91-b66c-7511ba28cbe5" absoluteBounds="6.75, 2.375, 1.5, 1">
+      <clientApplicationMoniker name="/e6abd8b0-219c-4aeb-9127-610c1d0d70d9/ClientApplication1" />
+      <relativeChildShapes>
+        <proxyPortShape Id="da6c80f6-8468-4915-a128-da86195e7fd9" absoluteBounds="6.625, 2.96875, 0.25, 0.25">
+          <proxyMoniker Id="bef7ef79-4cf7-47a7-a510-410ebc1a5168" />
+        </proxyPortShape>
+        <proxyPortShape Id="3ab7ad5c-eb71-4bd4-8eef-fb9c2586686e" absoluteBounds="6.625, 2.71875, 0.25, 0.25">
+          <proxyMoniker Id="f7b112dd-37a4-476d-bb8e-e7d45f975c1f" />
+        </proxyPortShape>
+      </relativeChildShapes>
+    </cilentApplicationShape>
+    <proxyEndpointConnector edgePoints="[(6.625 : 3.09375); (6.25 : 3.09375); (6.25 : 3.875); (3.375 : 3.875)]" manuallyRouted="false" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="8fff9ca0-4f72-4067-ae83-45b028e27931">
+      <nodes>
+        <proxyPortShapeMoniker Id="da6c80f6-8468-4915-a128-da86195e7fd9" />
+        <endpointPortShapeMoniker Id="ad5716a2-39c3-4e96-bb30-66d29b861317" />
+      </nodes>
+    </proxyEndpointConnector>
+    <proxyEndpointConnector edgePoints="[(6.625 : 2.84375); (6.5 : 2.84375); (6.5 : 2.96875); (3.625 : 2.96875)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="8fff9ca0-4f72-4067-ae83-45b028e27931">
+      <nodes>
+        <proxyPortShapeMoniker Id="3ab7ad5c-eb71-4bd4-8eef-fb9c2586686e" />
+        <endpointPortShapeMoniker Id="6304cc73-f503-464e-baf8-4c28bece7b5c" />
+      </nodes>
+    </proxyEndpointConnector>
+    <cilentApplicationShape Id="dc90f6a2-570d-41e5-8e1b-a0413deda472" absoluteBounds="6.75, 3.75, 1.5, 1">
+      <clientApplicationMoniker name="/e6abd8b0-219c-4aeb-9127-610c1d0d70d9/ClientApplication2" />
+      <relativeChildShapes>
+        <proxyPortShape Id="3ab41dbd-7aba-4fc0-8210-9ba26cada10a" absoluteBounds="6.625, 3.90625, 0.25, 0.25">
+          <proxyMoniker Id="03956650-0f9c-40b0-a0b7-abc80ea1b293" />
+        </proxyPortShape>
+        <proxyPortShape Id="ca3f7f03-a28b-4334-8eab-db4ed5953e01" absoluteBounds="6.625, 4.3125, 0.25, 0.25">
+          <proxyMoniker Id="ef031610-25e2-40db-9d94-b8fb6e0d2165" />
+        </proxyPortShape>
+      </relativeChildShapes>
+    </cilentApplicationShape>
+    <proxyEndpointConnector edgePoints="[(6.625 : 4.03125); (6.5 : 4.03125); (6.5 : 3.875); (3.375 : 3.875)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="8fff9ca0-4f72-4067-ae83-45b028e27931">
+      <nodes>
+        <proxyPortShapeMoniker Id="3ab41dbd-7aba-4fc0-8210-9ba26cada10a" />
+        <endpointPortShapeMoniker Id="ad5716a2-39c3-4e96-bb30-66d29b861317" />
+      </nodes>
+    </proxyEndpointConnector>
+    <proxyEndpointConnector edgePoints="[(6.625 : 4.4375); (6.25 : 4.4375); (6.25 : 4.21875); (3.375 : 4.21875)]" manuallyRouted="false" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="8fff9ca0-4f72-4067-ae83-45b028e27931">
+      <nodes>
+        <proxyPortShapeMoniker Id="ca3f7f03-a28b-4334-8eab-db4ed5953e01" />
+        <endpointPortShapeMoniker Id="1ab4512e-87d1-4f28-b3a7-8f7e97bb1e20" />
+      </nodes>
+    </proxyEndpointConnector>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

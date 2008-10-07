@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A3D9A17-E50B-4226-B09C-E30B74996898}</ProjectGuid>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputName>ServiceFactoryV3</OutputName>
+    <LocalizedStringFile>Strings.wxl</LocalizedStringFile>
+    <SuppressAssemblies>True</SuppressAssemblies>
+    <VerboseOutput>True</VerboseOutput>
+    <SetupIniFile>settings.ini</SetupIniFile>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <AssemblyName>ServiceFactoryGuidancePackageSetup</AssemblyName>
+    <RootNamespace>ServiceFactoryGuidancePackageSetup</RootNamespace><FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>Configuration=Debug</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Configuration=Release</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\DSLTools\v2.1\wix.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild" >
+  </Target>
+  <Target Name="AfterBuild" >
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="Common.wxs" />
+    <None Include="CommonRegistry.tt">
+    </None>
+    <None Include="DslIntegrationServiceFragment.wxs" />
+    <None Include="DslIntegrationServiceRegistryFragment.wxi" />
+    <None Include="FxCopRulesFragment.wxs" />
+    <None Include="HostDesignerFiles.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HostDesignerFiles.wxs</LastGenOutput>
+    </None>
+    <Compile Include="HostDesignerFiles.wxs">
+      <DependentUpon>HostDesignerFiles.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="HostDesignerRegistry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HostDesignerRegistry.wxs</LastGenOutput>
+    </None>
+    <Compile Include="HostDesignerRegistry.wxs">
+      <DependentUpon>HostDesignerRegistry.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataContractRegistry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataContractRegistry.wxs</LastGenOutput>
+    </None>
+    <Compile Include="DataContractRegistry.wxs">
+      <DependentUpon>DataContractRegistry.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataContractFiles.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataContractFiles.wxs</LastGenOutput>
+    </None>
+    <Compile Include="DataContractFiles.wxs">
+      <DependentUpon>DataContractFiles.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataContractDsl.dslsetup" />
+    <None Include="CommonFile.tt">
+    </None>
+    <None Include="HostDesignerDsl.dslsetup" />
+    <None Include="ProductDefinitionFragment.wxs" />
+    <None Include="ProductDefinitionRegistryFragment.wxi" />
+    <None Include="Service Factory Guidance Package Files.wxs" />
+    <None Include="ServiceContractFiles.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ServiceContractFiles.wxs</LastGenOutput>
+    </None>
+    <None Include="ServiceContractDsl.dslsetup" />
+    <None Include="Resources\BannerBitmap.bmp" />
+    <None Include="Resources\Product.ico" />
+    <None Include="Resources\NewFldrBtn.bmp" />
+    <None Include="Resources\ReadmeShortcut.ico" />
+    <None Include="Resources\UpFldrBtn.bmp" />
+    <None Include="ServiceContractFiles.wxs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceContractFiles.tt</DependentUpon>
+    </None>
+    <None Include="ServiceContractRegistry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ServiceContractRegistry.wxs</LastGenOutput>
+    </None>
+    <SetupFiles Include="settings.ini" />
+    <None Include="ServiceContractRegistry.wxs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceContractRegistry.tt</DependentUpon>
+    </None>
+    <None Include="Strings.wxl" />
+    <None Include="UI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UI.wxs</LastGenOutput>
+    </None>
+    <None Include="Main.wxs" />
+    <Compile Include="UI.wxs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

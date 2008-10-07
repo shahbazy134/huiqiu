@@ -1,0 +1,32 @@
+﻿<VSTemplate
+	Version="2.0"
+	Type="ProjectGroup"
+	xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Model Project</Name>
+    <Description>Service Factory Model Project</Description>
+    <ProjectType>ServicesSoftwareFactoryProduct</ProjectType>
+    <SortOrder>90</SortOrder>
+    <Icon>ServicesGuidancePackage.ico</Icon>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>Services</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="Schemas"></SolutionFolder>
+			<ProjectTemplateLink ProjectName="$safeprojectname$">Projects\Model\Model.vstemplate</ProjectTemplateLink>    			
+		</ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=1.0.60429.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0"
+              Recipe="CreateSolution">
+      <References/>			
+    </Template>
+  </WizardData>
+</VSTemplate>

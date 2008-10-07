@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This file is a manifest that defines how a domain-specific language is installed. The text template files 
+(.tt) in this project use the information in this file to generate WiX files (.wxs). When the project is 
+built, these WiX files are compiled into an MSI package. To deploy this package, copy all of the files 
+from the project output directory to the target computer, and run setup.exe.
+
+Some values in this file are copied from the domain-specific language definition (.dsl).
+If the .dsl file could not be found, you will need to edit this manifest to correct values for some attributes.
+For more specific information, see the Error List window.
+-->
+<installerDefinition xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/InstallerDefinitionModel" 
+  productUrl="http://www.codeplex.com/servicefactory"
+  defaultDirectoryName="Microsoft Service Factory V3\Guidance Package\Host Designer DSL"
+  productVersion="3.1.0"
+  requiresCSharp="true"
+  requiresVisualBasic="true"
+  productCode="5ddf5b1b-d506-42c4-b507-266cdff681d1"
+  upgradeCode="7dff2c11-e684-4f9f-9a2b-f28684a0df5f"
+  localeId="1033">
+	<dslPackage name="HostDesignerDslPackage" project="DSLs/Host Designer/HostDesignerDslPackage" assemblyPath="Microsoft.Practices.ServiceFactory.HostDesigner.DslPackage.dll" registryRoot="Software\Microsoft\VisualStudio\9.0">
+		<fileExtensions>
+			<fileExtension name="host" extension="host" descriptionKey="FileDescription" hasIcon="true" iconId="0"/>
+		</fileExtensions>
+		<supportingAssemblies>
+			<supportingAssembly name="HostDesignerDsl" project="DSLs/Host Designer/HostDesignerDsl" assemblyPath="Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll"/>
+		</supportingAssemblies>
+	</dslPackage>
+	<supportingFiles>
+	</supportingFiles>
+	<vsItemTemplates>
+	</vsItemTemplates>
+	<dslSchemas>
+		<dslSchema project="DSLs/Host Designer/HostDesignerDsl" filePath="GeneratedCode\HostDesignerSchema.xsd"/>
+	</dslSchemas>
+</installerDefinition>

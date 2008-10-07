@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" isCompleteView="false" name="Model2">
+  <messageContractModelMoniker Id="4743dca6-953f-4734-8b35-94b756889954" />
+  <nestedChildShapes>
+    <singlePartMessageCompartmentShape Id="cb9902c0-061b-4f05-a483-c0c0bd57728d" absoluteBounds="0.5, 2, 1.5, 1.3593896484374999">
+      <singlePartMessageElementMoniker name="/4743dca6-953f-4734-8b35-94b756889954/Message1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="236cfe91-1bf7-4306-8e15-d5d84c8df4d4" absoluteBounds="0.515, 3.01, 1.4700000000000002, 0.2493896484375" name="DataElementsCompartment" title="Data Elements" titleFillColor="LightGray" compartmentFillColor="White" />
+      </nestedChildShapes>
+    </singlePartMessageCompartmentShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

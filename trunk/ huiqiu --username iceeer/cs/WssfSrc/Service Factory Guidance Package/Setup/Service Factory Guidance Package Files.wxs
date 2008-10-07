@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment>
+		<DirectoryRef Id="GuidancePackageDir" FileSource="..\..\..\Guidance Package\bin\Release\">
+
+			<!-- Service Factory Guidance Package Assembly and Manifest -->
+			<Component Id="GuidancePackageRootComponent" Guid="3ba8b8f2-72b9-437b-bec2-c3335c834af0">
+				<File Id="ID_40166131_5d1f_4b99_80aa_59ccca1ef13c" DiskId="1" Name="F0000.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+				<File Id="ID_9264b40a_7e9e_4560_a8b3_2d0325a90acc" DiskId="1" Name="F0002.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+        <File Id="ID_ef985059_c088_4d5d_ba51_dc402ed29eb9" DiskId="1" Name="F0005.sfn" LongName="Microsoft.Practices.FxCop.Rules.WcfSemantic.dll" />
+				<File Id="ID_5CC52534_D88A_4046_BCCE_02131C6936A4" DiskId="1" Name="F0003.sfn" LongName="Microsoft.Practices.Modeling.CodeGeneration.Strategies.dll" />
+				<File Id="ID_794BA57A_00AD_4c6c_8B9F_041F9486E7E5" DiskId="1" Name="F0004.sfn" LongName="Microsoft.Practices.Modeling.Dsl.Integration.dll" />
+				<File Id="ID_d11e3982_707f_4831_9d47_317d856362f9" DiskId="1" Name="F0011.sfn" LongName="Microsoft.Practices.ObjectBuilder.dll" />
+				<File Id="ID_19264fa6_f7dd_406c_b911_f45126aa6e1f" DiskId="1" Name="F0012.sfn" LongName="Microsoft.Practices.RecipeFramework.Extensions.dll" />
+				<File Id="ID_fbf4ed98_f166_4e41_9894_6da68728a618" DiskId="1" Name="F0013.sfn" LongName="Microsoft.Practices.RecipeFramework.Library.dll" />
+				<File Id="ID_03CED0D1_FE53_400a_ACCC_024030F261A5" DiskId="1" Name="F0014.sfn" LongName="Microsoft.Practices.ServiceFactory.BuildTasks.dll" Source="..\..\..\..\Product Definition\BuildTasks\bin\Release\" />
+				<File Id="ID_20a511b8_3ecf_4183_b370_5a31aa767583" DiskId="1" Name="F0015.sfn" LongName="Microsoft.Practices.ServiceFactory.Description.dll" />
+				<File Id="ID_35a99ded_2295_4a89_bc74_c7b8705b0727" DiskId="1" Name="F0016.sfn" LongName="Microsoft.Practices.ServiceFactory.GuidancePackage.dll" />
+				<File Id="ID_e8ff9394_9d6d_4741_9da7_c869ee7aecad" DiskId="1" Name="F0017.sfn" LongName="Microsoft.Practices.ServiceFactory.GuidancePackage.dll.config" />
+				<File Id="ID_4619a701_9681_4bb0_9982_5ad5dac52dd7" DiskId="1" Name="F0019.sfn" LongName="Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions.dll" />
+				<File Id="ID_6c59a91d_b1de_4719_ae1d_5daf37c55cca" DiskId="1" Name="F0020.sfn" LongName="Microsoft.Practices.ServiceFactory.Validation.dll" />
+				<File Id="ID_EFDA8A0C_9CFE_4dbd_897C_5B502AD7DDD8" DiskId="1" Name="F0023.sfn" LongName="Microsoft.Practices.VisualStudio.Library.dll" Source="..\..\..\..\Lib\" />
+				<File Id="ID_33F7DBFA_E379_4bd0_A4D8_DCCE7E4AE0E8" DiskId="1" Name="F0025.sfn" LongName="ruleset.config" />
+				<File Id="ID_99801068_9e29_428d_893d_500ac92a25e9" DiskId="1" Name="F0026.sfn" LongName="Service Factory Guidance Package.xml" Source="..\..\..\Guidance Package\bin\Release\Service Factory Guidance Package (binary release).xml"/>
+			</Component>
+			
+			<!-- Lib Folder: Validation, Strategies and Extenders -->
+			<Directory Id="ID_175111ae_e690_4131_9f42_f9d6accdbbad" Name="Lib" FileSource="..\..\..\Guidance Package\bin\Release\Lib">
+				<Component Id="GuidancePackageLibComponent" Guid="0f42b559-474e-4497-b299-606161e6aa66">
+					<File Id="ID_fc416eee_106b_465a_85d7_6dcfed490401" DiskId="1" Name="F0000.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+					<File Id="ID_120fdbf6_d00a_4751_8517_c59ba5d144f3" DiskId="1" Name="F0001.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+					<File Id="ID_714a2b89_f2ac_4e63_b142_12d1ce1d6bc3" DiskId="1" Name="F0002.sfn" LongName="Microsoft.Practices.Modeling.CodeGeneration.Strategies.dll" />
+					<File Id="ID_98239b21_cdc3_4da2_8ed1_ece5dd0b8b95" DiskId="1" Name="F0003.sfn" LongName="Microsoft.Practices.Modeling.Dsl.Integration.dll" />					
+					<File Id="ID_daac36dc_01a2_4dc5_a40c_936beee3102e" DiskId="1" Name="F0004.sfn" LongName="Microsoft.Practices.ObjectBuilder.dll" />
+					<File Id="ID_6977447e_dc9e_4a9f_b54f_8d9a487a96ef" DiskId="1" Name="F0005.sfn" LongName="Microsoft.Practices.RecipeFramework.Extensions.dll" />
+					<File Id="ID_943ddb37_f5c2_460f_9464_27923b3aadae" DiskId="1" Name="F0006.sfn" LongName="Microsoft.Practices.ServiceFactory.BuildTasks.dll" />
+					<File Id="ID_d2f9fe7b_420a_4909_b025_e234f94029cd" DiskId="1" Name="F0007.sfn" LongName="Microsoft.Practices.ServiceFactory.Description.dll" />
+					<File Id="ID_bdc1adb8_db99_4633_8244_faebb1b0ce93" DiskId="1" Name="F0008.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.DataContract.Asmx.dll" />
+					<File Id="ID_87b96f1e_4221_41e7_a595_5ecb0bda7050" DiskId="1" Name="F0009.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.DataContract.Wcf.dll" />
+					<File Id="ID_e94c2552_9e8c_40e6_ba32_df33326691cd" DiskId="1" Name="F0010.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.HostDesigner.Asmx.dll" />
+					<File Id="ID_b2b88092_7fa3_449d_bc28_78aa31aab09f" DiskId="1" Name="F0011.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.HostDesigner.Wcf.dll" />
+					<File Id="ID_042eccc4_6b09_46dc_a763_e8d1b703f1dd" DiskId="1" Name="F0012.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.ServiceContract.Asmx.dll" />
+					<File Id="ID_d2a387c9_3499_467f_8ae7_bc54fedcd936" DiskId="1" Name="F0013.sfn" LongName="Microsoft.Practices.ServiceFactory.Extenders.ServiceContract.Wcf.dll" />
+					<File Id="ID_50a1a6bd_cf46_46f3_b0d6_407896a1efbe" DiskId="1" Name="F0014.sfn" LongName="Microsoft.Practices.ServiceFactory.RecipeFramework.Extensions.dll" />
+					<File Id="ID_893dbb77_593a_4c18_ae42_5e86867b777b" DiskId="1" Name="F0015.sfn" LongName="Microsoft.Practices.ServiceFactory.Validation.dll" />
+				</Component>
+			</Directory>
+			
+			<!-- Project Mapping Schemas -->
+			<Directory Id="ID_71745492_d205_47e8_b7da_65e256ba78d0" Name="F0002.sfn" LongName="ProjectMapping" FileSource="..\..\..\Guidance Package\bin\Release\ProjectMapping">
+				<Component Id="ID_2592e25c_f3af_4de8_a8ca_860d369b68c7" Guid="d0d4fdba-b7d1-43e2-99a2-be3f5706757a">
+					<File Id="ID_e38768b6_0f31_43cb_9e69_3ec82ee9f1de" DiskId="1" Name="F0000.sfn" LongName="ProjectMapping.xsd" />
+					<File Id="ID_0523c06f_202d_4c0f_92fa_248f6f176d74" DiskId="1" Name="F0001.sfn" LongName="ProjectMapping.xsx" />
+				</Component>
+			</Directory>
+			
+			<!-- Recipes -->
+			<Directory Id="ID_2bb99937_61f3_4438_b7ee_fb649e499a78" Name="Recipes" FileSource="..\..\..\Guidance Package\bin\Release\Recipes">
+				<Component Id="ID_d4c976ac_c1bf_483b_917c_cb97a7498ec3" Guid="003540b7-7180-4734-80e5-7c9a9d528c1a">
+					<File Id="ID_5d2dd3e4_7531_4eb3_90fb_a88722262203" DiskId="1" Name="Binding.xml" />
+				</Component>
+				<Directory Id="ID_b7e77df8_c3cd_4c07_9401_0643a6968681" Name="F0000.sfn" LongName="CodeAnalysis" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CodeAnalysis">
+					<Component Id="ID_3f7e0e40_578f_4de3_8a29_a4e27229560d" Guid="ccc70f17-d375-430d-a819-901d85388034">
+						<File Id="ID_0ec2cb40_a9c6_4cb2_b7c8_cc3d963ffc9a" DiskId="1" Name="F0000.sfn" LongName="RunCodeAnalysisRules.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_1e893bd9_36eb_49af_a1e8_b29b3df79bef" Name="Common" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\Common">
+					<Component Id="ID_a71b2cf8_5867_46e6_a54e_3879d1f2c7f9" Guid="155a3082-431a-470c-aa58-7bfab4002257">
+						<File Id="ID_5ebb6cea_8cb6_4c42_81ca_1e35f887dac0" DiskId="1" Name="F0000.sfn" LongName="AllCodeGeneration.xml" />
+						<File Id="ID_f131eb3b_2729_469a_8bc1_1c51e8ce49f1" DiskId="1" Name="F0001.sfn" LongName="CodeGeneration.xml" />
+						<File Id="ID_eb1731db_5775_486f_9511_a88008296c39" DiskId="1" Name="F0002.sfn" LongName="CommonArguments.xml" />
+						<File Id="ID_00a808cf_fc16_443f_acc3_b339dc76e4f1" DiskId="1" Name="F0003.sfn" LongName="CommonTypeAliases.xml" />
+						<File Id="ID_dfe1aa57_9da8_4ad4_82f2_653e04f2c319" DiskId="1" Name="F0004.sfn" LongName="CreateService.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_63980767_fc8b_4ab7_b62c_439f584d9cfd" Name="F1002.sfn" LongName="CreateASMXClientProxy" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateASMXClientProxy">
+					<Component Id="ID_fd5e1e3c_c2aa_4542_946f_0fd170e745d0" Guid="a5b8ee4b-7f93-4076-8738-8acc97a89cc3">
+						<File Id="ID_34384dba_29d4_46ee_a181_10b68f4b5bae" DiskId="1" Name="F0000.sfn" LongName="CreateASMXClientProxy.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_f78b7fb8_c092_41ef_b658_6e3baa977cd8" Name="F0002.sfn" LongName="CreateASMXService" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateASMXService">
+					<Component Id="ID_33e8b88a_b9c3_4a1d_9af3_7974aaff8408" Guid="eb50bc3e-f253-4552-a074-50eb7f3a969a">
+						<File Id="ID_e7651254_b3d6_487c_89ac_80b03ed6a28e" DiskId="1" Name="F0000.sfn" LongName="CreateASMXService.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_f003ce33_03e2_4244_b15f_1ca90dfbfb67" Name="F0003.sfn" LongName="CreateModel" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateModel">
+					<Component Id="ID_7defe551_fd71_4e64_8483_be00e8b919f1" Guid="2e920c06-cb28-44d9-90df-0d896815374d">
+						<File Id="ID_e804938c_7d49_48c1_b2b4_0bc12e8408a4" DiskId="1" Name="F0000.sfn" LongName="CreateModel.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_9b0e94c1_8bbb_407a_84ab_9cf2f8b585d7" Name="F0004.sfn" LongName="CreateSolution" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateSolution">
+					<Component Id="ID_d1b96241_0ebd_4785_b672_bc735ded78f1" Guid="675e53b5-18a3-4b15-bd5f-593d174ce8f7">
+						<File Id="ID_7acf3b4f_f9a6_473e_8bbd_82dd5d70d657" DiskId="1" Name="F0000.sfn" LongName="CreateSolution.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_9896ec27_e911_405c_82ad_0258e31e5098" Name="F0005.sfn" LongName="CreateTranslator" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateTranslator">
+					<Component Id="ID_600540cc_16e4_4838_9da2_796bbd12065c" Guid="89d703ea-d3fa-4c63-b895-4fa008e8c8e7">
+						<File Id="ID_89bdfd9e_e4ed_4220_b1df_5f08d5d36c62" DiskId="1" Name="F0000.sfn" LongName="CreateTranslator.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_5e3cc2ba_4c18_455e_8a18_29b6d1a82a25" Name="F0006.sfn" LongName="CreateWCFClientProxy" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateWCFClientProxy">
+					<Component Id="ID_5b1dd5ae_9813_44ad_9f4e_c94d71392338" Guid="7641fbfa-87f6-4e4b-b1c0-f1fd9eedb5d5">
+						<File Id="ID_550b1ae1_f587_49ba_95da_d01dabf32608" DiskId="1" Name="F0000.sfn" LongName="CreateWCFClientProxy.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_9118a38d_a714_42df_b252_ccd5e7178723" Name="F0007.sfn" LongName="CreateWCFService" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\CreateWCFService">
+					<Component Id="ID_5a8e3db1_457d_48cb_8d77_08ce5a9265f8" Guid="27a21c98-5ce9-4028-b308-ad8e174b000c">
+						<File Id="ID_6ba58c46_62cf_48a1_96e8_4b8ad9ae8be0" DiskId="1" Name="F0000.sfn" LongName="CreateWCFService.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_a4f28411_48ac_4823_8e69_23975e7e5d24" Name="F0008.sfn" LongName="GenerateCode" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\GenerateCode">
+					<Component Id="ID_05eff14a_58ed_40e9_aef5_3d66b97698dd" Guid="6897161b-67b8-40b7-8798-c0d37c8dbe3f">
+						<File Id="ID_6c9072d4_702d_4ed9_842d_f7ccc684c3ef" DiskId="1" Name="F0000.sfn" LongName="GenerateCode.xml" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_E2DD40D2_373E_4582_BCCB_90EA80D35E5B" Name="F0009.sfn" LongName="GenerateServiceCode" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\GenerateServiceCode">
+					<Component Id="ID_72195572_CFDD_4820_AE00_F522F4460FAD" Guid="5B79DC78-72D5-42f9-AD18-64B8CC5615B9">
+						<File Id="ID_B6DECC7D_173C_43fc_B685_167BA8EC8A42" DiskId="1" Name="F0000.sfn" LongName="GenerateServiceCode.xml" />
+					</Component>
+				</Directory>
+        <Directory Id="DirId_d7a703a3bcb3430694be8effa7567aee" Name="F9001.sfn" LongName="OrderAllDataMembers"  FileSource="..\..\..\Guidance Package\bin\Release\Recipes\OrderAllDataMembers">
+          <Component Id="CompId_d7d5bd55ec1c431aa096503bc54c6d4a" Guid="79f7f315-c386-4473-a575-94c1ff52c081" DiskId="1">
+            <File Id="FileId_d46c7aed7c304909bfe8ab676f8eb709" Name="F9002.sfn" LongName="OrderAllDataMembers.xml" />
+          </Component>
+        </Directory>
+        <Directory Id="ID_5a49de4a_fd88_4639_9084_0be0f16a4650" Name="F0011.sfn" LongName="PopulateProjectMappingTable" FileSource="..\..\..\Guidance Package\bin\Release\Recipes\PopulateProjectMappingTable">
+					<Component Id="ID_9911e7f8_2e29_4a0b_84e2_d6efe7179a3e" Guid="6889a7eb-e57d-46d6-ae58-3417362b2fcd">
+						<File Id="ID_5e4302ff_c3ee_49d7_8a5a_cf92aac0b7c0" DiskId="1" Name="F0000.sfn" LongName="PopulateProjectMappingTable.xml" />
+					</Component>
+				</Directory>
+			</Directory>
+			
+			<!-- Visual Studio Templates -->
+			<Directory Id="ID_14ce9919_2f9a_4f53_898a_b831bab0e1d6" Name="F0004.sfn" LongName="Templates" FileSource="..\..\..\Guidance Package\bin\Release\Templates">
+				<Directory Id="ID_a11ea2d6_36d1_4a7e_a352_fe7566582f8f" Name="Items" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Items">
+					<Component Id="ID_883200c3_f740_4c92_8c75_70589f0e803d" Guid="a1c8d641-be94-4077-9d7a-3ac9675921da">
+						<File Id="ID_2fcf6379_9a9a_43e2_8300_f6e102db7178" DiskId="1" Name="F0000.sfn" LongName="DataContractModel.datacontract" />
+            <File Id="ID_f8bc38ce_675c_40bd_aa8e_5e91b00339f6" DiskId="1" Name="F9000.sfn" LongName="DataContractModel.datacontract.diagram" />
+						<File Id="ID_875bb7fd_fbc7_42c4_ae42_8a0d6f8f55d3" DiskId="1" Name="F0001.sfn" LongName="DataContractModel.ico" />
+						<File Id="ID_ccd8b1d4_40a7_4034_9d88_a34ce628cb9a" DiskId="1" Name="F0002.sfn" LongName="DataContractModel.vstemplate" />
+						<File Id="ID_9d20599e_4f25_46ec_9b42_3cd3858aa3ad" DiskId="1" Name="F0003.sfn" LongName="HostDesignerModel.host" />
+						<File Id="ID_f65ff9fd_e947_45bc_92d8_bfc8d934c7ac" DiskId="1" Name="F0004.sfn" LongName="HostDesignerModel.ico" />
+						<File Id="ID_614ef69b_1656_424d_9692_13eae1a6cb39" DiskId="1" Name="F0005.sfn" LongName="HostDesignerModel.vstemplate" />
+						<File Id="ID_1c646852_be72_481d_a061_ac47da186359" DiskId="1" Name="F0006.sfn" LongName="ServiceModel.ico" />
+						<File Id="ID_5716f1db_eb19_4180_806a_0d7a9f2fb514" DiskId="1" Name="F0007.sfn" LongName="ServiceModel.servicecontract" />
+            <File Id="ID_3d1b6b44_0629_40ce_9bb4_5165e9e86e18" DiskId="1" Name="F9007.sfn" LongName="ServiceModel.servicecontract.diagram" />
+						<File Id="ID_54fb1457_e9b7_4aa4_a61f_3702f6fd96f7" DiskId="1" Name="F0008.sfn" LongName="ServiceModel.vstemplate" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_58e0ba48_9570_405b_881d_0d1559b7c04d" Name="F0001.sfn" LongName="Overview" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Overview">
+					<Component Id="ID_c1535f41_6258_43d4_9c0f_c35395a6e073" Guid="bb390c83-843d-4014-b74d-d8a4157783cf">
+						<File Id="ID_3332929e_79c5_4f89_86cf_5848505ea23b" DiskId="1" Name="header.gif" />
+						<File Id="ID_d959f82b_b8e4_4c35_b586_f387c0d4d8e5" DiskId="1" Name="Intro.htm" />
+					</Component>
+				</Directory>
+				<Directory Id="ID_e1c73616_dade_43a0_ae7f_52a3c8026a41" Name="F0002.sfn" LongName="Projects" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects">
+					<Component Id="ID_c22ff52f_e750_4123_92b6_c3de769465d9" Guid="96a7692d-f9ca-4678-a8b6-524911d119a6">
+						<File Id="ID_c774a0ae_f31c_4bcc_9101_739a54356f13" DiskId="1" Name="ASMX.ico" />
+						<File Id="ID_fd27e2c9_e4fd_4710_80a0_2e98f64e37fd" DiskId="1" Name="F0001.sfn" LongName="ASMX.vstemplate" />
+						<File Id="ID_4f411798_0e82_4b32_a5fd_700bfb59b6d7" DiskId="1" Name="WCF.ico" />
+						<File Id="ID_ee105dc3_7893_4aad_8149_1df7cac1fc76" DiskId="1" Name="F0003.sfn" LongName="WCF.vstemplate" />
+					</Component>
+					<Directory Id="ID_cdc568da_9e85_4c8a_81c6_96ad8ce30559" Name="F0000.sfn" LongName="ASMXBusinessEntity" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXBusinessEntity">
+						<Component Id="ID_f2c12b93_d5f7_4bf1_be31_84be9dbd9a81" Guid="e7e7a931-c430-4455-a228-5e253fd81120">
+							<File Id="ID_4ee75915_9e20_4110_b116_3d1f52247e37" DiskId="1" Name="F0000.sfn" LongName="BusinessEntity.csproj" />
+							<File Id="ID_925c3829_b0d8_49f9_8815_2b375b72b25c" DiskId="1" Name="F0001.sfn" LongName="BusinessEntity.vstemplate" />
+							<File Id="ID_b758b01d_6cb3_4c77_bf77_10790d1b1679" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_93594269_2f3a_44af_af2b_c1fc75b60974" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXBusinessEntity\Properties">
+							<Component Id="ID_6b6a5aca_30b0_41ad_a185_dfcc0d5d5cea" Guid="3e93266d-52b2-4d4b-80b8-06ffa9a8de1e">
+								<File Id="ID_e675968e_1fdc_4bcb_b4f7_47dc2720210f" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_3295c541_73c1_4e2b_a875_fffff27c3bfc" Name="F0001.sfn" LongName="ASMXBusinessLogic" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXBusinessLogic">
+						<Component Id="ID_d25b3787_0488_4823_9f53_03a308423176" Guid="ae9ab1d5-de0c-4f41-9736-ba5924be5a0a">
+							<File Id="ID_b797f9f5_c5aa_4d08_99db_318828b88394" DiskId="1" Name="F0000.sfn" LongName="BusinessLogic.csproj" />
+							<File Id="ID_db5289f8_59ee_46f2_b182_8d2233525e2f" DiskId="1" Name="F0001.sfn" LongName="BusinessLogic.vstemplate" />
+							<File Id="ID_d6e28cf1_19d4_4600_84e3_82f8c683da37" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_f0456078_0582_4f93_a408_b7af5e08af95" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXBusinessLogic\Properties">
+							<Component Id="ID_86026e06_2c03_46d2_a0b9_93f87cf746ba" Guid="469bf564-e42a-46f0-bae6-9c9b6125c123">
+								<File Id="ID_8c09ca83_d338_414f_9ecc_2aa85aabff77" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_37c0193b_207e_4f44_8343_6eb6d20f0422" Name="F0002.sfn" LongName="ASMXClient" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXClient">
+						<Component Id="ID_29f5ff0a_1be3_434f_b6e1_96b2070261bc" Guid="86b5ef26-0e7c-4633-8944-150cb82d0f4f">
+							<File Id="ID_9ea31a0e_1782_4755_b318_c57276d1df88" DiskId="1" Name="F0000.sfn" LongName="app.config" />
+							<File Id="ID_efd6b437_fe2f_4650_b7ef_cff93e03b184" DiskId="1" Name="F0001.sfn" LongName="Client.csproj" />
+							<File Id="ID_01c1b5f0_35a1_4594_a66a_321de754103c" DiskId="1" Name="F0002.sfn" LongName="Client.vstemplate" />
+							<File Id="ID_b1c91b06_338a_4bbd_ba3c_590d98f39417" DiskId="1" Name="F0003.sfn" LongName="MainForm.cs" />
+							<File Id="ID_f9bf00ae_89da_4134_aaa9_e060cf4fe630" DiskId="1" Name="F0004.sfn" LongName="MainForm.designer.cs" />
+							<File Id="ID_6e270079_f8b4_4181_b5b6_0c4d50bd1156" DiskId="1" Name="F0005.sfn" LongName="MainForm.resx" />
+							<File Id="ID_f14a2a50_e665_456b_aed6_47467b5ed6fb" DiskId="1" Name="Program.cs" />
+							<File Id="ID_780953d6_cd86_471c_bf53_bc9cd721c7b3" DiskId="1" Name="F0007.sfn" LongName="ResultsGrid.cs" />
+							<File Id="ID_6d351b05_fd73_4659_8a17_7ec99073c432" DiskId="1" Name="F0008.sfn" LongName="ResultsGrid.designer.cs" />
+							<File Id="ID_0ec4db39_9a7f_4c7f_baaf_a2b5538c5de8" DiskId="1" Name="F0009.sfn" LongName="ResultsGrid.resx" />
+							<File Id="ID_866344f1_a22f_4529_a10a_59a88fe5863f" DiskId="1" Name="F0010.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_a5f04341_435c_4db5_9280_4bdcc0b22115" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXClient\Properties">
+							<Component Id="ID_e84a7a18_1d71_405e_abee_9054993a18aa" Guid="a67d9b1f-99e8-4776-998c-269b0fa96dde">
+								<File Id="ID_971e4a8d_61b6_4090_9f57_76e6fa74b45c" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+								<File Id="ID_39bb68c1_951d_47b4_8ee8_65389fb763e9" DiskId="1" Name="F0001.sfn" LongName="Resources.Designer.cs" />
+								<File Id="ID_ff2290e8_e719_4789_b076_b9db4d129086" DiskId="1" Name="F0002.sfn" LongName="Resources.resx" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_2ec71b34_9b5c_438f_85ea_7be3bff7e189" Name="F0003.sfn" LongName="ASMXDataAccess" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXDataAccess">
+						<Component Id="ID_232c819c_0050_47a1_ba0d_b884b07b784d" Guid="e0250f59-bdf5-4dc5-81e0-19d0e0e91ca2">
+							<File Id="ID_f56b6ec4_87cf_4824_83d8_6cbca06a6731" DiskId="1" Name="F0000.sfn" LongName="DataAccess.csproj" />
+							<File Id="ID_638af98b_0041_4cfe_93f2_86e1e2c0f791" DiskId="1" Name="F0001.sfn" LongName="DataAccess.vstemplate" />
+							<File Id="ID_7183ccc7_6749_4ac2_ade3_44a9b0843e3b" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_af952fcd_1fa2_40fb_9225_1738e4b51362" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXDataAccess\Properties">
+							<Component Id="ID_1addf0b0_9c85_4144_979b_3836246dfdda" Guid="f69b52e1-2108-4a3c-a32f-bae990a214a2">
+								<File Id="ID_cbe152c9_2b7a_43b9_b23f_344b5ebcfb5d" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_3bb57d1d_f43d_48a7_bbed_7439f5769793" Name="F0004.sfn" LongName="ASMXDataType" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXDataType">
+						<Component Id="ID_4393e1cb_9b29_4fd1_b5e1_41f7a361b687" Guid="5c26c796-d645-4aba-ab02-562a2bfe1531">
+							<File Id="ID_79207f79_2a92_4e6e_bc60_d823401054ed" DiskId="1" Name="F0000.sfn" LongName="DataType.csproj" />
+							<File Id="ID_2fed34bf_9507_43bb_b45a_999edd58f706" DiskId="1" Name="F0001.sfn" LongName="DataType.vstemplate" />
+							<File Id="ID_7761d4cd_9f1c_482e_814b_82111b86ddd2" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_3916befe_0161_4b7f_93f1_0c12c65b6ed7" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXDataType\Properties">
+							<Component Id="ID_7dd1a1bd_ca33_4363_9ed5_1ccb6f6a998c" Guid="2ea2c0a2-831e-4e8a-af33-f6d188a1748d">
+								<File Id="ID_9672407a_a818_4ee9_a3d6_541582016159" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_f5081e65_fc18_4685_b2b5_b1dcf5decf84" Name="F0005.sfn" LongName="ASMXHost" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXHost">
+						<Component Id="ID_81f3e75c_335c_4c73_b313_fdc046943675" Guid="4a0bf34a-ad7f-4a81-ba41-3856331bcecc">
+							<File Id="ID_101813b4_5e49_46f7_99df_511a013213d0" DiskId="1" Name="F0000.sfn" LongName="Host.vstemplate" />
+							<File Id="ID_99cea2a5_ab20_4e44_ae4c_3e83b9c03442" DiskId="1" Name="F0001.sfn" LongName="Host.webproj" />
+							<File Id="ID_26f3ffad_b9e7_4ce3_a9fa_09ca3ac94f76" DiskId="1" Name="F0002.sfn" LongName="vwd.webinfo" />
+							<File Id="ID_d9e91cc3_7c64_4c1e_8898_4c1083bfee52" DiskId="1" Name="F0003.sfn" LongName="web.config" />
+							<File Id="ID_699618be_48ab_4182_90dc_812dd225d5bf" DiskId="1" Name="F0004.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+					</Directory>
+					<Directory Id="ID_90993ebc_2759_44cd_9f08_ba2c91141906" Name="F0006.sfn" LongName="ASMXServiceContract" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXServiceContract">
+						<Component Id="ID_1564d16d_e66d_4681_a3e3_cdf20326fc86" Guid="6fa529f6-1102-4cf7-aa65-37fd2c504c8c">
+							<File Id="ID_b9efc6b0_2d0b_4073_b04e_75a0331ba8e8" DiskId="1" Name="F0000.sfn" LongName="ServiceContract.csproj" />
+							<File Id="ID_42b919b0_b2a5_4bb0_8f99_8f05617fa0db" DiskId="1" Name="F0001.sfn" LongName="ServiceContract.vstemplate" />
+							<File Id="ID_1313b90e_28bc_42c6_9402_f51506972a4a" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_300e5940_1d05_4519_a887_16967e3ffd92" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXServiceContract\Properties">
+							<Component Id="ID_57ca54a8_e60c_43d9_8140_0d6905a84278" Guid="24139e6d-91ec-4df0-a3d5-db0c5e806c95">
+								<File Id="ID_355a39e3_5841_49ed_9606_995d8bebb6ab" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_7b217f38_0ef9_41d9_b633_e66630583c8f" Name="F0007.sfn" LongName="ASMXServiceImplementation" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXServiceImplementation">
+						<Component Id="ID_72d7657e_51fc_4248_8510_bcabe871ef26" Guid="6bb31e6e-e311-46ba-b1b6-d033b552445a">
+							<File Id="ID_a2d72c2d_7300_4c20_b799_b061bb6db8b4" DiskId="1" Name="F0000.sfn" LongName="ServiceImplementation.csproj" />
+							<File Id="ID_292fa053_7fe5_417f_93ec_b61df67c17e7" DiskId="1" Name="F0001.sfn" LongName="ServiceImplementation.vstemplate" />
+							<File Id="ID_2c0b2ccc_6313_4cc0_90ef_56f7477fc8c3" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_34a77fbe_10fb_4b7e_af55_661e9f671f45" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\ASMXServiceImplementation\Properties">
+							<Component Id="ID_f3685783_bd35_4dd0_aa66_72600510051c" Guid="c38a2c38-1824-478e-9690-d7edb5d6fd7d">
+								<File Id="ID_b29d8216_ef46_4b59_99ee_26e293759a45" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_e245b769_a5af_4a86_b6cc_043511c432a8" Name="F0008.sfn" LongName="WCFBusinessEntity" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFBusinessEntity">
+						<Component Id="ID_33beb997_cef1_4cd9_86b4_742845af1c33" Guid="95867d0f-f4e5-4245-ba30-965614a481a6">
+							<File Id="ID_b7bab321_2b18_4bc8_a2e3_7431a496753f" DiskId="1" Name="F0000.sfn" LongName="BusinessEntity.csproj" />
+							<File Id="ID_0a4970b7_d4e4_4d7d_8371_a44fe97f1acd" DiskId="1" Name="F0001.sfn" LongName="BusinessEntity.vstemplate" />
+							<File Id="ID_2500aa09_1c02_463a_8a5a_978e93791ff0" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_f912e85f_ab48_4f18_aad3_adefca4111a4" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFBusinessEntity\Properties">
+							<Component Id="ID_51cafaca_6c4c_4eca_964e_876a73661404" Guid="ed52ece5-fddb-4540-ac4f-696a33a1a260">
+								<File Id="ID_06226111_9fc0_4bc4_8baf_78a84aaa1c69" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_cc5db5f2_4f4b_4c8b_bb85_ed3dabc2bf69" Name="F0009.sfn" LongName="WCFBusinessLogic" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFBusinessLogic">
+						<Component Id="ID_d21c7eea_c9ac_42e9_8449_4c3f887859f8" Guid="7d158d66-a9d0-4ac3-89d5-e8e56e68189e">
+							<File Id="ID_21fc626f_ff14_4480_9fa7_bba92b57c924" DiskId="1" Name="F0000.sfn" LongName="BusinessLogic.csproj" />
+							<File Id="ID_7d6451d2_eb73_4d31_b396_c6a6b9db0304" DiskId="1" Name="F0001.sfn" LongName="BusinessLogic.vstemplate" />
+							<File Id="ID_1123228d_a501_4aa2_a8a1_6def75fd94a6" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_de1cffbc_d4f5_49ab_bc7c_f5984456678d" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFBusinessLogic\Properties">
+							<Component Id="ID_b8e46305_ec34_496a_a39a_753fd3c38dad" Guid="887c1a8f-8159-4943-b8ee-ab487c0fb198">
+								<File Id="ID_d456db58_a131_4ab8_806f_b5e774cd2b94" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_40a65d9a_d876_450b_9f48_02352f1d2fbb" Name="F0010.sfn" LongName="WCFClient" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFClient">
+						<Component Id="ID_88cff1b6_8f9d_4065_9336_9a19efd40497" Guid="b8ee1fa2-fd7e-45b4-b1ad-9c09495ab3f2">
+							<File Id="ID_24016deb_6a9e_4f8b_ae2c_3c3e6325acbb" DiskId="1" Name="F0000.sfn" LongName="app.config" />
+							<File Id="ID_38deb10e_9377_4356_9573_06b306906773" DiskId="1" Name="F0001.sfn" LongName="Client.csproj" />
+							<File Id="ID_8ef52e2c_75be_4264_9e73_a697024500d6" DiskId="1" Name="F0002.sfn" LongName="Client.vstemplate" />
+							<File Id="ID_7cd24f46_0ced_4d6c_97ec_0a9a912ec3a1" DiskId="1" Name="F0003.sfn" LongName="MainForm.cs" />
+							<File Id="ID_2ed70f08_328f_4575_9031_5d8927ab500d" DiskId="1" Name="F0004.sfn" LongName="MainForm.designer.cs" />
+							<File Id="ID_9b94250a_baa1_458f_a19e_d10d90536059" DiskId="1" Name="F0005.sfn" LongName="MainForm.resx" />
+							<File Id="ID_7adc514f_e0dd_4142_a9de_3aece2bcc99c" DiskId="1" Name="Program.cs" />
+							<File Id="ID_4ab6abcf_6233_4195_bff9_a319127cd4eb" DiskId="1" Name="F0007.sfn" LongName="ResultsGrid.cs" />
+							<File Id="ID_0f8e4e0e_c0a5_4356_a60c_99c4abacb8cc" DiskId="1" Name="F0008.sfn" LongName="ResultsGrid.designer.cs" />
+							<File Id="ID_7c1a279b_a970_4024_9f69_0b65400f94a8" DiskId="1" Name="F0009.sfn" LongName="ResultsGrid.resx" />
+							<File Id="ID_30dec473_5da9_4a3c_bc94_e2c8686b5d73" DiskId="1" Name="F0010.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_06062927_348d_485c_9fbd_f07597b0171e" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFClient\Properties">
+							<Component Id="ID_12ce02c1_1626_4fc2_805a_5217090c81a7" Guid="d85eaf41-2149-418c-b17b-4d0401d98949">
+								<File Id="ID_64dbee18_67da_49fc_9376_7fc560d4986a" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+								<File Id="ID_91bed1c9_a120_48f3_9b1d_7c7b563ec8cb" DiskId="1" Name="F0001.sfn" LongName="Resources.Designer.cs" />
+								<File Id="ID_763121dd_6aa9_4c8f_a936_605276b667ed" DiskId="1" Name="F0002.sfn" LongName="Resources.resx" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_a60cef8f_701b_4505_8086_8ae725f7dde1" Name="F0011.sfn" LongName="WCFDataAccess" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFDataAccess">
+						<Component Id="ID_09b86ca9_04a3_4719_8a26_48c56f01b7c4" Guid="4cfff815-603d-4082-838b-a121f73e81e5">
+							<File Id="ID_83c95a31_43e3_4a09_85c6_1cb89a6782e0" DiskId="1" Name="F0000.sfn" LongName="DataAccess.csproj" />
+							<File Id="ID_f9bcec6a_c53f_4af3_96a7_f869f7ee9139" DiskId="1" Name="F0001.sfn" LongName="DataAccess.vstemplate" />
+							<File Id="ID_72332875_07d8_4371_bfcd_afa1bd79aad3" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_5a9d0149_adf1_447a_a966_31f4ed26112e" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFDataAccess\Properties">
+							<Component Id="ID_417c02c3_967b_454a_b76e_3ae66670e1a3" Guid="c72b843c-91e8-4b6f-b0bf-d330f963e603">
+								<File Id="ID_e007995b_69c8_4941_a70b_c85eda01fe1e" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_2e605be6_3391_4d4e_94f6_5801f479525f" Name="F0012.sfn" LongName="WCFDataContract" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFDataContract">
+						<Component Id="ID_436bfad9_3c95_41fb_a062_20af78e32efb" Guid="1f6eef09-14b6-472f-b103-bf44da45872e">
+							<File Id="ID_b6fe8f0d_994a_46b3_9532_560b838e366a" DiskId="1" Name="F0000.sfn" LongName="DataContract.csproj" />
+							<File Id="ID_66712e15_5e1b_471c_a074_d9eeb21f7dac" DiskId="1" Name="F0001.sfn" LongName="DataContract.vstemplate" />
+							<File Id="ID_8366b8dc_bf7b_4bf9_b923_5d4e8c6bcc57" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_ce4431be_4803_4db4_9478_0e9a5c6c867c" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFDataContract\Properties">
+							<Component Id="ID_068639f9_499e_4fa2_a47f_fda8a92f4b52" Guid="57120463-326d-4575-a5f8-070da3cce2a0">
+								<File Id="ID_29edb3e4_8461_4137_87c4_f66d354f2ea1" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_3540e70e_2a8c_47ba_9ebe_54b610bd186f" Name="F0013.sfn" LongName="WCFFaultContract" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFFaultContract">
+						<Component Id="ID_a52d1a8d_9f9b_41ad_8dba_36a82d67ed2f" Guid="6ad24dd2-653e-467d-9c91-efbf52547bd4">
+							<File Id="ID_c6442042_ec20_48a7_9d28_c1dccd395f00" DiskId="1" Name="F0000.sfn" LongName="FaultContract.csproj" />
+							<File Id="ID_f4a77584_7f57_47d3_8f36_b5bd55cf6eb9" DiskId="1" Name="F0001.sfn" LongName="FaultContract.vstemplate" />
+							<File Id="ID_86c137ad_b44e_4392_812f_deac941362f7" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_da52015c_0571_42a5_be83_f27630cc07b4" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFFaultContract\Properties">
+							<Component Id="ID_979dfda6_1ea1_48b1_9664_fca3291eef73" Guid="19415366-bc75-4eb3-8b79-bc53b4667f9f">
+								<File Id="ID_d1a2a753_7809_495a_a98f_f45e08bea8fd" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_bf08d582_1616_4452_bc90_b4f6ca85ef6b" Name="WCFHost" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFHost">
+						<Component Id="ID_f0e9e492_2572_4909_b490_328c3ffcc6af" Guid="6035bba6-dd8a-48ac-9c43-b304dfad1e4b">
+							<File Id="ID_c59090c3_eb90_442a_9e72_ceed598645ca" DiskId="1" Name="F0000.sfn" LongName="Host.vstemplate" />
+							<File Id="ID_75e01ca9_69fc_427f_9a71_93825c84d0ef" DiskId="1" Name="F0001.sfn" LongName="Host.webproj" />
+							<File Id="ID_d6214313_9a19_46f4_a71b_2d094e25d6ff" DiskId="1" Name="F0002.sfn" LongName="vwd.webinfo" />
+							<File Id="ID_5b2cd39f_924c_4fb2_ae89_57a310deb084" DiskId="1" Name="F0003.sfn" LongName="web.config" />
+							<File Id="ID_c283342f_196d_49d7_bc2a_7426be5aaebe" DiskId="1" Name="F0004.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+					</Directory>
+					<Directory Id="ID_4dd253d8_4bc2_4e4a_89d7_785b29737d7f" Name="F0015.sfn" LongName="WCFMessageContract" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFMessageContract">
+						<Component Id="ID_7e60a4b3_091c_4344_9438_5a664a37f6fe" Guid="9d70fb31-0b76-4f03-a5df-ecb2500688bf">
+							<File Id="ID_0b4999ef_0081_4796_9664_975ee0761ff0" DiskId="1" Name="F0000.sfn" LongName="MessageContract.csproj" />
+							<File Id="ID_4b40f16a_6f43_445e_8c5d_174dc869e7f0" DiskId="1" Name="F0001.sfn" LongName="MessageContract.vstemplate" />
+						</Component>
+						<Directory Id="ID_98f05b0d_cd56_4c74_a311_7cd7eb3c3f0a" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFMessageContract\Properties">
+							<Component Id="ID_c79b5dc7_bb81_48c5_9bea_9e5257e25362" Guid="517a20f5-ebc1-495a-aabe-bd7990cbe5b5">
+								<File Id="ID_b9f6c273_8166_45e3_98a5_4c7f272c1f49" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_ba67b9bf_159d_44b9_abf5_3d801d263894" Name="F0016.sfn" LongName="WCFServiceContract" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFServiceContract">
+						<Component Id="ID_d54a74f6_675a_4b73_b21d_01907c7cb6b5" Guid="2aa8a7e6-0f2e-4464-b34a-49962ceeff8b">
+							<File Id="ID_29509668_260d_4d3a_a0a7_2db08b1d5066" DiskId="1" Name="F0000.sfn" LongName="ServiceContract.csproj" />
+							<File Id="ID_db280bbe_d789_456f_9bbc_f865a48437d4" DiskId="1" Name="F0001.sfn" LongName="ServiceContract.vstemplate" />
+							<File Id="ID_8e17bad9_d8b6_40c8_82e7_e927c0c039f7" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_42a7548a_de19_49e8_8d84_cec5261da6b5" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFServiceContract\Properties">
+							<Component Id="ID_e28ff292_96a3_49c4_baf6_a1c1f9fcfead" Guid="06508f6d-f3d8-48f2-8391-6a18be6372ad">
+								<File Id="ID_efdb991d_dac2_4a0a_83c7_245206cdbdd3" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+					<Directory Id="ID_f8f94a08_bdd0_4712_972f_26d9236b79c1" Name="F0017.sfn" LongName="WCFServiceImplementation" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFServiceImplementation">
+						<Component Id="ID_5f1e4fe6_2162_4d07_a223_e3fe3b751cf2" Guid="bf670767-48e1-4634-b253-6b7aeca57e8e">
+							<File Id="ID_bc8ad045_8b8d_4ed9_ad59_bee328806982" DiskId="1" Name="F0000.sfn" LongName="ServiceImplementation.csproj" />
+							<File Id="ID_d183c429_010d_4a36_be2a_c8273fa5ac59" DiskId="1" Name="F0001.sfn" LongName="ServiceImplementation.vstemplate" />
+							<File Id="ID_c2b38bdb_91bb_4780_b4e7_9aea44dc74e8" DiskId="1" Name="F0002.sfn" LongName="__TemplateIcon.ico" />
+						</Component>
+						<Directory Id="ID_14bd4a79_8f99_4674_84b7_6cf134ffc570" Name="F0000.sfn" LongName="Properties" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Projects\WCFServiceImplementation\Properties">
+							<Component Id="ID_e3c31199_df80_45c0_a965_1411fce088ce" Guid="6d31a08b-793b-4a50-bdeb-b231e2ad6b3c">
+								<File Id="ID_5aeefc0e_22be_477c_877f_b18fde23f743" DiskId="1" Name="F0000.sfn" LongName="AssemblyInfo.cs" />
+							</Component>
+						</Directory>
+					</Directory>
+				</Directory>
+				<Directory Id="ID_fb31cb1e_eaa3_48e7_a389_77df46eb919d" Name="F0003.sfn" LongName="Solutions" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Solutions">
+					<Component Id="ID_4f1b7ef9_6e99_4cd6_a88f_538cc335af4c" Guid="08e1a956-bc90-410d-b4df-cc0e9a7872af">
+						<File Id="ID_bdd19885_2fb1_4cbe_ad38_a8e4ca52bc89" DiskId="1" Name="F0000.sfn" LongName="ServicesGuidancePackage.ico" />
+						<File Id="ID_9cbdbe6d_9ae0_4d02_a00e_8a6cf534293d" DiskId="1" Name="F0001.sfn" LongName="ServicesGuidancePackage.vstemplate" />
+					</Component>
+					<Directory Id="ID_eb54730b_7ed5_4e5b_8e44_42ec15d3841a" Name="F0000.sfn" LongName="Projects" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Solutions\Projects">
+						<Directory Id="ID_b1653fa9_2859_4085_a237_e36b1eb6d9ca" Name="Model" FileSource="..\..\..\Guidance Package\bin\Release\Templates\Solutions\Projects\Model">
+							<Component Id="ID_2d602674_85f2_4023_a868_a4414e640a1c" Guid="710d86b6-a127-4f03-a468-40c6a6736b3d">
+								<File Id="ID_523de112_e365_4887_8f28_0761a1e00aee" DiskId="1" Name="Model.ico" />
+								<File Id="ID_4453d71a_d9da_4ade_990d_b92867268fd6" DiskId="1" Name="F0001.sfn" LongName="Model.ssfproduct" />
+								<File Id="ID_43955c2f_af5c_4f7f_9126_7e98332c07e9" DiskId="1" Name="F0002.sfn" LongName="Model.vstemplate" />
+							</Component>
+						</Directory>
+					</Directory>
+				</Directory>
+				<Directory Id="ID_f0507d01_30da_4094_ac1a_b0e0bfe2c08b" Name="F0004.sfn" LongName="TextTemplates" FileSource="..\..\..\Guidance Package\bin\Release\Templates\TextTemplates">
+					<Directory Id="ID_9002cdaf_218f_4643_bcfe_fe33a3738ca1" Name="CS" FileSource="..\..\..\Guidance Package\bin\Release\Templates\TextTemplates\CS">
+						<Component Id="ID_b076d01d_f49c_4afa_9f18_8ad09e5c8705" Guid="9cbc1a12-3096-4350-9e92-bda5a99563db">
+							<File Id="ID_9d1c6270_8998_47c9_a5fd_41a94ec7ce17" DiskId="1" Name="F0000.sfn" LongName="TypeTranslator.tt" />
+						</Component>
+					</Directory>
+				</Directory>
+			</Directory>
+			
+			<!-- Code Generation Text Templates -->
+			<Directory Id="ID_a84b027e_cbcb_46ed_bc62_d78958fa2112" Name="F0005.sfn" LongName="TextTemplates" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates">
+				<Directory Id="ID_07a1233b_c4e6_473b_90dc_7d1e39554ced" Name="Asmx" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates\Asmx">
+					<Directory Id="ID_8c6f5a68_296f_4235_83e4_586fc4d50d5c" Name="CS" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates\Asmx\CS">
+						<Component Id="ID_c3b29e1f_3a16_408f_80ee_92fd83d79e25" Guid="6d5caa2a-5ba1-4e35-8fd9-e359fa99392b">
+							<File Id="ID_0ae2401f_2f07_4b28_8a6a_30f40cfa5ee2" DiskId="1" Name="F0000.sfn" LongName="CommonTextTransformation.tt" />
+							<File Id="ID_215cb4dd_bf29_4ee0_9c11_e04f8dee9c06" DiskId="1" Name="F0001.sfn" LongName="DataContract.tt" />
+							<File Id="ID_74521803_9f42_4b20_8400_2b0855af9818" DiskId="1" Name="F0002.sfn" LongName="DataContractCollection.tt" />
+							<File Id="ID_053f5828_7971_4248_857a_699bb9840799" DiskId="1" Name="F0003.sfn" LongName="DataContractEnum.tt" />
+							<File Id="ID_733bfe8b_d53d_4a29_b091_56584d1490fa" DiskId="1" Name="F0004.sfn" LongName="MessageContract.tt" />
+							<File Id="ID_10de7a8e_311e_4b44_a370_7ab40515791e" DiskId="1" Name="F0005.sfn" LongName="ServiceContract.tt" />
+							<File Id="ID_b0e05613_84dd_42be_8f26_244009ada618" DiskId="1" Name="F0006.sfn" LongName="ServiceDescription.tt" />
+							<File Id="ID_d395592d_966c_4cef_8c99_66c3e4a33b52" DiskId="1" Name="F0007.sfn" LongName="ServiceImplementation.tt" />
+							<File Id="ID_e25c7ae1_e169_4288_bc67_d39fbd04b82e" DiskId="1" Name="F0008.sfn" LongName="XsdMessageContract.tt" />
+						</Component>
+					</Directory>
+				</Directory>
+				<Directory Id="ID_fa5068f5_0300_428f_b2f8_caad0a318c4a" Name="WCF" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates\WCF">
+					<Directory Id="ID_53c75dd4_32c4_406e_a8c2_6856194b06b3" Name="CS" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates\WCF\CS">
+						<Component Id="ID_79a0baa1_a711_404f_89e3_af7a741b00db" Guid="96a1a9ad-d2dd-4a25-85cc-efb58b39cf7b">
+							<File Id="ID_78fbcbc6_3709_426c_bbc2_6a8096bc6042" DiskId="1" Name="F0000.sfn" LongName="CommonTextTransformation.tt" />
+							<File Id="ID_ee339d9d_a5e0_4917_9d27_ad87d8462664" DiskId="1" Name="F0001.sfn" LongName="DataContract.tt" />
+							<File Id="ID_dba89679_35a0_4271_b646_b2d9e463a939" DiskId="1" Name="F0002.sfn" LongName="DataContractCollection.tt" />
+							<File Id="ID_7b5f1f73_dabf_4b65_9b30_329216dd6177" DiskId="1" Name="F0003.sfn" LongName="DataContractEnum.tt" />
+							<File Id="ID_0078640d_c7e2_4970_b685_012e23a91f44" DiskId="1" Name="F0004.sfn" LongName="MessageContract.tt" />
+							<File Id="ID_8b780957_ae17_4fef_9747_e1d8eff8b263" DiskId="1" Name="F0005.sfn" LongName="ServiceContract.tt" />
+							<File Id="ID_76a80d21_07ce_46c6_9615_a8104b4d8e5c" DiskId="1" Name="F0006.sfn" LongName="ServiceDescription.tt" />
+							<File Id="ID_9f34e29b_89db_4861_b520_4db53f59fc98" DiskId="1" Name="F0007.sfn" LongName="ServiceImplementation.tt" />
+							<File Id="ID_70e58172_9aec_437e_813f_ea320420d87f" DiskId="1" Name="F0008.sfn" LongName="XsdMessageContract.tt" />
+						</Component>
+					</Directory>
+					<Directory Id="ID_f89b2d5f_a481_416a_9ef1_1d20daf1d196" Name="VB" FileSource="..\..\..\Guidance Package\bin\Release\TextTemplates\WCF\VB">
+						<Component Id="ID_32ae02de_e264_44e4_9d76_f6a2206b1078" Guid="9b7afccf-298e-4a2d-bf1e-8e226ab67c27">
+							<File Id="ID_9190e6bc_d91b_4627_bd3d_716009cad1f4" DiskId="1" Name="F0000.sfn" LongName="DataContractEnum.tt" />
+						</Component>
+					</Directory>
+				</Directory>
+			</Directory>
+		</DirectoryRef>
+		
+		<!-- Guidance Package Installer Assembly -->
+		<DirectoryRef Id="PublicAssemblies" FileSource="..\..\..\Installer\bin\Release">
+			<Component Id="ID_a5b01e05_b8b4_48d8_936c_ddad38515abd" Guid="b6eff0a6-2722-47c2-b7a4-bb0dbce65f0c">
+				<File Id="ID_9d8f05f5_e9f9_45a3_b351_c0b2dc7a3900" DiskId="1" Name="F0000.sfn" LongName="Microsoft.Practices.ServiceFactory.GuidancePackage.Installer.dll" />
+				<File Id="ID_7abe8935_2e08_4e75_8267_6e09d148ccd9" DiskId="1" Name="F0001.sfn" LongName="Microsoft.Practices.ServiceFactory.GuidancePackage.Installer.dll.config" />
+			</Component>
+		</DirectoryRef>
+		
+		<!-- Guidance Package Setup Custom Actions -->
+		<CustomAction Id="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" Impersonate="no" Property="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7" Value="/installtype=notransaction /action=uninstall /Hive=9.0 /LogFile=&quot;c:\uninstall.log&quot; /DesignMode /Configuration=&quot;[GuidancePackageDir]Service Factory Guidance Package.xml&quot; &quot;[#ID_9d8f05f5_e9f9_45a3_b351_c0b2dc7a3900]&quot; &quot;[#ID_7abe8935_2e08_4e75_8267_6e09d148ccd9]&quot;" />
+		<CustomAction Id="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7" BinaryKey="InstallUtil" DllEntry="ManagedInstall" Impersonate="no" Execute="deferred" />
+		<CustomAction Id="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" Impersonate="no" Property="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7" Value="/installtype=notransaction /action=install /Hive=9.0 /LogFile=&quot;c:\install.log&quot; /DesignMode /Configuration=&quot;[GuidancePackageDir]Service Factory Guidance Package.xml&quot; &quot;[#ID_9d8f05f5_e9f9_45a3_b351_c0b2dc7a3900]&quot; &quot;[#ID_7abe8935_2e08_4e75_8267_6e09d148ccd9]&quot;" />
+		<CustomAction Id="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7" BinaryKey="InstallUtil" DllEntry="ManagedInstall" Impersonate="no" Execute="deferred" />
+		<CustomAction Id="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" Impersonate="no" Property="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7" Value="/installtype=notransaction /action=rollback /Hive=9.0 /LogFile=&quot;c:\rollback.log&quot; /DesignMode /Configuration=&quot;[GuidancePackageDir]Service Factory Guidance Package.xml&quot; &quot;[#ID_9d8f05f5_e9f9_45a3_b351_c0b2dc7a3900]&quot; &quot;[#ID_7abe8935_2e08_4e75_8267_6e09d148ccd9]&quot;" />
+		<CustomAction Id="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7" BinaryKey="InstallUtil" DllEntry="ManagedInstall" Impersonate="no" Execute="rollback" />
+		<CustomAction Id="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" Impersonate="no" Property="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7" Value="/installtype=notransaction /action=commit /Hive=9.0 /LogFile=&quot;c:\commit.log&quot; /DesignMode /Configuration=&quot;[GuidancePackageDir]Service Factory Guidance Package.xml&quot; &quot;[#ID_9d8f05f5_e9f9_45a3_b351_c0b2dc7a3900]&quot; &quot;[#ID_7abe8935_2e08_4e75_8267_6e09d148ccd9]&quot;" />
+		<CustomAction Id="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7" BinaryKey="InstallUtil" DllEntry="ManagedInstall" Impersonate="no" Execute="commit" />
+		<InstallExecuteSequence>
+			<Custom Action="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" After="MsiUnpublishAssemblies">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd=2</Custom>
+			<Custom Action="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7" After="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd=2</Custom>
+			<Custom Action="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" After="StartServices">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+			<Custom Action="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7" After="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+			<Custom Action="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" After="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+			<Custom Action="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7" After="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+			<Custom Action="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp" After="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+			<Custom Action="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7" After="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">$ID_a5b01e05_b8b4_48d8_936c_ddad38515abd&gt;2</Custom>
+		</InstallExecuteSequence>
+		<UI>
+			<ProgressText Action="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">Uninstalling Service Factory Guidance Package: setprop</ProgressText>
+			<ProgressText Action="Uninstallf3f8cafc_649c_408f_ae8e_af68b8c24ae7">Uninstalling Service Factory Guidance Package</ProgressText>
+			<ProgressText Action="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">Commiting Service Factory Guidance Package: setprop</ProgressText>
+			<ProgressText Action="Commitf3f8cafc_649c_408f_ae8e_af68b8c24ae7">Commiting Service Factory Guidance Package</ProgressText>
+			<ProgressText Action="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">Rollbacking Service Factory Guidance Package: setprop</ProgressText>
+			<ProgressText Action="Rollbackf3f8cafc_649c_408f_ae8e_af68b8c24ae7">Rollbacking Service Factory Guidance Package</ProgressText>
+			<ProgressText Action="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7.SetProp">Installing Service Factory Guidance Package: setprop</ProgressText>
+			<ProgressText Action="Installf3f8cafc_649c_408f_ae8e_af68b8c24ae7">Installing Service Factory Guidance Package</ProgressText>
+		</UI>
+		
+		<!-- Component Grouping -->
+		<ComponentGroup Id="GuidancePackageComponents">
+			<ComponentRef Id="GuidancePackageRootComponent" />
+			<ComponentRef Id="GuidancePackageLibComponent" />
+			<ComponentRef Id="ID_2592e25c_f3af_4de8_a8ca_860d369b68c7" />
+			<ComponentRef Id="ID_d4c976ac_c1bf_483b_917c_cb97a7498ec3" />
+			<ComponentRef Id="ID_3f7e0e40_578f_4de3_8a29_a4e27229560d" />
+			<ComponentRef Id="ID_a71b2cf8_5867_46e6_a54e_3879d1f2c7f9" />
+			<ComponentRef Id="ID_fd5e1e3c_c2aa_4542_946f_0fd170e745d0" />
+			<ComponentRef Id="ID_33e8b88a_b9c3_4a1d_9af3_7974aaff8408" />
+			<ComponentRef Id="ID_7defe551_fd71_4e64_8483_be00e8b919f1" />
+			<ComponentRef Id="ID_d1b96241_0ebd_4785_b672_bc735ded78f1" />
+			<ComponentRef Id="ID_600540cc_16e4_4838_9da2_796bbd12065c" />
+			<ComponentRef Id="ID_5b1dd5ae_9813_44ad_9f4e_c94d71392338" />
+			<ComponentRef Id="ID_5a8e3db1_457d_48cb_8d77_08ce5a9265f8" />
+			<ComponentRef Id="ID_05eff14a_58ed_40e9_aef5_3d66b97698dd" />
+			<ComponentRef Id="ID_72195572_CFDD_4820_AE00_F522F4460FAD" />
+			<ComponentRef Id="ID_9911e7f8_2e29_4a0b_84e2_d6efe7179a3e" />
+			<ComponentRef Id="ID_883200c3_f740_4c92_8c75_70589f0e803d" />
+			<ComponentRef Id="ID_c1535f41_6258_43d4_9c0f_c35395a6e073" />
+			<ComponentRef Id="ID_c22ff52f_e750_4123_92b6_c3de769465d9" />
+			<ComponentRef Id="ID_f2c12b93_d5f7_4bf1_be31_84be9dbd9a81" />
+			<ComponentRef Id="ID_6b6a5aca_30b0_41ad_a185_dfcc0d5d5cea" />
+			<ComponentRef Id="ID_d25b3787_0488_4823_9f53_03a308423176" />
+			<ComponentRef Id="ID_86026e06_2c03_46d2_a0b9_93f87cf746ba" />
+			<ComponentRef Id="ID_29f5ff0a_1be3_434f_b6e1_96b2070261bc" />
+			<ComponentRef Id="ID_e84a7a18_1d71_405e_abee_9054993a18aa" />
+			<ComponentRef Id="ID_232c819c_0050_47a1_ba0d_b884b07b784d" />
+			<ComponentRef Id="ID_1addf0b0_9c85_4144_979b_3836246dfdda" />
+			<ComponentRef Id="ID_4393e1cb_9b29_4fd1_b5e1_41f7a361b687" />
+			<ComponentRef Id="ID_7dd1a1bd_ca33_4363_9ed5_1ccb6f6a998c" />
+			<ComponentRef Id="ID_81f3e75c_335c_4c73_b313_fdc046943675" />
+			<ComponentRef Id="ID_1564d16d_e66d_4681_a3e3_cdf20326fc86" />
+			<ComponentRef Id="ID_57ca54a8_e60c_43d9_8140_0d6905a84278" />
+			<ComponentRef Id="ID_72d7657e_51fc_4248_8510_bcabe871ef26" />
+			<ComponentRef Id="ID_f3685783_bd35_4dd0_aa66_72600510051c" />
+			<ComponentRef Id="ID_33beb997_cef1_4cd9_86b4_742845af1c33" />
+			<ComponentRef Id="ID_51cafaca_6c4c_4eca_964e_876a73661404" />
+			<ComponentRef Id="ID_d21c7eea_c9ac_42e9_8449_4c3f887859f8" />
+			<ComponentRef Id="ID_b8e46305_ec34_496a_a39a_753fd3c38dad" />
+			<ComponentRef Id="ID_88cff1b6_8f9d_4065_9336_9a19efd40497" />
+			<ComponentRef Id="ID_12ce02c1_1626_4fc2_805a_5217090c81a7" />
+			<ComponentRef Id="ID_09b86ca9_04a3_4719_8a26_48c56f01b7c4" />
+			<ComponentRef Id="ID_417c02c3_967b_454a_b76e_3ae66670e1a3" />
+			<ComponentRef Id="ID_436bfad9_3c95_41fb_a062_20af78e32efb" />
+			<ComponentRef Id="ID_068639f9_499e_4fa2_a47f_fda8a92f4b52" />
+			<ComponentRef Id="ID_a52d1a8d_9f9b_41ad_8dba_36a82d67ed2f" />
+			<ComponentRef Id="ID_979dfda6_1ea1_48b1_9664_fca3291eef73" />
+			<ComponentRef Id="ID_f0e9e492_2572_4909_b490_328c3ffcc6af" />
+			<ComponentRef Id="ID_7e60a4b3_091c_4344_9438_5a664a37f6fe" />
+			<ComponentRef Id="ID_c79b5dc7_bb81_48c5_9bea_9e5257e25362" />
+			<ComponentRef Id="ID_d54a74f6_675a_4b73_b21d_01907c7cb6b5" />
+			<ComponentRef Id="ID_e28ff292_96a3_49c4_baf6_a1c1f9fcfead" />
+			<ComponentRef Id="ID_5f1e4fe6_2162_4d07_a223_e3fe3b751cf2" />
+			<ComponentRef Id="ID_e3c31199_df80_45c0_a965_1411fce088ce" />
+			<ComponentRef Id="ID_4f1b7ef9_6e99_4cd6_a88f_538cc335af4c" />
+			<ComponentRef Id="ID_2d602674_85f2_4023_a868_a4414e640a1c" />
+			<ComponentRef Id="ID_b076d01d_f49c_4afa_9f18_8ad09e5c8705" />
+			<ComponentRef Id="ID_c3b29e1f_3a16_408f_80ee_92fd83d79e25" />
+			<ComponentRef Id="ID_79a0baa1_a711_404f_89e3_af7a741b00db" />
+			<ComponentRef Id="ID_32ae02de_e264_44e4_9d76_f6a2206b1078" />
+			<ComponentRef Id="ID_a5b01e05_b8b4_48d8_936c_ddad38515abd" />
+      <ComponentRef Id="CompId_d7d5bd55ec1c431aa096503bc54c6d4a" />
+		</ComponentGroup>
+	</Fragment>
+</Wix>

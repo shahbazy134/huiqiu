@@ -1,0 +1,15 @@
+<#
+/***************************************************************************
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    This code is licensed under the Visual Studio SDK license terms.
+
+    THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+    ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+    IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+    PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+
+***************************************************************************/
+#>
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+<#@ include file="DslPackage\GeneratedCmd.tt" #>
+#define guidCmdSet		{ 0x7f1c6863, 0x602e, 0x41c8, { 0x85, 0x09, 0xa8, 0x64, 0x7d, 0xd2, 0x5d, 0x3b } }

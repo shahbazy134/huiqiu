@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+	<Fragment>
+		<DirectoryRef Id="EntLibBinaryDir" FileSource="..\..\..\..\Lib\">
+			<Component Id="EntLibBinaryComponent" Guid="41353100-31FE-48e8-8BA7-C9C55F918F14" DiskId="1">
+<!--
+				<File Id="FileId_dee3a04fd7cc4a1a8912eccdd567a17f" Name="F0000.sfn" LongName="EntLibConfig.exe" />
+				<File Id="FileId_1a32d61f757b49c89c7897256b5f9ce0" Name="F0002.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll" />
+				<File Id="FileId_eb292ef5f45440e18b8c72163238b536" Name="F0003.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Tests.dll" />
+				<File Id="FileId_e73a52f7499141db8e44d16c4788eafd" Name="F0004.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll" />
+				<File Id="FileId_7c762086a6374482ba2acbd4d70c3ec8" Name="F0005.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Tests.dll" />
+				<File Id="FileId_2f8b698bd76c423e8068385dd2b62b1c" Name="F0006.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll" />
+				<File Id="FileId_387ce925dc404a46b5e8fac55d924b46" Name="F0007.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Tests.dll" />
+				<File Id="FileId_a394f096d13f4bd5ae062f86a51410fb" Name="F0008.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll" />
+				<File Id="FileId_8608b7fffb224aa283fcb35265b54aae" Name="F0009.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Tests.dll" />
+				<File Id="FileId_402d2c2db8104e60808eb587202e0afe" Name="F0010.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll" />
+				<File Id="FileId_960c9ecab2c94a809005046c26c8506a" Name="F0011.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Database.Tests.dll" />
+				<File Id="FileId_967c7e96f1794b519b6bf9347a741aaf" Name="F0012.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.DatabaseAndCryptography.Tests.dll" />
+				<File Id="FileId_dc9bc3719a5044b3aab90248f7316a13" Name="F0013.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+				<File Id="FileId_a398a7df2cde42a5a8fe805aa7828832" Name="F0014.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Caching.Tests.dll" />
+				<File Id="FileId_7b773819eba64ff0933835fc0e1f655a" Name="F0015.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+				<File Id="FileId_b81f0f41f0fc4d90b004dd6e4065327a" Name="F0016.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Common.Tests.dll" />
+				<File Id="FileId_c3cc8e9ad95c476da11e91f51d94d902" Name="F0017.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" />
+				<File Id="FileId_fef2d78087434a879dee9886b3ade39d" Name="F0018.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Tests.dll" />
+				<File Id="FileId_9e7e54ccd969412b98f6f1c1d1adcd98" Name="F0019.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" />
+				<File Id="FileId_d0788d694a6549e7b154027b49541938" Name="F0020.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Tests.dll" />
+				<File Id="FileId_b64c36f26a764127b04f7c10e8d57458" Name="F0021.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+				<File Id="FileId_48a4b514f95e457d970ee01da5751627" Name="F0022.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Data.Tests.dll" />
+				<File Id="FileId_6f5445f30eba4f27963c52d615a57d0c" Name="F0023.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll" />
+				<File Id="FileId_33c1eb15e8054e9786004791ef31d8d3" Name="F0024.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Tests.dll" />
+				<File Id="FileId_47c881322a434ba38b24e674def0ab2d" Name="F0025.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+				<File Id="FileId_843617c290774aeb8259f74ffbbd106b" Name="F0026.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll" />
+				<File Id="FileId_3e09e34ca09240dc8bfa843bb69a7b4a" Name="F0027.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Tests.dll" />
+				<File Id="FileId_daa6b114f14645889dd3e7b7d9698042" Name="F0028.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" />
+				<File Id="FileId_3a806c27b4c84ec68f25cbb3ce383ad2" Name="F0029.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Tests.dll" />
+				<File Id="FileId_5c3aa30ec0224287877bab2fa4fc1ba7" Name="F0030.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Tests.dll" />
+				<File Id="FileId_378009a184de4ed6a2f56768844bc508" Name="F0031.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll" />
+				<File Id="FileId_1caa480ae1874ec3a75a8ea1718140eb" Name="F0032.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Tests.dll" />
+				<File Id="FileId_5bc30898957d40e7a8b680e23d95b4a6" Name="F0033.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll" />
+				<File Id="FileId_e2fd576ee5bc4fc9a9a9b8ceeffaf4eb" Name="F0034.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Tests.dll" />
+				<File Id="FileId_a2bac1a9386740a4ab2af98f67990b4e" Name="F0035.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+				<File Id="FileId_04eaa92ace374c6282a05d5baa639ce8" Name="F0036.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Database.Tests.dll" />
+				<File Id="FileId_700fcd605b864459aecd068ac6dc6868" Name="F0037.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+				<File Id="FileId_3794352bd572495c8df120adf2b3117b" Name="F0038.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Tests.dll" />
+				<File Id="FileId_80e216a92328428b97c4207e3732eafd" Name="F0039.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Logging.Tests.dll" />
+				<File Id="FileId_7cba7fdfd07e4d06a6f7fd7266e66e5b" Name="F0040.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll" />
+				<File Id="FileId_0c97fb47b8084057a45af614978652a4" Name="F0041.sfn" LongName="microsoft.practices.enterpriselibrary.security.azman.configuration.design.tests.dll" />
+				<File Id="FileId_008c00f1366a4c4c8a804162c031ffb3" Name="F0042.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll" />
+				<File Id="FileId_cb337a65fe3746b9a90c136310072ab7" Name="F0043.sfn" LongName="microsoft.practices.enterpriselibrary.security.azman.tests.dll" />
+				<File Id="FileId_4dfe491c3ec24caf9e98786374f3e2c5" Name="F0044.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.dll" />
+				<File Id="FileId_87b319933d4444ce84125eabe9f52f22" Name="F0045.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.Tests.dll" />
+				<File Id="FileId_f4593de64f39498bb35dcc246f94604f" Name="F0046.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll" />
+				<File Id="FileId_b13f8765ac594c1ab5a9c4c65a3f414b" Name="F0047.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Tests.dll" />
+				<File Id="FileId_8f7cb087c6b44a65bf1fa8904885b1a2" Name="F0048.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll" />
+				<File Id="FileId_64158fd1653c48d4924be98a2bf3ac9f" Name="F0049.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Tests.dll" />
+				<File Id="FileId_40df24ead88c47469ee54e1f650953ad" Name="F0050.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll" />
+				<File Id="FileId_9f64a292eb9740cea8e02627c69e4cd8" Name="F0051.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Tests.dll" />
+				<File Id="FileId_5a3b88ed0b8d40ca90e70475a70f40e7" Name="F0052.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll" />
+				<File Id="FileId_bbb24ff81a604c0dbcb83d79fe26fe7a" Name="F0053.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Tests.dll" />
+				<File Id="FileId_eaae8f9e38734fb181b5532462a516d1" Name="F0054.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.dll" />
+				<File Id="FileId_2fbc652740f248c1b6971b2e08360ace" Name="F0055.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Security.Tests.dll" />
+				<File Id="FileId_bbd98b13bb1c4543b3bd89657a5a4275" Name="F0056.sfn" LongName="Microsoft.Practices.ObjectBuilder.dll" />
+				<File Id="FileId_26d5fb08e24b4ab6bec0d24aca30c133" Name="F0057.sfn" LongName="Microsoft.Practices.ObjectBuilder.Tests.VSTS.dll" />
+				<File Id="FileId_195366a4c43f4ac3820f0ca1e997031b" Name="F0058.sfn" LongName="MsmqDistributor.exe" />
+-->
+				<File Id="FileId_22B7323731354f53BEBC156066F5AE5A" Name="EL000.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+				<File Id="FileId_F5603775498F41beB99D4396A489C36A" Name="EL001.sfn" LongName="Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+				<File Id="FileId_3E084DF264564355B00EBC4B3462AB3A" Name="EL002.sfn" LongName="Microsoft.Practices.ObjectBuilder.dll" />
+			</Component>
+		</DirectoryRef>
+		
+		<ComponentGroup Id="EntLibBinariesComponents">
+			<ComponentRef Id="EntLibBinaryComponent" />
+		</ComponentGroup>
+	</Fragment>
+</Wix>

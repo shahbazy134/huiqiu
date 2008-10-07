@@ -1,0 +1,48 @@
+<Include>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\InstalledProducts\ModelProjectPackage" Value="#110" Type="string">
+    <Registry Name="Package" Value="{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Type="string" />
+    <Registry Name="ProductDetails" Value="#112" Type="string" />
+    <Registry Name="PID" Value="1.0" Type="string" />
+    <Registry Name="LogoID" Value="#400" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\Packages\{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Value="Microsoft.Practices.ServiceFactory.VsPkg.ModelProjectPackage, Microsoft.Practices.ServiceFactory.VsPkg, Version=1.0.0.0, Culture=neutral, PublicKeyToken=##CustomPublicKeyToken##" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Microsoft.Practices.ServiceFactory.VsPkg.ModelProjectPackage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_Microsoft.Practices.ServiceFactory.VsPkg.dll]" Type="string" />
+    <Registry Name="ID" Value="1" Type="integer" />
+    <Registry Name="MinEdition" Value="Standard" Type="string" />
+    <Registry Name="ProductVersion" Value="3.1.0.0" Type="string" />
+		<Registry Name="ProductName" Value="Web Service Software Factory: Modeling Edition" Type="string" />
+		<Registry Name="CompanyName" Value="Microsoft PLK" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\AutoLoadPackages\{adfc4e64-0397-11d1-9f4e-00a0c911004f}">
+    <Registry Name="{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Value="0" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\Projects\{1df4d691-79fd-4e3e-b7a6-a1a5dc772bbd}" Value="ModelProjectFactory" Type="string">
+    <Registry Name="DisplayName" Value="Service Factory : Modeling Edition" Type="string" />
+    <Registry Name="DisplayProjectFileExtensions" Value="Model Project(*.ssfproduct);*.ssfproduct" Type="string" />
+    <Registry Name="Package" Value="{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Type="string" />
+    <Registry Name="DefaultProjectExtension" Value="ssfproduct" Type="string" />
+    <Registry Name="PossibleProjectExtensions" Value="ssfproduct" Type="string" />
+		<Registry Name="ProjectTemplatesDir" Value="[ProductDefinitionProjectCacheDir]" Type="string" />
+		<Registry Name="Language(VsTemplate)" Value="ServicesSoftwareFactoryProduct" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\NewProjectTemplates\TemplateDirs\{3a053d37-49a0-4713-a3c4-6161158fb0c4}\/1" Value="Service Factory : Modeling Edition" Type="string">
+    <Registry Name="SortPriority" Value="100" Type="integer" />
+		<Registry Name="TemplatesDir" Value="[ProductDefinitionProjectCacheDir]" Type="string" />
+		<Registry Name="Folder" Value="{dcf2a94a-45b0-11d1-adbf-00c04fb6be4c}" Type="string" />
+	</Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\Services\{a7c4a96e-6d0b-4bc1-b8a3-6b0b030ad272}" Value="{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Type="string">
+    <Registry Name="Name" Value="CodeGenerationService" Type="string" />
+  </Registry>
+	<Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\Services\{4d13efd4-853c-489c-860f-f87cca709a27}" Value="{3a053d37-49a0-4713-a3c4-6161158fb0c4}" Type="string">
+		<Registry Name="Name" Value="ExtensionProviderService" Type="string" />
+	</Registry>
+
+</Include>

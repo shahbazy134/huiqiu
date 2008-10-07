@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="CreateWCFService"
+        xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Bound="true">
+  <xi:include href="../Common/CommonTypeAliases.xml"
+				      xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+  <Caption>Create WCF Service</Caption>
+  <Description>Creates a new WCF service.</Description>
+ 
+  <Arguments>
+    <xi:include href="../Common/CreateService.xml"
+             xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Recipe/gax:Arguments/gax:Argument)" />
+    
+    <Argument Name="DataContractProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).DataContracts">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+   
+    <Argument Name="FaultContractsProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).FaultContracts">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+    
+    <Argument Name="MessageContractsProjectName">
+      <ValueProvider Type="Evaluator" Expression="$(safeprojectname).MessageContracts">
+        <MonitorArgument Name="safeprojectname"/>
+      </ValueProvider>
+    </Argument>
+    
+    <Argument Name="MessageContractsProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Service Interface\$(MessageContractsProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    
+    <Argument Name="FaultContractsProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Service Interface\$(FaultContractsProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+    
+    <Argument Name="DataContractsProject" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Converter Type="ProjectConverter" />
+      <ValueProvider Type="ProjectByPathExpressionProvider" PathExpression="Source\Service Interface\$(DataContractProjectName)" Stage="OnBeforeActions">
+      </ValueProvider>
+    </Argument>
+  </Arguments>
+
+  <Actions>
+    <xi:include href="../Common/CreateService.xml"
+              xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Recipe/gax:Actions/gax:Action)" />
+    
+    <Action Name="AddReferenceDataContractsProjectToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="DataContractsProject" />
+    </Action>
+
+    <Action Name="AddReferenceFaultContractsToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="FaultContractsProject" />
+    </Action>
+
+    <Action Name="AddReferenceMessageContractsToServiceImplementationProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceImplementationProject" />
+      <Input Name="ReferencedProject" RecipeArgument="MessageContractsProject" />
+    </Action>
+
+    <Action Name="AddReferenceDataContractsToServiceContractsProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceContractsProject" />
+      <Input Name="ReferencedProject" RecipeArgument="DataContractsProject" />
+    </Action>
+    
+    <Action Name="AddReferenceFaultContractsToServiceContractsProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceContractsProject" />
+      <Input Name="ReferencedProject" RecipeArgument="FaultContractsProject" />
+    </Action>
+    
+    <Action Name="AddReferenceMessageContractsToServiceContractsProject" Type="Referencer">
+      <Input Name="ReferringProject" RecipeArgument="ServiceContractsProject" />
+      <Input Name="ReferencedProject" RecipeArgument="MessageContractsProject" />
+    </Action>
+  </Actions>
+</Recipe>

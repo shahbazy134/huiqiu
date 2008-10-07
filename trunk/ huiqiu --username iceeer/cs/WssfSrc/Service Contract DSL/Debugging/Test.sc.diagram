@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" isCompleteView="false" name="Test">
+  <serviceContractModelMoniker Id="9b363a1a-872e-4b9f-b325-7c8d0ef6a865" />
+  <nestedChildShapes>
+    <operationShape Id="3c2d35eb-42b6-437b-ab8a-4ed3be2481e6" absoluteBounds="5, 2.375, 1.375, 0.875">
+      <operationMoniker name="/9b363a1a-872e-4b9f-b325-7c8d0ef6a865/Operation1" />
+    </operationShape>
+    <serviceShape Id="5148e984-af7e-4c49-9c5c-84d5ae847adf" absoluteBounds="2.75, 1.125, 1.5, 1">
+      <serviceMoniker Id="85ecbd57-02e7-4e65-969f-0d88d2fa1afe" />
+    </serviceShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

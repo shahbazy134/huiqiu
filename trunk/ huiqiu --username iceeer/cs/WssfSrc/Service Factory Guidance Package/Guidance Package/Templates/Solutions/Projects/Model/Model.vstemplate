@@ -1,0 +1,27 @@
+﻿<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Model</Name>
+		<Description>Model container</Description>
+    <Icon>Model.ico</Icon>
+    <ProjectType>ServicesSoftwareFactoryProduct</ProjectType>
+		<SortOrder>20</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>Model</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Model.ssfproduct" ReplaceParameters="true">
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.Practices.RecipeFramework.VisualStudio, Version=1.0.60429.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.Practices.RecipeFramework.VisualStudio.Templates.UnfoldTemplate</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<Template xmlns="http://schemas.microsoft.com/pag/gax-template"
+              SchemaVersion="1.0">
+			<References>
+			</References>
+		</Template>
+	</WizardData>
+</VSTemplate>

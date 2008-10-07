@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" isCompleteView="false" name="Sample">
+  <dataContractModelMoniker name="/" />
+  <nestedChildShapes>
+    <dataContractCompartmentShape Id="277c6eb4-413f-4794-92ec-b5910bb451da" absoluteBounds="2.875, 1.5, 1.5, 1.5516910807291668">
+      <dataContractElementMoniker name="//ExampleElement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac1e49a9-89d1-4ce0-bd09-ec00115026ea" absoluteBounds="2.89, 2.51, 1.4700000000000002, 0.44169108072916663" name="PropertiesCompartment" title="Properties" titleFillColor="LightGray" compartmentFillColor="White" />
+      </nestedChildShapes>
+    </dataContractCompartmentShape>
+    <dataContractCompartmentShape Id="736e7ea6-524f-4e1d-b970-c0411ea0b839" absoluteBounds="7, 2, 1.5, 1.3593896484374999">
+      <dataContractElementMoniker name="//DataContractElement2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33d43abe-355b-4cb8-96e7-6a8ffce9be74" absoluteBounds="7.015, 3.01, 1.4700000000000002, 0.2493896484375" name="PropertiesCompartment" title="Properties" titleFillColor="LightGray" compartmentFillColor="White" />
+      </nestedChildShapes>
+    </dataContractCompartmentShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

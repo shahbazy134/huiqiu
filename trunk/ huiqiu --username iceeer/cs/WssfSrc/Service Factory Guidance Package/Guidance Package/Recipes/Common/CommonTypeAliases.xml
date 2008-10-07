@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types xmlns="http://schemas.microsoft.com/pag/gax-core">
+	<!--ValueProviders-->
+	<TypeAlias Name="Evaluator" Type="Microsoft.Practices.RecipeFramework.Library.ValueProviders.ExpressionEvaluatorValueProvider, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="PathCreatorProvider" Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.OS.PathCreatorProvider, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="GuidancePackagePathProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.GuidancePackagePathProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="CurrentProjectProvider" Type="Microsoft.Practices.RecipeFramework.Extensions.ValueProviders.VisualStudio.CurrentProjectProvider, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="StoreProvider" Type="Microsoft.Practices.Modeling.Dsl.Integration.ValueProviders.StoreProvider, Microsoft.Practices.Modeling.Dsl.Integration" />
+	<TypeAlias Name="DiagramProvider" Type="Microsoft.Practices.Modeling.Dsl.Integration.ValueProviders.DiagramProvider, Microsoft.Practices.Modeling.Dsl.Integration" />
+	<TypeAlias Name="SelectedProjectModelProvider" Type="Microsoft.Practices.Modeling.Dsl.Integration.ValueProviders.SelectedProjectModelProvider, Microsoft.Practices.Modeling.Dsl.Integration" />
+	<TypeAlias Name="ModelFilesProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.ModelFilesProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="HostModelEndpointAddressProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.HostModelEndpointAddressProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="HostModelServiceReferenceNameProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.HostModelServiceReferenceNameProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="HostModelClientProjectProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.HostModelClientProjectProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="ConfigurationProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.ConfigurationProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="CodeLanguageConfigurableProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.CodeLanguageConfigurableProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="ProjectNamespaceProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.ProjectNamespaceProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="ClientProxyFolderNameProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.ClientProxyFolderNameProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+  <TypeAlias Name="ProjectByPathExpressionProvider" Type="Microsoft.Practices.ServiceFactory.ValueProviders.ProjectByPathExpressionProvider, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+  <!--Converters-->
+	<TypeAlias Name="ProjectItemConverter" Type="Microsoft.Practices.RecipeFramework.Library.Converters.ProjectItemConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="SolutionConverter" Type="Microsoft.Practices.RecipeFramework.Library.Converters.SolutionConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="ProjectConverter" Type="Microsoft.Practices.RecipeFramework.Library.Converters.ProjectConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="SolutionFolderConverter" Type="Microsoft.Practices.RecipeFramework.Library.Converters.SolutionFolderConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="TypeSolutionFolderConverter" Type="Microsoft.Practices.RecipeFramework.Library.VisualStudio.Converters.SolutionFolderConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="CodeIdentifierStringConverter" Type="Microsoft.Practices.RecipeFramework.Library.Converters.CodeIdentifierStringConverter, Microsoft.Practices.RecipeFramework.Library" />
+	<TypeAlias Name="ValidLocationConverter" Type="Microsoft.Practices.ServiceFactory.Library.Validation.ValidLocationConverter, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="ValidFileNameConverter" Type="Microsoft.Practices.ServiceFactory.Library.Validation.ValidFileNameConverter, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+  <TypeAlias Name="ValidFolderNameConverter" Type="Microsoft.Practices.ServiceFactory.Library.Validation.ValidFolderNameConverter, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<!--Actions-->
+  <TypeAlias Name="Referencer" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.AddProjectReferenceAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1" />
+  <TypeAlias Name="RefCreator" Type="Microsoft.Practices.RecipeFramework.Library.Actions.CreateUnboundReferenceAction, Microsoft.Practices.RecipeFramework.Library"/>
+	<TypeAlias Name="AddAssemblyReferenceAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.AddAssemblyReferenceAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="AddItemFromStringAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.AddItemFromStringAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="AddItemFromStringToProjectItemByNameAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.AddItemFromStringToProjectItemByNameAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="AddSolutionFolderItemFromFileAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.AddSolutionFolderItemFromFileAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="AutoLayoutShapeElementsAction" Type="Microsoft.Practices.Modeling.Dsl.Integration.Actions.Dsl.AutoLayoutShapeElementsAction, Microsoft.Practices.Modeling.Dsl.Integration" />
+	<TypeAlias Name="AnyStandardProjectReference" Type="Microsoft.Practices.ServiceFactory.References.AnyStandardProjectReference, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+	<TypeAlias Name="ClassGeneratorFromCompileUnitAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.CodeDom.ClassGeneratorFromCompileUnitAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="DeleteItemIfExistsFromProjectAction" Type="Microsoft.Practices.RecipeFramework.Extensions.Actions.VisualStudio.DeleteItemIfExistsFromProjectAction, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	<TypeAlias Name="SaveConfigurationAction" Type="Microsoft.Practices.ServiceFactory.Actions.SaveConfigurationAction, Microsoft.Practices.ServiceFactory.GuidancePackage" />
+</Types>

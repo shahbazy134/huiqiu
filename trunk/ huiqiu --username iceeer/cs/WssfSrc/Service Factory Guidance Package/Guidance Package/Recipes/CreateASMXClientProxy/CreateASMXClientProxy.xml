@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipe Name="CreateASMXClientProxy" Bound="false" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="../Common/CommonTypeAliases.xml" xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Add ASMX Service Reference</Caption>
+	<Description>Add a reference to a service (client proxy class and types). This option may require network access.</Description>
+	<HostData>
+		<Icon ID="2934" />
+		<!-- HostDesignerCommandSetId = "7f1c6863-602e-41c8-8509-a8647dd25d3b" -->
+		<CommandBar Guid="7f1c6863-602e-41c8-8509-a8647dd25d3b" ID="65536"/>
+	</HostData>
+	<Arguments>
+		<Argument Name="ClientProject" Required="true" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="HostModelClientProjectProvider" />
+		</Argument>		
+		<Argument Name="ServiceAddress">
+			<Converter Type="ValidLocationConverter" Extension=".wsdl"/>
+			<ValueProvider Type="HostModelEndpointAddressProvider" ServiceURLEndMask=".asmx" />
+		</Argument>
+	</Arguments>
+	<Actions>
+		<Action Name="AddServiceReference" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateASMXClientProxy.AddServiceReferenceAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="ClientProject" RecipeArgument="ClientProject" />
+			<Input Name="ServiceAddress" RecipeArgument="ServiceAddress" />
+		</Action>
+	</Actions>
+</Recipe>

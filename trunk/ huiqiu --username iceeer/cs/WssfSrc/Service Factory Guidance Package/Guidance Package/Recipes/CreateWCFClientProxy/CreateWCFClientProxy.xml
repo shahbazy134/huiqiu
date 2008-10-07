@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipe Name="CreateWCFClientProxy" Bound="false" xmlns="http://schemas.microsoft.com/pag/gax-core" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="../Common/CommonTypeAliases.xml" xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Add WCF Service Reference</Caption>
+	<Description>Add a reference to a service (client proxy class and types) and generate a client configuration file from a WSDL endpoint description. This option may require network access.</Description>
+	<HostData>
+		<Icon ID="2934" />
+		<!-- HostDesignerCommandSetId = "7f1c6863-602e-41c8-8509-a8647dd25d3b" -->
+		<CommandBar Guid="7f1c6863-602e-41c8-8509-a8647dd25d3b" ID="65536"/>
+	</HostData>
+	<Arguments>
+		<Argument Name="ClientProject" Required="true" Type="EnvDTE.Project, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<Converter Type="ProjectConverter" />
+			<ValueProvider Type="HostModelClientProjectProvider" />
+		</Argument>		
+		<Argument Name="ServiceAddress">
+			<Converter Type="ValidLocationConverter" Extension=".wsdl"/>
+			<ValueProvider Type="HostModelEndpointAddressProvider" ServiceURLEndMask=".svc?wsdl" />
+		</Argument>
+		<Argument Name="ServiceReferenceName" Required="true">
+			<ValueProvider Type="HostModelServiceReferenceNameProvider"/>
+		</Argument>
+		<Argument Name="ServiceReferenceFileName">
+			<ValueProvider Type="Evaluator" Expression="$(ServiceReferenceName).cs" Stage="OnBeforeActions">
+				<MonitorArgument Name="ServiceReferenceName" />
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ClientProjectNamespace" Required="false">
+			<ValueProvider Type="ProjectNamespaceProvider" SelectedProject="ClientProject" Stage="OnBeforeActions">
+				<MonitorArgument Name="ServiceReferenceName" />
+			</ValueProvider>
+		</Argument>
+		<Argument Name="ServiceEndpoint" Required="true" Type="System.ServiceModel.Description.ServiceEndpoint, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+		<Argument Name="ClientProxyCompileUnit" Required="true" Type="System.CodeDom.CodeCompileUnit, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+		<Argument Name="BehaviorElement" Required="true" Type="System.ServiceModel.Configuration.EndpointBehaviorElement, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+		<Argument Name="CertificateValidationMode" Required="true" Type="System.ServiceModel.Security.X509CertificateValidationMode, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<ValueProvider Type="Evaluator" Expression="ChainTrust" />
+		</Argument>
+		<Argument Name="ContractGenerationOptions" Required="true" Type="Microsoft.Practices.ServiceFactory.Description.ContractGenerationOptions, Microsoft.Practices.ServiceFactory.Description" />
+		<Argument Name="Configuration" Required="true" Type="System.Configuration.Configuration, System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+			<ValueProvider Type="ConfigurationProvider" SelectedProject="ClientProject" />
+		</Argument>
+		<Argument Name="CodeProvider" Required="true" Type="System.CodeDom.Compiler.CodeDomProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<ValueProvider Type="CodeLanguageConfigurableProvider" SelectedProject="ClientProject"/>
+		</Argument>
+		<Argument Name="ClientProxyFolderName" Required="true">
+			<ValueProvider Type="ClientProxyFolderNameProvider" SelectedProject="ClientProject"/>
+		</Argument>
+	</Arguments>
+	<GatheringServiceData>
+		<Wizard xmlns="http://schemas.microsoft.com/pag/gax-wizards" SchemaVersion="1.0" Help="ms-help://MS.VSCC.v80/MS.VSIPCC.v80/ms.wssf.2006Dec/WSSF/html/12-170-How_to_Add_a_Reference_to_the_Service_Client.htm">
+			<Pages>
+				<Page>
+					<Title>Connect to a service and generate a client configuration file from a WSDL endpoint description</Title>
+					<LinkTitle>Service properties</LinkTitle>
+					<Fields>
+						<Field Label="Service address" ValueName="ServiceAddress" InvalidValueMessage="Invalid value. A valid URL address is required">
+							<Tooltip>Service URI (absolute or base) without the '?wsdl' or '/mex' path.</Tooltip>
+							<Editor Type="Microsoft.Practices.RecipeFramework.Extensions.Editors.AddWebReferenceEditor, Microsoft.Practices.RecipeFramework.Extensions" />
+						</Field>
+						<Field Label="Service Reference Name" ValueName="ServiceReferenceName">
+							<Tooltip>The name for all the imported assets from the WSDL endpoint description.</Tooltip>
+						</Field>
+					</Fields>
+				</Page>
+				<Page Type="Microsoft.Practices.ServiceFactory.Recipes.CreateWCFClientProxy.Presentation.SecureClientConfigPage, Microsoft.Practices.ServiceFactory.GuidancePackage">
+					<Title>Confirm the service endpoint selection</Title>
+					<LinkTitle>Endpoint selection</LinkTitle>
+				</Page>
+				<Page Type="Microsoft.Practices.ServiceFactory.Recipes.CreateWCFClientProxy.Presentation.SecureClientConfigBehaviorPage, Microsoft.Practices.ServiceFactory.GuidancePackage">
+					<Title>Enter the additional client configuration information</Title>
+					<LinkTitle>Security settings</LinkTitle>
+				</Page>
+			</Pages>
+		</Wizard>
+	</GatheringServiceData>
+	<Actions CoordinatorServiceType="Microsoft.Practices.RecipeFramework.Extensions.Coordinators.FailSafeCoordinator, Microsoft.Practices.RecipeFramework.Extensions, Version=1.3.41007.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+		<Action Name="UpdateClientConfig" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateWCFClientProxy.UpdateClientConfigAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="ServiceEndpoint" RecipeArgument="ServiceEndpoint" />
+			<Input Name="ContractGenerationOptions" RecipeArgument="ContractGenerationOptions" />
+		</Action>		
+		<Action Name="CreateClientProxyClassFromCompileUnit" Type="ClassGeneratorFromCompileUnitAction">
+			<Input Name="CompileUnit" RecipeArgument="ClientProxyCompileUnit" />
+			<Input Name="CodeProvider" RecipeArgument="CodeProvider" />
+			<Output Name="Class" />
+		</Action>
+		<Action Name="DeleteClientProxyIfExists" Type="DeleteItemIfExistsFromProjectAction">
+			<Input Name="ItemName" RecipeArgument="ServiceReferenceFileName" />
+			<Input Name="Project" RecipeArgument="ClientProject" />
+		</Action>
+		<Action Name="AddClientProxyAction" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateWCFClientProxy.AddClientProxyAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="ItemName" RecipeArgument="ClientProxyFolderName" />
+			<Input Name="TargetFileName" RecipeArgument="ServiceReferenceFileName" />
+			<Input Name="Project" RecipeArgument="ClientProject" />
+			<Input Name="Content" ActionOutput="CreateClientProxyClassFromCompileUnit.Class" />
+		</Action>
+		<Action Name="SetBehaviorOnClientConfigAction" Type="Microsoft.Practices.ServiceFactory.Recipes.CreateWCFClientProxy.SetBehaviorOnClientConfigAction, Microsoft.Practices.ServiceFactory.GuidancePackage">
+			<Input Name="Configuration" RecipeArgument="Configuration" />
+			<Input Name="ServiceEndpoint" RecipeArgument="ServiceEndpoint" />
+			<Input Name="BehaviorElement" RecipeArgument="BehaviorElement" />
+		</Action>
+		<Action Name="AddServiceModelReferenceAction" Type="AddAssemblyReferenceAction" AssemblyFilePath="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<Input Name="ReferringProject" RecipeArgument="ClientProject" />
+		</Action>
+		<Action Name="AddRuntimeSerializationReferenceAction" Type="AddAssemblyReferenceAction" AssemblyFilePath="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<Input Name="ReferringProject" RecipeArgument="ClientProject" />
+		</Action>
+		<Action Name="SaveConfiguration" Type="SaveConfigurationAction">
+			<Input Name="Configuration" RecipeArgument="Configuration" />
+		</Action>
+	</Actions>
+</Recipe>

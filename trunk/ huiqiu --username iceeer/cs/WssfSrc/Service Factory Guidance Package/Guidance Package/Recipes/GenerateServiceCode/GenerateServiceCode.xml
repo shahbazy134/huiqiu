@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Recipe Name="GenerateServiceCode"
+        xmlns="http://schemas.microsoft.com/pag/gax-core"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        Bound="false">
+	<xi:include href="../Common/CommonTypeAliases.xml"
+						xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(/gax:Types)" />
+	<Caption>Generate Code</Caption>
+	<Description>Generates code from the service.</Description>
+	<HostData>
+		<Icon ID="3039"/>
+		<!-- Constants.HostDesignerCommandSetId -->
+		<CommandBar Guid="7f1c6863-602e-41c8-8509-a8647dd25d3b" ID="65536" />		
+	</HostData>
+	<Arguments>
+		<xi:include href="../Common/CodeGeneration.xml" xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(gax:Recipe/gax:Arguments/gax:Argument)" />
+	</Arguments>
+	<Actions>
+		<xi:include href="../Common/CodeGeneration.xml" xpointer="xmlns(gax=http://schemas.microsoft.com/pag/gax-core) xpointer(gax:Recipe/gax:Actions/gax:Action)" />
+	</Actions>
+</Recipe>

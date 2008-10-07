@@ -1,0 +1,38 @@
+
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{1DF4D691-79FD-4E3E-B7A6-A1A5DC772BBD}") = "Debugging", "Debugging.ssfproduct", "{AF2308FD-3214-4638-ADF1-0E7594DA72D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library1", "Library1\Library1.csproj", "{999DB8B8-6FCC-40A5-B235-F53C9F04975C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{7FE63CAE-7DD3-4AA6-8343-7DE3E0C55EEB}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF2308FD-3214-4638-ADF1-0E7594DA72D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2308FD-3214-4638-ADF1-0E7594DA72D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2308FD-3214-4638-ADF1-0E7594DA72D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999DB8B8-6FCC-40A5-B235-F53C9F04975C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999DB8B8-6FCC-40A5-B235-F53C9F04975C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999DB8B8-6FCC-40A5-B235-F53C9F04975C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999DB8B8-6FCC-40A5-B235-F53C9F04975C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF2308FD-3214-4638-ADF1-0E7594DA72D2} = {7FE63CAE-7DD3-4AA6-8343-7DE3E0C55EEB}
+	EndGlobalSection
+EndGlobal

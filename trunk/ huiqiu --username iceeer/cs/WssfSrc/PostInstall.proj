@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+	
+	<!--
+		Create a new PublicKey and update the source to refer to its public key token.
+	-->
+	<Target Name="Build">
+		<Error 
+				Condition="Exists('ProductKey.snk')" 
+				Text="A product key has already been generated for this source code."/>
+		
+		<GenerateKeyPair KeyFile="ProductKey.snk" />
+		<ReadPublicKeyToken
+				KeyFile="ProductKey.snk" >
+			<Output PropertyName="CustomPublicKeyToken" TaskParameter="PublicKeyToken" />
+		</ReadPublicKeyToken>
+
+		<CreateItem Include="$(MSBuildProjectDirectory)\**\*.csproj;
+				$(MSBuildProjectDirectory)\**\*.dsl;
+				$(MSBuildProjectDirectory)\**\*.cs;
+				$(MSBuildProjectDirectory)\**\*.tt;
+				$(MSBuildProjectDirectory)\**\*.wxs;
+				$(MSBuildProjectDirectory)\**\*.wxi;
+				$(MSBuildProjectDirectory)\**\*.xml;
+				$(MSBuildProjectDirectory)\**\ruleset.config" >
+			<Output ItemName="CodeFiles" TaskParameter="Include" />
+		</CreateItem>
+
+		<ReplaceString Path="%(CodeFiles.Identity)"
+			OldValue="##CustomPublicKeyToken##"
+			NewValue="$(CustomPublicKeyToken)" />
+	</Target>
+
+	<UsingTask TaskName="Microsoft.Practices.Build.File.ReplaceString" AssemblyFile="Lib\Microsoft.Practices.Build.dll" />
+	<UsingTask TaskName="Microsoft.Practices.Build.Tools.GenerateKeyPair" AssemblyFile="Lib\Microsoft.Practices.Build.dll" />
+	<UsingTask TaskName="Microsoft.Practices.Build.Tools.ReadPublicKeyToken" AssemblyFile="Lib\Microsoft.Practices.Build.dll" />
+
+</Project>

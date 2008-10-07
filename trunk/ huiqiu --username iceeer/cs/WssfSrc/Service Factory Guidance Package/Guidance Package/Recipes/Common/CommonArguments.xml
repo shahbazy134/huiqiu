@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Arguments xmlns="http://schemas.microsoft.com/pag/gax-core">
+  <Argument Name="SolutionArgument" Type="EnvDTE.Solution, EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <Converter Type="SolutionConverter" />
+    <ValueProvider Type="Evaluator"
+            Expression="/">
+    </ValueProvider>
+  </Argument>
+  <Argument Name="ApplicationNameArgument">
+    <ValueProvider Type="Evaluator"
+            Expression="$(SolutionArgument.Properties.Item('Name').Value)">
+    </ValueProvider>
+  </Argument>  
+</Arguments>

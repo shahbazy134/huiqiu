@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="p_p" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p&amp;p.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SF.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ServiceModelDescription" xml:space="preserve">
+    <value>Model service contracts, operations, and messages.</value>
+  </data>
+  <data name="MessageModelDescription" xml:space="preserve">
+    <value>Model data and fault contracts.</value>
+  </data>
+  <data name="ServiceSoftwareFactory" xml:space="preserve">
+    <value>Service Factory: Modeling Edition</value>
+  </data>
+  <data name="ModelProjectReference" xml:space="preserve">
+    <value>Applies to a Model Project.</value>
+  </data>
+  <data name="LargeIcons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeIcons.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallIcons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallIcons.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DSLSurfaceArea" xml:space="preserve">
+    <value>Applies to DSL Surface Area.</value>
+  </data>
+  <data name="ServiceUriValidationMessage" xml:space="preserve">
+    <value>The service location is invalid. Select a valid location as a file path or service URL.</value>
+  </data>
+  <data name="ProjectPropertyNotAssigned" xml:space="preserve">
+    <value>The property 'Project' was not assigned. Specify a value for the 'Project' property where the generated code should be placed.</value>
+  </data>
+  <data name="DomainModelNotFound" xml:space="preserve">
+    <value>The DomainModel for the model element '{0}' was not found.</value>
+  </data>
+  <data name="GeneratedObjects" xml:space="preserve">
+    <value>Generated objects: {0}</value>
+  </data>
+  <data name="BehaviorNotFoundException" xml:space="preserve">
+    <value>The behavior {0} was not found.</value>
+  </data>
+  <data name="BindingNotFoundException" xml:space="preserve">
+    <value>The binding {0} was not found.</value>
+  </data>
+  <data name="MissingFaultDescription" xml:space="preserve">
+    <value>The operation '{0}' has no FaultContract defined for validation. Add the  [FaultContract(typeof(ValidationFault))] attribute to this operation. </value>
+  </data>
+  <data name="SolutionFolderHasProjectsReference" xml:space="preserve">
+    <value>Applies to Solution Folders that contains projects.</value>
+  </data>
+  <data name="DataSetSchemaNotAllowed" xml:space="preserve">
+    <value>The schema '{0}' is a DataSet and is not allowed for this operation.</value>
+  </data>
+  <data name="LogErrorTitle" xml:space="preserve">
+    <value>Log error</value>
+  </data>
+  <data name="IdleStatusBarMessage" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="ImportingElements" xml:space="preserve">
+    <value>Importing {0} ...</value>
+  </data>
+  <data name="GeneratingServiceContractsMessage" xml:space="preserve">
+    <value>ServiceContract model elements</value>
+  </data>
+  <data name="LogInformationTitle" xml:space="preserve">
+    <value>Log information</value>
+  </data>
+  <data name="ElementsGenerated" xml:space="preserve">
+    <value>Total generated elements: {0}</value>
+  </data>
+  <data name="SolutionReference" xml:space="preserve">
+    <value>Applies to a Solution.</value>
+  </data>
+  <data name="Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvalidMappingErrorMessage" xml:space="preserve">
+    <value>Cannot perform mapping between {0} and {1}. Possible reasons are incompatible types or unavailable getter/setter pairs.</value>
+  </data>
+  <data name="InvalidMappingErrorTitle" xml:space="preserve">
+    <value>Invalid Property Mapping</value>
+  </data>
+  <data name="InvalidNamespaceError" xml:space="preserve">
+    <value>Invalid namespace</value>
+  </data>
+  <data name="MappedPropertyToString" xml:space="preserve">
+    <value>{0} {1} {2}</value>
+  </data>
+  <data name="ProjectItemInvalidName" xml:space="preserve">
+    <value>The selected name is invalid.</value>
+  </data>
+  <data name="ProjectItemNameAlreadyExists" xml:space="preserve">
+    <value>The selected name is already exists in the project.</value>
+  </data>
+  <data name="PropertiesLabelText" xml:space="preserve">
+    <value>Properties for {0}</value>
+  </data>
+  <data name="PublicPropertyListItemToString" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="TranslatedTypesMustBeDifferent" xml:space="preserve">
+    <value>You must choose two different types to translate between.</value>
+  </data>
+  <data name="ProjectIsInRoleReference" xml:space="preserve">
+    <value>A project with a particular role</value>
+  </data>
+  <data name="HostModelDescription" xml:space="preserve">
+    <value>Model host application, service endpoints, and client/proxies.</value>
+  </data>
+  <data name="CodeAnalysisSuccess" xml:space="preserve">
+    <value>WCF Code Analysis passed successfully.</value>
+  </data>
+  <data name="CodeAnalysisWarnings" xml:space="preserve">
+    <value>WCF Code Analysis detected {0} rule warnings. Please see detailed information in the Error List window.</value>
+  </data>
+  <data name="OverwriteExistingModel" xml:space="preserve">
+    <value>The current selected model contains elements. Are you sure you want to import ? </value>
+  </data>
+  <data name="DataContractModelImageText" xml:space="preserve">
+    <value>Data Contract Model</value>
+  </data>
+  <data name="HostDesignerModelImageText" xml:space="preserve">
+    <value>Host Model</value>
+  </data>
+  <data name="ServiceModelImageText" xml:space="preserve">
+    <value>Service Contract Model</value>
+  </data>
+  <data name="ErrorMsgBoxTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NullBindingException" xml:space="preserve">
+    <value>The view.Endpoint.Binding property has an empty value.</value>
+  </data>
+  <data name="NullEndpointException" xml:space="preserve">
+    <value>The view.Endpoint property has an empty value.</value>
+  </data>
+  <data name="SelectImporterFile" xml:space="preserve">
+    <value>Select an importer file</value>
+  </data>
+  <data name="CheckoutException" xml:space="preserve">
+    <value>The file {0} could not be added to the source control system.</value>
+  </data>
+  <data name="UpdatedFile" xml:space="preserve">
+    <value>The file '{0}' was created or updated.</value>
+  </data>
+  <data name="ClientProxyShapeReference" xml:space="preserve">
+    <value>Applies to the client proxy shape.</value>
+  </data>
+  <data name="ValidationException" xml:space="preserve">
+    <value>There were validation errors. Check the error list window and fix the errors and run this recipe again.</value>
+  </data>
+  <data name="ValidationWarnings" xml:space="preserve">
+    <value>This WSDL has the following warning:\n\r{0}\n\rDo you want to continue with the import?</value>
+  </data>
+  <data name="ShapeHasArtifactLinksReference" xml:space="preserve">
+    <value>Applies to a particular MEL with artifact links.</value>
+  </data>
+  <data name="ProjectMappingTableException" xml:space="preserve">
+    <value>The Proyect Mapping Table file was not found or the Proyect Mapping Table value specified in this model does not exists.</value>
+  </data>
+  <data name="OrderAllDataMembersReference" xml:space="preserve">
+    <value>Order All DataMembers reference</value>
+  </data>
+  <data name="OrderedDataMembers" xml:space="preserve">
+    <value>Ordered '{1}' items on the '{0}' element.</value>
+  </data>
+</root>

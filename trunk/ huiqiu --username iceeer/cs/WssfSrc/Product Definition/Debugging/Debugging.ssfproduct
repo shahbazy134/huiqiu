@@ -1,0 +1,31 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{af2308fd-3214-4638-adf1-0e7594da72d2}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Model Include="Model1.dsl">
+    </Model>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Model Include="Model2.msgc">
+      <SubType>Content</SubType>
+    </Model>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model2.msgc.diagram">
+      <SubType>Content</SubType>
+      <DependentUpon>Model2.msgc</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <SFBasePath>$(DevEnvDir)\PublicAssemblies</SFBasePath>
+  </PropertyGroup>
+  <Import Project="$(SFBasePath)\Microsoft.Practices.ServiceFactory.Product.targets" />
+</Project>
