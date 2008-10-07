@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[TaskManagerEx.dsp]
+SCC_Aux_Path = "D:\Work\TaskManager\SS"
+SCC_Project_Name = "$/TaskManagerEx", BAAAAAAA
+
+[TaskManagerEx.vcproj]
+SCC_Aux_Path = "D:\Work\TaskManager\SS"
+SCC_Project_Name = "$/TaskManagerEx", BAAAAAAA
