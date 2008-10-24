@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>ÑÝÊ¾¸´ÖÆ¡¢Õ³Ìù¡¢Çå¿Õ¼ôÌù°å</title>
+<script language="javascript" type="text/javascript">
+    function copy_to_clipboard(text) {
+        if (window.clipboardData) {
+            window.clipboardData.setData('Text', text); //setData(sDataFormat, sData)
+            return true;
+        }
+        else {
+            var clipboarddiv = document.getElementById('divclipboardswf');
+            if (clipboarddiv == null) {
+                clipboarddiv = document.createElement('div');
+                clipboarddiv.setAttribute("name", "divclipboardswf");
+                clipboarddiv.setAttribute("id", "divclipboardswf");
+                document.body.appendChild(clipboarddiv);
+            }
+            clipboarddiv.innerHTML = '<embed src="clipboard.swf" FlashVars="clipboard=' +
+encodeURIComponent(text) + '" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+            return true;
+        }
+        return false;
+    }
+    function paste_from_clipboard() {
+        if (window.clipboardData) {
+            var text = window.clipboardData.getData('Text');
+            return text?text:"";
+        }
+        else {
+            alert('Not implemented!')
+        }
+        return false;
+    }
+    function clear_clipboard() {
+        window.clipboardData.clearData();
+        return true;
+    }
+    function doCopy(id) {
+        var obj = document.getElementById(id);
+        var text = obj.value;
+        copy_to_clipboard(text);
+    }
+    function doPaste(id) {
+        var obj = document.getElementById(id);
+        obj.value = paste_from_clipboard();
+    }
+</script>
+</head>
+<body>
+<input type="text" id="txtCopyFrom" value="" />
+<input type="button" id="btnCopy" value="¸´ÖÆ" onclick="doCopy('txtCopyFrom');" />
+<br />
+<input type="text" id="txtPasteTo" value="" />
+<input type="button" id="btnPaste" value="Õ³Ìù" onclick="doPaste('txtPasteTo');" />
+<br />
+<input type="button" id="btnClear" value="Çå¿Õ¼ôÌù°å" onclick="clear_clipboard();" />
+</body>
+</html>
