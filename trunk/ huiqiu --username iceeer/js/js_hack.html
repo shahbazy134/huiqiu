@@ -1,14 +1,17 @@
+<html>
+<head>
+<title></title>
 <script type="text/javascript">
 <!--
-var _alert = alert;
-window.alert = function(s) {
-    if (confirm("HACK \"" + s + "\"!!!")) {
-        _alert(s);
+    var _alert = alert;
+    window.alert = function(s) {
+        if (confirm("HACK \"" + s + "\"!!!")) {
+            _alert(s);
+        }
     }
-}
 -->
 </script>
-<html>
+</head>
 <body>
 <input type="button" onclick="javascript: alert('Hello World!')" value="test" />
 </body>
