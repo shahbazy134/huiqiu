@@ -57,11 +57,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="activex\excel.htm" />
+    <Content Include="activex\jquery-1.2.6-vsdoc.js" />
+    <Content Include="activex\jquery-1.2.6.js" />
+    <Content Include="activex\jquery-1.2.6.min.js" />
+    <Content Include="activex\word.htm" />
     <Content Include="dist\ext\2.1\ext-2.1-intellisense.js" />
     <Content Include="dist\jquery\1.2.6\demo_jquery_vs_intellisense.htm" />
     <Content Include="dist\jquery\1.2.6\jquery-1.2.6-vsdoc.js" />
     <Content Include="dist\jquery\1.2.6\jquery-1.2.6.js" />
     <Content Include="vsintellisense.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="activex\Book.xlt" />
+    <None Include="activex\word.dot" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
