@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Personnel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\PRJ32\Book\C#Cookbook\Code\CSharpRecipes\Personnel.xsd">
-	<Employee name="Bob" title="Customer Service" companyYears="1"/>
-	<Employee name="Alice" title="Manager" companyYears="12"/>
-	<Employee name="Chas" title="Salesman" companyYears="3"/>
-	<Employee name="Rutherford" title="CEO" companyYears="27"/>
-</Personnel>

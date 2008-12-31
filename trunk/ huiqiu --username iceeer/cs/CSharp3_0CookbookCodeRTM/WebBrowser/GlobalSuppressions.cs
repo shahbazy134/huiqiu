@@ -1,3 +1,0 @@
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2122:DoNotIndirectlyExposeMethodsWithLinkDemands", Scope = "member", Target = "WebBrowser.frmCheapoBrowser.InitializeComponent():System.Void")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions", Scope = "member", Target = "WebBrowser.frmCheapoBrowser.NavigateToCurrentUri():System.Void")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions", Scope = "member", Target = "WebBrowser.CheapoBrowser.NavigateToCurrentUri():System.Void")]

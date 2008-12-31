@@ -1,7 +1,0 @@
-﻿在符合East Asia Numeric Formatting Library 许可的条件下下面的文件可以再分发:
-  
-EastAsiaNumericFormatter.dll
-ja\EastAsiaNumericFormatter.resources.dll
-zh-chs\EastAsiaNumericFormatter.resources.dll
-zh-cht\EastAsiaNumericFormatter.resources.dll
-ko-kr\EastAsiaNumericFormatter.resources.dll
