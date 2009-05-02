@@ -1,0 +1,26 @@
+<script type="text/javascript">
+function checkss(so,n)
+{
+	if (n == 1)
+	{
+		if(so.value == "输入关键字开始搜索")
+		{
+			so.value="";
+		}
+		so.style.cssText = "color:#000";
+	}
+	if (n == 2 && so.value == "")
+	{
+		so.value = "输入关键字开始搜索";
+		so.style.cssText = "color:#333"
+	}
+	return true;
+}
+</script>
+
+<div class="searchbox" style="float: right;" align="right">
+<form name="f" action="/search.php" method="get"">
+<input type="hidden" name="cmd" value="search">
+<input name="so" type="text" class="c" id="so" onblur="checkss(this,2)" onclick="checkss(this,1);" value="输入关键字开始搜索" size="20" maxlength="100"> 
+</form>
+</div>

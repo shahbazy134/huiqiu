@@ -1,0 +1,17 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>GoogleA</os:ShortName>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,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</os:Image>
+<SearchForm>file:///C:/My%20Documents/Desktop/TEST.html</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/custom">
+  <os:Param name="q" value="{searchTerms}"/>
+  <os:Param name="sa" value="Search"/>
+  <os:Param name="client" value="pub-5363906623211223"/>
+  <os:Param name="forid" value="1"/>
+  <os:Param name="ie" value="UTF-8"/>
+  <os:Param name="oe" value="UTF-8"/>
+  <os:Param name="cof" value="GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A1"/>
+  <os:Param name="hl" value="en"/>
+  <os:Param name="sourceid" value="Mozilla-search"/>
+</os:Url>
+</SearchPlugin>
