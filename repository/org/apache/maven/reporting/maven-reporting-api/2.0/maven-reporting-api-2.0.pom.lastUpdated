@@ -1,0 +1,7 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Jan 20 15:18:43 CST 2012
+http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.error=Could not transfer artifact org.apache.maven.reporting\:maven-reporting-api\:pom\:2.0 from/to snapshots (http\://10.5.24.114\:8081/artifactory/plugins-snapshot)\: Error transferring file\: Connection timed out\: connect
+http\://repo1.maven.org/maven2/.lastUpdated=1327043923109
+default-http\://10.5.24.114\:8081/artifactory/plugins-release/.lastUpdated=1327040775593
+default-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.lastUpdated=1327040796609
+http\://10.5.24.114\:8081/artifactory/plugins-release/.error=Could not transfer artifact org.apache.maven.reporting\:maven-reporting-api\:pom\:2.0 from/to central (http\://10.5.24.114\:8081/artifactory/plugins-release)\: Error transferring file\: Connection timed out\: connect

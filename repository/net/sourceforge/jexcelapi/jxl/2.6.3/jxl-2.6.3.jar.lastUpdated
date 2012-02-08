@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Dec 29 15:11:37 CST 2011
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1325142697687
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1325142594359
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact net.sourceforge.jexcelapi\:jxl\:jar\:2.6.3 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

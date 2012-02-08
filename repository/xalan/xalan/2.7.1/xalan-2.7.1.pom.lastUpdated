@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed Feb 01 12:53:34 CST 2012
+default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1328072013875
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact xalan\:xalan\:pom\:2.7.1 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-release/xalan/xalan/2.7.1/xalan-2.7.1.pom. Error code 500, Server Error
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1328072014046
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact xalan\:xalan\:pom\:2.7.1 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-snapshot/xalan/xalan/2.7.1/xalan-2.7.1.pom. Error code 500, Server Error

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="AppFuse">
+  <bannerLeft>
+    <name>AppFuse Light</name>
+    <src>https://appfuse.dev.java.net/images/appfuse-title.gif</src>
+    <href>http://appfuse.org</href>
+  </bannerLeft>
+  <publishDate format="dd MMM yyyy" />
+  <skin>
+    <groupId>org.apache.tapestry</groupId>
+    <artifactId>maven-skin</artifactId>
+    <version>1.1</version>
+  </skin>
+  <body>
+    <menu name="Modules" ref="modules">
+      <item name="AppFuse Light JSF Module" href="appfuse-light-jsf/index.html" />
+      <item name="AppFuse Light Spring MVC Module" href="appfuse-light-spring/index.html" />
+      <item name="AppFuse Light Spring MVC/FreeMarker Module" href="appfuse-light-spring-freemarker/index.html" />
+      <item name="AppFuse Light Spring MVC/Security Module" href="appfuse-light-spring-security/index.html" />
+      <item name="AppFuse Light Stripes Module" href="appfuse-light-stripes/index.html" />
+      <item name="AppFuse Light Struts 2 Module" href="appfuse-light-struts/index.html" />
+      <item name="AppFuse Light Tapestry 5 Module" href="appfuse-light-tapestry/index.html" />
+      <item name="AppFuse Light Wicket Module" href="appfuse-light-wicket/index.html" />
+    </menu>
+    <menu ref="reports" />
+  </body>
+</project>

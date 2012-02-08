@@ -1,0 +1,7 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 09:38:17 CST 2011
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324604297187
+http\://maven.springframework.org/milestone/.lastUpdated=1324603918562
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324603917093
+http\://maven.springframework.org/milestone/.error=
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.hibernate\:hibernate-core\:jar\:3.6.7.Final from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

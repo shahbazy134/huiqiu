@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Mon Dec 26 10:46:28 CST 2011
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324867588531
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324866868062
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.compass-project\:compass\:jar\:2.2.0 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

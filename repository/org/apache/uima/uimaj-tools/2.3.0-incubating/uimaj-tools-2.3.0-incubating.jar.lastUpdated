@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Dec 22 14:34:15 CST 2011
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324535655187
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324535273312
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.apache.uima\:uimaj-tools\:jar\:2.3.0-incubating from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

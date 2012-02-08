@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>appfuse-maven-plugin</artifactId>
+  <versioning>
+    <latest>2.1-SNAPSHOT</latest>
+    <release>2.0.2</release>
+    <versions>
+      <version>2.0-SNAPSHOT</version>
+      <version>2.0-alpha</version>
+      <version>2.0-alpha-1-SNAPSHOT</version>
+      <version>2.0-m5-SNAPSHOT</version>
+      <version>2.0-m5</version>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <version>2.0-rc1</version>
+      <version>2.0</version>
+      <version>2.0.1-SNAPSHOT</version>
+      <version>2.0.1</version>
+      <version>2.0.2-SNAPSHOT</version>
+      <version>2.0.2</version>
+      <version>2.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20100927215455</lastUpdated>
+  </versioning>
+</metadata>

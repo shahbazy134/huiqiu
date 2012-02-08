@@ -1,0 +1,8 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Dec 29 12:06:03 CST 2011
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1325131563718
+default-http\://maven.net.cn/content/groups/public/.lastUpdated=1324619371312
+http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact org.hibernate\:hibernate-core\:jar\:3.3.2.GA from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to http\://maven.net.cn/content/groups/public/org/hibernate/hibernate-core/3.3.2.GA/hibernate-core-3.3.2.GA.jar. Error code 403, Forbidden
+http\://repo1.maven.org/maven2/.lastUpdated=1324619448093
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619370515
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.hibernate\:hibernate-core\:jar\:3.3.2.GA from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

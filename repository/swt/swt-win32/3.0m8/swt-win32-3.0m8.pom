@@ -1,0 +1,6 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>swt</groupId>
+  <artifactId>swt-win32</artifactId>
+  <version>3.0m8</version>
+</project>

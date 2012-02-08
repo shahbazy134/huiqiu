@@ -1,0 +1,16 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Dec 22 08:17:53 CST 2011
+http\://repository.aduna-software.org/maven2/.lastUpdated=1324513073671
+http\://repo.aduna-software.org/maven2/ext/.error=
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=
+http\://repo.aduna-software.org/maven2/releases/.error=Could not transfer artifact org.openrdf.sesame\:sesame-queryalgebra-evaluation\:pom\:2.2.4 from/to aduna-opensource.releases (http\://repo.aduna-software.org/maven2/releases)\: Failed to transfer http\://repo.aduna-software.org/maven2/releases/org/openrdf/sesame/sesame-queryalgebra-evaluation/2.2.4/sesame-queryalgebra-evaluation-2.2.4.pom. Error code 416, Requested Range Not Satisfiable
+http\://repo.aduna-software.org/maven2/ext/.lastUpdated=1324513072984
+default-http\://repository.jboss.org/maven2/.lastUpdated=1324513072218
+default-http\://repo.aduna-software.org/maven2/releases/.lastUpdated=1324513071296
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324513069578
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=
+http\://people.apache.org/repo/m2-incubating-repository/.lastUpdated=1324513071687
+http\://repository.aduna-software.org/maven2/.error=
+http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324513070578
+http\://people.apache.org/repo/m2-incubating-repository/.error=
+http\://repository.jboss.org/maven2/.error=Could not transfer artifact org.openrdf.sesame\:sesame-queryalgebra-evaluation\:pom\:2.2.4 from/to jboss (http\://repository.jboss.org/maven2)\: Access denied to http\://repository.jboss.org/maven2/org/openrdf/sesame/sesame-queryalgebra-evaluation/2.2.4/sesame-queryalgebra-evaluation-2.2.4.pom. Error code 403, Forbidden

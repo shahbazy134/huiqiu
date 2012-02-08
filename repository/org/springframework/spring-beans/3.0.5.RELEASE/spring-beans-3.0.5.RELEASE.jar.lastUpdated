@@ -1,0 +1,8 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Jan 20 15:17:11 CST 2012
+default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324619301421
+http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact org.springframework\:spring-beans\:jar\:3.0.5.RELEASE from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to\: http\://maven.net.cn/content/groups/public/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE.jar
+default-http\://maven.net.cn/content/groups/public/.lastUpdated=1327043826000
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619369265
+http\://repo1.maven.org/maven2/.lastUpdated=1327043831781
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.springframework\:spring-beans\:jar\:3.0.5.RELEASE from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000

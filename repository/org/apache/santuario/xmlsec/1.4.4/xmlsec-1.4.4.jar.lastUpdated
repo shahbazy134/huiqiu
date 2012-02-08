@@ -1,0 +1,8 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Jan 20 15:17:11 CST 2012
+default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324619301406
+http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact org.apache.santuario\:xmlsec\:jar\:1.4.4 from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to\: http\://maven.net.cn/content/groups/public/org/apache/santuario/xmlsec/1.4.4/xmlsec-1.4.4.jar
+default-http\://maven.net.cn/content/groups/public/.lastUpdated=1327043825984
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619368937
+http\://repo1.maven.org/maven2/.lastUpdated=1327043831781
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.apache.santuario\:xmlsec\:jar\:1.4.4 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000
