@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 09:26:16 CST 2011
+default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324603514750
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324603576531
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact com.h2database\:h2\:jar\:1.3.159 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000

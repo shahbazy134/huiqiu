@@ -1,0 +1,10 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Mon Dec 26 13:38:53 CST 2011
+default-http\://maven.net.cn/content/groups/public/.lastUpdated=1324619371296
+http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact com.h2database\:h2\:jar\:1.2.135 from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to http\://maven.net.cn/content/groups/public/com/h2database/h2/1.2.135/h2-1.2.135.jar. Error code 403, Forbidden
+default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324619301421
+http\://10.5.24.114\:8081/artifactory/plugins-release/.lastUpdated=1324877933625
+http\://repo1.maven.org/maven2/.lastUpdated=1324619447750
+http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact com.h2database\:h2\:jar\:1.2.135 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000
+default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619369140
+http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact com.h2database\:h2\:jar\:1.2.135 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000
