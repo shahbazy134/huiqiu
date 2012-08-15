@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Tue Dec 20 17:00:38 CST 2011
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324371636000
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.hibernate\:hibernate-core\:jar\:sources\:3.5.5-Final from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Error transferring file\: Server returned HTTP response code\: 409 for URL\: http\://10.5.24.114\:8081/artifactory/libs-release/org/hibernate/hibernate-core/3.5.5-Final/hibernate-core-3.5.5-Final-sources.jar
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324371638406
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.hibernate\:hibernate-core\:jar\:sources\:3.5.5-Final from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Error transferring file\: Server returned HTTP response code\: 409 for URL\: http\://10.5.24.114\:8081/artifactory/libs-snapshot/org/hibernate/hibernate-core/3.5.5-Final/hibernate-core-3.5.5-Final-sources.jar

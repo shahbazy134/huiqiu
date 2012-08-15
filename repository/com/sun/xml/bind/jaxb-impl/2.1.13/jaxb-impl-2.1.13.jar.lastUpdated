@@ -1,8 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Mon Dec 26 10:33:20 CST 2011
-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324866800390
-default-http\://maven.net.cn/content/groups/public/.lastUpdated=1324619371296
-http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-impl\:jar\:2.1.13 from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to http\://maven.net.cn/content/groups/public/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13.jar. Error code 403, Forbidden
-http\://repo1.maven.org/maven2/.lastUpdated=1324619447500
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619368359
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-impl\:jar\:2.1.13 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

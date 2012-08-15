@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Dec 21 13:17:40 CST 2011
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324444600765
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.freemarker\:freemarker\:jar\:2.3.9 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324444660812
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.freemarker\:freemarker\:jar\:2.3.9 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

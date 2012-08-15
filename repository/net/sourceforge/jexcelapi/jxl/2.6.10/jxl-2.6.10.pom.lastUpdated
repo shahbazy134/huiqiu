@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Feb 01 12:53:34 CST 2012
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1328072014375
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact net.sourceforge.jexcelapi\:jxl\:pom\:2.6.10 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-release/net/sourceforge/jexcelapi/jxl/2.6.10/jxl-2.6.10.pom. Error code 500, Server Error
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1328072014500
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact net.sourceforge.jexcelapi\:jxl\:pom\:2.6.10 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-snapshot/net/sourceforge/jexcelapi/jxl/2.6.10/jxl-2.6.10.pom. Error code 500, Server Error

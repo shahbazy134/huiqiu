@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Jan 18 09:11:15 CST 2012
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1326849075734
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.rendersnake\:rendersnake\:pom\:X.Y from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-release/org/rendersnake/rendersnake/X.Y/rendersnake-X.Y.pom. Error code 500, Server Error
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1326849075921
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.rendersnake\:rendersnake\:pom\:X.Y from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-snapshot/org/rendersnake/rendersnake/X.Y/rendersnake-X.Y.pom. Error code 500, Server Error

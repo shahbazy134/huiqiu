@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Feb 01 12:53:36 CST 2012
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1328072016218
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.apache.commons\:commons-exec\:pom\:1.1 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-release/org/apache/commons/commons-exec/1.1/commons-exec-1.1.pom. Error code 500, Server Error
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1328072016375
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.apache.commons\:commons-exec\:pom\:1.1 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-snapshot/org/apache/commons/commons-exec/1.1/commons-exec-1.1.pom. Error code 500, Server Error

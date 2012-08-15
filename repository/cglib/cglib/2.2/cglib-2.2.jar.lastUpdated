@@ -1,8 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Sun Jan 29 12:58:34 CST 2012
-default-http\://maven.net.cn/content/groups/public/.lastUpdated=1327043826015
-http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact cglib\:cglib\:jar\:2.2 from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to\: http\://maven.net.cn/content/groups/public/cglib/cglib/2.2/cglib-2.2.jar
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324619302656
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324619370265
-http\://repo1.maven.org/maven2/.lastUpdated=1327813114937
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact cglib\:cglib\:jar\:2.2 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: No response received after 60000

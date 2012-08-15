@@ -1,7 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Fri Jan 20 15:18:28 CST 2012
-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.error=Could not transfer artifact org.codehaus.plexus\:plexus-archiver\:pom\:1.0-alpha-12 from/to snapshots (http\://10.5.24.114\:8081/artifactory/plugins-snapshot)\: Error transferring file\: Connection timed out\: connect
-http\://repo1.maven.org/maven2/.lastUpdated=1327043908046
-default-http\://10.5.24.114\:8081/artifactory/plugins-release/.lastUpdated=1327040564562
-default-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.lastUpdated=1327040585578
-http\://10.5.24.114\:8081/artifactory/plugins-release/.error=Could not transfer artifact org.codehaus.plexus\:plexus-archiver\:pom\:1.0-alpha-12 from/to central (http\://10.5.24.114\:8081/artifactory/plugins-release)\: Error transferring file\: Connection timed out\: connect

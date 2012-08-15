@@ -1,9 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Jan 18 09:10:03 CST 2012
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1326848986234
-http\://maven.net.cn/content/groups/public/.error=Could not transfer artifact org.hibernate\:hibernate-validator\:jar\:sources\:4.1.0.Final from/to maven.net.cn (http\://maven.net.cn/content/groups/public/)\: Access denied to\: http\://maven.net.cn/content/groups/public/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final-sources.jar
-default-http\://maven.net.cn/content/groups/public/.lastUpdated=1326848986812
-http\://repo1.maven.org/maven2/.lastUpdated=1326849003203
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.hibernate\:hibernate-validator\:jar\:sources\:4.1.0.Final from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Error transferring file\: Server returned HTTP response code\: 500 for URL\: http\://10.5.24.114\:8081/artifactory/libs-release/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final-sources.jar
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1326848986453
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.hibernate\:hibernate-validator\:jar\:sources\:4.1.0.Final from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Error transferring file\: Server returned HTTP response code\: 500 for URL\: http\://10.5.24.114\:8081/artifactory/libs-snapshot/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final-sources.jar

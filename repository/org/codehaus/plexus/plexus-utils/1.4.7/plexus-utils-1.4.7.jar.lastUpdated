@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Fri Jan 20 14:42:40 CST 2012
-http\://repo1.maven.org/maven2/.lastUpdated=1327041760593
-default-http\://10.5.24.114\:8081/artifactory/plugins-release/.lastUpdated=1324616966984
-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.lastUpdated=1324616971921
-http\://10.5.24.114\:8081/artifactory/plugins-release/.error=Could not transfer artifact org.codehaus.plexus\:plexus-utils\:jar\:1.4.7 from/to central (http\://10.5.24.114\:8081/artifactory/plugins-release)\: No response received after 60000

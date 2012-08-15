@@ -1,5 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Mon Dec 26 11:57:43 CST 2011
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1324871755765
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1324871863328
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-impl\:jar\:sources\:2.1.13 from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Error transferring file\: Server returned HTTP response code\: 409 for URL\: http\://10.5.24.114\:8081/artifactory/libs-release/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13-sources.jar

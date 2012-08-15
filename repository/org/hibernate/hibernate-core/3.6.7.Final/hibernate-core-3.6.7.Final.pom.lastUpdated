@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Feb 01 12:53:28 CST 2012
-default-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1328072007125
-http\://10.5.24.114\:8081/artifactory/libs-release/.error=Could not transfer artifact org.hibernate\:hibernate-core\:pom\:3.6.7.Final from/to central (http\://10.5.24.114\:8081/artifactory/libs-release)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-release/org/hibernate/hibernate-core/3.6.7.Final/hibernate-core-3.6.7.Final.pom. Error code 500, Server Error
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1328072007609
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact org.hibernate\:hibernate-core\:pom\:3.6.7.Final from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: Failed to transfer http\://10.5.24.114\:8081/artifactory/libs-snapshot/org/hibernate/hibernate-core/3.6.7.Final/hibernate-core-3.6.7.Final.pom. Error code 500, Server Error

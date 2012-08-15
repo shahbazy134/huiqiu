@@ -1,5 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Thu Dec 29 16:05:48 CST 2011
-http\://10.5.24.114\:8081/artifactory/libs-release/.lastUpdated=1325145948218
-default-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.lastUpdated=1325145746718
-http\://10.5.24.114\:8081/artifactory/libs-snapshot/.error=Could not transfer artifact javaee\:javaee-api\:jar\:5 from/to snapshots (http\://10.5.24.114\:8081/artifactory/libs-snapshot)\: No response received after 60000

@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed Jan 18 10:37:44 CST 2012
-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.error=Could not transfer artifact org.jvnet.hudson.svnkit\:svnkit\:jar\:1.1.4-hudson-4 from/to snapshots (http\://10.5.24.114\:8081/artifactory/plugins-snapshot)\: No response received after 60000
-default-http\://10.5.24.114\:8081/artifactory/plugins-release/.lastUpdated=1326854204890
-default-http\://10.5.24.114\:8081/artifactory/plugins-snapshot/.lastUpdated=1326854264953
-http\://10.5.24.114\:8081/artifactory/plugins-release/.error=Could not transfer artifact org.jvnet.hudson.svnkit\:svnkit\:jar\:1.1.4-hudson-4 from/to central (http\://10.5.24.114\:8081/artifactory/plugins-release)\: No response received after 60000
