@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">  
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>PowerApp</title>
+    <title>测试应用</title>
     
     <!-- <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" type="text/css"/> -->
     <link rel="stylesheet" href="jquery.mobile/greens3.min.css" />
@@ -52,45 +52,50 @@
 
     <div data-role="page" id="page-item" data-theme="a">
   	<div data-role="header" data-theme="a">
-    	<h1>PowerApp : <span class="ltgreen">Scan Item</span></h1> 
+    	<h1>测试 : <span class="ltgreen">扫描</span></h1> 
 		<a href="#dialog-devmenu" data-rel="dialog" data-icon="grid" data-iconpos="notext" class="ui-btn-right" data-theme="a"></a>
 	  </div>
     <div data-role="content">  
    
 		<div class="ui-body-a ui-corner-all ui-shadow box-nice hidden" id="new-user">
-      <p class="dkgreen">Welcome New PowerApp User!</p>
- 			<p class="dkgreen">To save data on the server:</p>         
-			<a href="#page-login" data-role="button" data-theme="a">Go To Login Page</a>
-			After login you will have the option to share data with other users.
+      <p class="dkgreen">欢迎测试!</p>
+ 			<p class="dkgreen">保存信息至服务器:</p>         
+			<a href="#page-login" data-role="button" data-theme="a">登录</a>
+			登录后可以保存和分享数据
 	
-			<p class="dkgreen">To work offline:</p>
-			<a href="#" data-role="button" data-theme="a" id="close-new-user">Skip Login, Start Scanning</a>
-			All data will be saved on device. You will not be able to share data. 
+			<p class="dkgreen">本地操作:</p>
+			<a href="#" data-role="button" data-theme="a" id="close-new-user">跳过登录</a>
+			所有数据将保存在您的机器中
 			
-    	<p>Login and share status can be changed at any time. See the Menu for
-    		more information.</p>
+    	<p>您可以点击右上角菜单按钮随时改变登录状态.</p>
    	</div>
     
    	<div class="hidden" id="scanarea">
-    	<a data-role="button" data-icon="star" data-theme="c" id="scan_btn">Scan Item</a>	  
+    	<a data-role="button" data-icon="star" data-theme="c" id="scan_btn">扫描</a>	  
     	<div class="scandata">
 				<!-- Successful scan required to save an item.<br/>	 -->	
 				<p>
-				Scan Status: <span id="scanstatus">Not Started</span><br/>
-				Scan: <span class="smalltxt" id="itemscancode"></span><br/>
-    		Location: <span class="smalltxt" id="itemlocation"></span><br/>
-    		Time: <span class="smalltxt" id="itemtime"></span>
+				扫描状态: <span id="scanstatus">未启动</span><br/>
+				扫描值: <span class="smalltxt" id="itemscancode"></span><br/>
+    		地址: <span class="smalltxt" id="itemlocation"></span><br/>
+    		时间: <span class="smalltxt" id="itemtime"></span>
 				</p>
 				<br/>
 				<div id="star" class="noclear"></div>
-				<span id="itemrating">Not Rated</span>
+				<span id="itemrating">未评级</span>
 				<br/><br/><br/>
-       		<textarea maxlength="64" placeholder="Add comment here" id="itemcomment"></textarea>
+       		<textarea maxlength="64" placeholder="添加描述信息" id="itemcomment"></textarea>
 				<br/>
-				<div data-role="controlgroup" data-type="horizontal">
-					<a id="savebtn" data-role="button" data-icon="plus">Save Item</a>
-					<a id="clearfields" data-role="button" data-icon="delete">Discard Item</a>
-				</div>
+				<!-- <div data-role="controlgroup" data-type="horizontal"> -->
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="savebtn" data-role="button" data-icon="plus">保存</a>
+					</div>
+					<div class="ui-block-b">
+						<a id="clearfields" data-role="button" data-icon="delete">放弃</a>
+					</div>
+				</fieldset>
+				<!-- </div> -->
 		  </div>
 		</div> <!-- /scanarea div -->
 		<span id="new_map_center" class="hidden"></span>		    
@@ -98,9 +103,9 @@
   <div data-role="footer" data-theme="a" data-position="fixed" class="hidden">
 		<div data-role="navbar">
 			<ul>
-	  		<li><a href="#page-item">Scan</a></li>
-				<li><a href="#page-list">List</a></li>
-				<li><a href="#page-map">Map</a></li>
+	  		<li><a href="#page-item">扫描</a></li>
+				<li><a href="#page-list">列表</a></li>
+				<li><a href="#page-map">地图</a></li>
 				</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->    
@@ -109,22 +114,22 @@
   <div data-role="page" id="page-list" data-theme="a">
   	<div data-role="header" data-theme="a">
 			<a href="#page-item" data-icon="back" data-iconpos="notext" data-theme="b" data-rel="back"></a>
-    	<h1>PowerApp : <span class="ltgreen">List</span></h1> 
+    	<h1>测试应用 : <span class="ltgreen">列表</span></h1> 
 			<a href="#dialog-devmenu" data-rel="dialog" data-icon="grid" data-iconpos="notext" class="ui-btn-right" data-theme="a"></a>
 		</div>
 
 		<div data-role="content">
 		<div id="instr_list_container" data-role="collapsible" data-theme="b" data-content-theme="a">
-			<h3>Instructions</h3>
-				<span class="dkgreen">Your Item List</span>
+			<h3>说明</h3>
+				<span class="dkgreen">您的信息列表</span>
 				<li>Tap list item to see it on map page</li>
 				<li>Tap gear icon to edit or delete item</li>
 				<li>Tap marker on map to pop up info window for that item</li>
 				<ul>
-					<li><img src="img/markers/bimage.png" height="17" width="10"/>&nbsp;&nbsp;Your Items</li>
-					<li><img src="img/markers/gimage.png" height="17" width="10"/>&nbsp;&nbsp;Shared Items</li>
+					<li><img src="img/markers/bimage.png" height="17" width="10"/>&nbsp;&nbsp您的信息</li>
+					<li><img src="img/markers/gimage.png" height="17" width="10"/>&nbsp;&nbsp;共享信息</li>
 				</ul>
-				<span class="dkgreen">Shared Item List</span>
+				<span class="dkgreen">共享信息列表</span>
 				<li>Refresh shared list to update &#40;must Share to see other&#39;s shared items&#41;
 				<li>Tap shared item to see it on map</li>
 		</div>
@@ -150,9 +155,9 @@
   <div data-role="footer" data-theme="a" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#page-item">Scan</a></li>
-				<li><a href="#page-list">List</a></li>
-				<li><a href="#page-map">Map</a></li>
+				<li><a href="#page-item">扫描</a></li>
+				<li><a href="#page-list">列表</a></li>
+				<li><a href="#page-map">地图</a></li>
 			</ul>
 	  </div><!-- /navbar -->
 	</div><!-- /footer -->
@@ -163,10 +168,10 @@
     	<div id="map_canvas"></div>
 	
 		<div id="controls" style="display:none;">
-				<a href="#page-list" data-rel="back" data-icon="back" data-inline="true" data-role="button" class="noclear">Back</a>
+				<a href="#page-list" data-rel="back" data-icon="back" data-inline="true" data-role="button" class="noclear">返回</a>
 		  <div data-role="controlgroup" data-type="horizontal" data-theme="c" class="noclear ui-shadow">
-				<div id="showminebtn" data-role="button"><img src="img/markers/bimage.png" height="17" width="10"/>&nbsp;&nbsp;Mine</div>
-				<div id="showsharedbtn" data-role="button"><img src="img/markers/gimage.png" height="17" width="10"/>&nbsp;&nbsp;Shared</div>
+				<div id="showminebtn" data-role="button"><img src="img/markers/bimage.png" height="17" width="10"/>&nbsp;&nbsp;我的</div>
+				<div id="showsharedbtn" data-role="button"><img src="img/markers/gimage.png" height="17" width="10"/>&nbsp;&nbsp;共享</div>
 			</div>
 			<span id="mapcenter" class="hidden"></span>
 	  </div>		    
@@ -175,38 +180,38 @@
 
   <div data-role="page" id="dialog-edit" data-theme="b">
   	<div data-role="header" data-theme="b">
-    	<h1>PowerApp : <span class="ltgreen">Edit Item</span></h1> 
+    	<h1>测试应用 : <span class="ltgreen">编辑</span></h1> 
 	  </div>
 
     <div data-role="content" data-theme="b">
-		Item: <span class="dkgreen" id="editscancode"></span>
+		信息: <span class="dkgreen" id="editscancode"></span>
 		<div class="scandata">
-    		<p>Location: <span class="smalltxt" id="edititemlocation"></span><br/>
+    		<p>地点: <span class="smalltxt" id="edititemlocation"></span><br/>
     		<span class="smalltxt" id="edititemtime"></span>
     	</p>
         </div>
-    	<a data-role="button" id="edit_loc_time">Get New Location and Time</a>
+    	<a data-role="button" id="edit_loc_time">获得新地点和时间</a>
 			<br/>
 			<div id="editstar" class="noclear"></div>
-			<span id="editrating"> Not Rated</span>
+			<span id="editrating"> 未评价</span>
 			<br/><br/>				
         	<textarea maxlength="64" name="editcomment" id="editcomment"></textarea>
         <br/>	
         <div data-role="controlgroup" data-type="horizontal">
-					<a href="#page-list" id="edit_delete" data-role="button" data-icon="delete">Delete Item&nbsp;</a>		    
-					<a href="#page-list" id="edit_cancel" data-role="button" data-icon="back">Cancel&nbsp;&nbsp;</a>		    
+					<a href="#page-list" id="edit_delete" data-role="button" data-icon="delete">删除&nbsp;</a>		    
+					<a href="#page-list" id="edit_cancel" data-role="button" data-icon="back">取消&nbsp;&nbsp;</a>		    
 				</div>
-			<a href="#page-list" id="edit_save" data-role="button" data-icon="check">Save Changes</a>		    
+			<a href="#page-list" id="edit_save" data-role="button" data-icon="check">保存修改</a>		    
     </div><!-- /content -->	
 	</div><!-- /dialog-edit --> 
 
   <div data-role="page" id="page-login" data-theme="a">
   	<div data-role="header" data-theme="a">
-    	<h1>Power App : <span class="ltgreen">Log In</span></h1> 
+    	<h1>测试应用 : <span class="ltgreen">登录</span></h1> 
 		  <a href="#dialog-devmenu" data-rel="dialog" data-icon="grid" data-iconpos="notext" class="ui-btn-right" data-theme="a"></a>
 	  </div>    
 		<div data-role="content" data-theme="a">
-			<span class="dkgreen">PowerApp Registration</span>
+			<span class="dkgreen">注册</span>
 	
 			<!-- Simple OpenID Selector -->
 			<!-- <form action="http://yourserver.com/openidAuth" method="get" id="openid_form">  -->
@@ -223,7 +228,7 @@
 				<p>After log in, user&#39;s item data is stored on the server.
 					Users can change share settings to share data with other users.</p>
 				<p>See Menu page for more about OpenID Secure Login and share settings.</p>
-				<a href="#dialog-devmenu" data-rel="dialog" data-role="button" data-inline="true">More about PowerApp</a>
+				<a href="#dialog-devmenu" data-rel="dialog" data-role="button" data-inline="true">更多关于测试应用</a>
 				
 		<span id="new_map_center" class="hidden"></span>
     </div><!-- /content -->    
@@ -240,46 +245,32 @@
         
   <div data-role="page" id="dialog-devmenu" data-theme="b">
   	<div data-role="header" data-theme="b">
-    	<h1>PowerApp : <span class="ltgreen">Menu</span></h1> 
+    	<h1>测试应用 : <span class="ltgreen">菜单</span></h1> 
 		</div>
   <div data-role="content" data-theme="c">
     
-		<p>PowerApp User: <br/><span class="username dkgreen">Not Logged In</span><br>
+		<p>测试应用: <br/><span class="username dkgreen">未登录</span><br>
 
 		<div data-role="collapsible" class="allcollapse" id="devmenu-help" data-content-theme="a">
-				<h3>Help with PowerApp</h3>
-				<p>PowerApp demonstrates a few of the powerful capabilities
-				of a PhoneGap App when combined with other open source software.</p>
-				
-				<li><span class="dkgreen">Item Page</span> Scan any barcode to start. Geolocation
-					and a timestamp will be added upon successful scan.  All data is stored locally 
-					with or without login. User adds rating&#47;comment.</li>
-				<li><span class="dkgreen">List Page</span> The list of all scanned items in a
-					collapsible element. Tap on item to see it on the map. Tap the gear icon
-					to edit or delete it.</li>
-				<li><span class="dkgreen">Login</span> After log in the user&#39;s data is stored on the server
-					and may be shared &#40;See Share Settings&#41;.</li>									
-				<li><span class="dkgreen">Shared Item List</span> When you share your items, you can see
-					other PowerApp users shared items. Shared item data does not include user info or timestamp.</li>
-				<li><span class="dkgreen">Map</span> Google Map showing location where items were scanned. 
-					Tap on marker to see item details.</li>								
+				<h3>帮助</h3>
+				未完成							
 		</div>
 		
     <div data-role="collapsible" class="allcollapse" data-content-theme="a">
-			<h3>Login / Logout</h3>
+			<h3>登录 / 注销</h3>
 			<p>To login go to the Login Page.</p>
 			<p><strong>Important:</strong> You must use your gmail or google account name to log in.</p>
-			<a href="#page-login" data-role="button" class="goto_login" data-theme="a">Go To Login Page</a>
+			<a href="#page-login" data-role="button" class="goto_login" data-theme="a">登录</a>
 			<p>Logging out is only necessary if others have access to your device.</p>
-			<div id="logout" data-role="button" data-theme="a">Log out</div>
+			<div id="logout" data-role="button" data-theme="a">注销</div>
 			<p>When logged out, your data will be saved locally and is still available after device reboot
 			or app stop/start.</p>
 		</div>    
 
     <div data-role="collapsible" id="share_set" class="allcollapse" data-content-theme="a">
-			<h3>Share Settings</h3>
-			<p>Currently <span class="dkgreen" id="sharestatus">Not Sharing</span> data.</p>
-			<div id="share_btn" data-role="button">Share</div>
+			<h3>共享设置</h3>
+			<p>当前 <span class="dkgreen" id="sharestatus">Not Sharing</span> 数据.</p>
+			<div id="share_btn" data-role="button">共享</div>
 			<p>You must login and have network connection to share.
 				Unshare at any time, even when logged in.</p>
 			<p><span class="dkgreen">Share</span> Other users see your item data, but
@@ -288,7 +279,7 @@
 		</div>    
 
     <div data-role="collapsible" class="allcollapse" data-content-theme="a">
-			<h3>Navigation / Home Page</h3>		
+			<h3>导航 / 首页</h3>		
 			
 			<!-- <b>Swipe to change pages:</b><br/>
 			<span id="dkgreen"> Item Page &gt; List Page &gt; Map</span><br/><br/> -->
@@ -299,9 +290,9 @@
 
 			<label for="select-home-page" class="select">Set Home Page:</label>
 			<select name="select-home-page" id="select-home-page">
-				<option value="page-item">Scan Item</option>
-				<option value="page-list">Item List</option>
-				<option value="page-map">Map</option>
+				<option value="page-item">扫描</option>
+				<option value="page-list">列表</option>
+				<option value="page-map">地图</option>
 			</select>
 			<hr>
 			<div data-role="button" id="go_to_homepage" data-theme="a">Go to Homepage</div>
@@ -316,17 +307,16 @@
 		</div> -->	
 
     <div data-role="collapsible" class="allcollapse" data-content-theme="a">
-			<h3>About OpenID</h3>
+			<h3>关于登录</h3>
 			<p>OpenID is a service that allows you to log-on to many different websites using a single identity.</p>
 			<p>Neither PowerApp nor the server see your password during authentication.</p>
 			<p>Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>
 		</div>
 	
 		<div data-role="collapsible" class="allcollapse" data-content-theme="a">
-			<h3>About PowerApp</h3>
+			<h3>关于应用</h3>
 
-			<p style="margin-top:0.4em;margin-bottom:0em;"> This app was created by <a href="http://twitter.com/#!/libbybaldwin">Libby Baldwin</a>
-				of <span style="color:#008595;"><a href="http://www.mobiledevelopersolutions.com/">Mobile Developer Solutions</a></span>.</p>
+			<p style="margin-top:0.4em;margin-bottom:0em;"> 测试而已.</p>
 			<ul style="line-height:1.4em;margin-bottom:0.3em;margin-top:0.2em;">
 				<li><a href="http://www.phonegap.com/">PhoneGap</a></li>
 				<li><a href="http://www.jquerymobile.com/">jQuery Mobile Frameworks</a></li>

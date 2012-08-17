@@ -161,7 +161,7 @@ $('#dialog-devmenu').live('pageinit', function(event){
     
     $('#logout').click(function() {
         if (!isConnected()) {
-            fadingMsg("Check network connection. Can not logout when offline.");
+            fadingMsg("请检查网络，在网络不可用时不能注销.");
             console.log("Device not connected when logging out.");
             return;
         }
