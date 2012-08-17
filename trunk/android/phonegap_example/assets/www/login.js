@@ -28,25 +28,25 @@ $('#page-login').live('pageinit', function(event){
         // dataType : 'json',
         // data: { key1: 'value1', key2: 'value2' }
         beforeSend : function(jqXHR, settings) {
-            fadingMsg('Contacting OpenID Provider..');
+            fadingMsg('连接OpenID提供者..');
         },
         cache : false,
         success : function (responseText, statusText) {
-            console.log("PowerApp: openid_form statusText: " + statusText);
+            console.log("测试应用: openid_form statusText: " + statusText);
             if (responseText.indexOf('https://') === 0) {
-                console.log("PowerApp: https:// response found: " + responseText);
+                console.log("测试应用: https:// response found: " + responseText);
                 window.plugins.childBrowser.showWebPage(responseText, { showLocationBar : false });
                 return true;
             } else if ((responseText.indexOf('http://') === 0) && responseText.indexOf('verify?') > 0) {
-                console.log("PowerApp: openid_form Got a verify before auth" + responseText);
+                console.log("测试应用: openid_form Got a verify before auth" + responseText);
                 //  General failure cases after this..
             } else {
-                console.log("PowerApp: Failure in openid_form .ajaxform");
+                console.log("测试应用: Failure in openid_form .ajaxform");
             }
             $('#fading_msg').remove();
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            console.log("PowerApp: openid_form ajax error: " + textStatus + " : " + errorThrown);
+            console.log("测试应用: openid_form ajax error: " + textStatus + " : " + errorThrown);
             // If errorThrown === "" and textStatus === error
             // suggest checking Form action
             alert("OpenID Ajax Form error: " + textStatus + " : " + errorThrown);
@@ -68,7 +68,7 @@ $('#page-login').live('pageshow', function(event){
 
 function onLogin (btn) {
     if (btn === 1) {
-        console.log("PowerApp: onLogin");
+        console.log("测试应用: onLogin");
         $.mobile.changePage($('#page-login'), { changeHash : false });
     }
 }

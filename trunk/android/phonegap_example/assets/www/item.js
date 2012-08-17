@@ -155,7 +155,7 @@ $('#page-item').live('pageinit', function(event){
             if (score !== null) {
                 $('#itemrating').text(" " + score + " star" + ((score > 1) ? "s" : ""));
             } else {
-                $('#itemrating').text("Not Rated");
+                $('#itemrating').text("未评级");
             }
         }
       });
