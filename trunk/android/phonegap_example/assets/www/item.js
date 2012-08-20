@@ -251,7 +251,7 @@ $('#page-item').live('pageinit', function(event){
         $('#itemtime').html("Error");
         //console.log('geolocError: ' + error.code + ', message: ' + error.message);
         $('#fading_msg').remove();
-        fadingMsg("Error: " + error.code + "\nCheck device GPS or network connectivity.");
+        fadingMsg("Error: " + error.code + "\n检查GPS和网络.");
         $('#savebtn').removeClass('ui-disabled');
     }
         
