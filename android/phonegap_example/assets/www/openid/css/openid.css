@@ -5,22 +5,21 @@
 	This code is licensed under the New BSD License.
 */
 
-/* MDS need to fix these!! */
-/* #openid_form { wraps better w/o this */
-/* 	width: 380px; */
-/* } */
+#openid_form {
+	width: 580px;
+}
 
-/* #openid_form legend { */
-/* 	font-weight: bold; */
-/* } */
+#openid_form legend {
+	font-weight: bold;
+}
 
-/* #openid_choice {  always showing now */
-/* 	display: none; */
-/* } */
+#openid_choice {
+	display: none;
+}
 
 #openid_input_area {
 	clear: both;
-	padding: 10px; /* changed from 10 to 20 MDS */
+	padding: 10px;
 }
 
 #openid_btns, #openid_btns br {
@@ -28,8 +27,8 @@
 }
 
 #openid_highlight {
-	/* padding: 1px;  was 2px */
-	background-color: #efaa2e;
+	padding: 3px;
+	background-color: #FFFCC9;
 	float: left;
 }
 
@@ -37,11 +36,11 @@
 	width: 100px;
 	height: 60px;
 /* fix for IE 6 only: http://en.wikipedia.org/wiki/CSS_filter#Underscore_hack */
-/* 	_width: 102px; */
-/* 	_height: 62px; */
+	_width: 102px;
+	_height: 62px;
 
-	border: 2px solid #aaa;
-	margin: 5px; /* was 3 MDS */
+	border: 1px solid #DDD;
+	margin: 3px;
 	float: left;
 }
 
@@ -49,10 +48,10 @@
 	width: 24px;
 	height: 24px;
 /* fix for IE 6 only: http://en.wikipedia.org/wiki/CSS_filter#Underscore_hack */
-/* 	_width: 26px; */
-/* 	_height: 26px; */
+	_width: 26px;
+	_height: 26px;
 
-	border: 1px solid #aaa;
+	border: 1px solid #DDD;
 	margin: 3px;
 	float: left;
 }
