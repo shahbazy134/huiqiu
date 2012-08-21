@@ -77,13 +77,13 @@ $('#dialog-devmenu').live('pageinit', function(event){
         return false;
     });
     
-    if ($('#sharestatus').text() === "Sharing"){
-        $('#share_btn').changeButtonText("Unshare");
+    if ($('#sharestatus').text() === "共享中"){
+        $('#share_btn').changeButtonText("取消共享");
     }
     
     $('#share_btn').click(function() {
         if (!isConnected()) {
-            fadingMsg("Please check network connection. Can not share when offline.");
+            fadingMsg("请检查网络，不能在脱机状态共享e.");
             console.log("Device not connected when changing Share");
             return false;
         }
@@ -104,17 +104,17 @@ $('#dialog-devmenu').live('pageinit', function(event){
             return false;           
         }
         
-        if ($(this).getButtonText() === "Share") {
+        if ($(this).getButtonText() === "共享") {
             $.post(serverUrl + "/setShare", 
                 { share : 'true' },
                 function(r) {
                     if (r.success) {
                         //console.log("setShare success");
-                        $('#share_btn').changeButtonText("Unshare");
-                        $('#sharestatus').text("Sharing");
+                        $('#share_btn').changeButtonText("取消共享");
+                        $('#sharestatus').text("共享中");
                         localStorage.powerapp_share = "true";
                     } else {
-                        alert("Failed to Share. Check network settings.");
+                        alert("共享失败，请检查网络.");
                         console.log("setShare failure");
                     }
             });
@@ -124,15 +124,15 @@ $('#dialog-devmenu').live('pageinit', function(event){
                 function(r) {
                     if (r.success) {
                         //console.log("Unset Share success");
-                        $('#share_btn').changeButtonText("Share");
-                        $('#sharestatus').text("Not Sharing");
+                        $('#share_btn').changeButtonText("共享");
+                        $('#sharestatus').text("未共享");
                         localStorage.powerapp_share = "false";
                         // Empty Share list and hide it
                         $('span#shared_cnt').html("0 Shared Items");
                         $("ul#shared_list").empty().listview('refresh');
                         $('div#shared_list_container').trigger('collapse').addClass('hidden');
                     } else {
-                        alert("Failed to Unshare. Check log in status or network settings.");
+                        alert("取消共享失败，请检查网络");
                         console.log("Unset Share failure");
                     }
             });

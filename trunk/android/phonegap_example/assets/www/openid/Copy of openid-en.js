@@ -90,7 +90,6 @@ var providers_small = {
 };
 
 openid.locale = 'en';
-openid.all_small = true;
 openid.sprite = 'en'; // reused in german& japan localization
 openid.demo_text = 'In client demo mode. Normally would have submitted OpenID:';
 openid.signin_text = 'Sign-In';
