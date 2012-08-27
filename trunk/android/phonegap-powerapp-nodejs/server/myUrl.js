@@ -1,6 +1,6 @@
 // Server URL definition
 
-var rawUrl = '10.136.238.174';
+var rawUrl = 'a.huiq.org';
 var url = 'http://' + rawUrl;
 
 var port = 8012;
