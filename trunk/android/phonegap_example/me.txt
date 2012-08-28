@@ -1,0 +1,5 @@
+http://a.huiq.org:8012/getConnection
+
+openid_form
+action
+http://10.136.238.174:8012/openidAuth
