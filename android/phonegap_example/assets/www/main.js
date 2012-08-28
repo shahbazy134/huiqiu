@@ -18,7 +18,7 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-var serverUrl = 'http://10.136.238.174:8012';
+var serverUrl = 'http://a.huiq.org:8012';
 
 var powerapp = {};
 powerapp.networkState = -1;
@@ -190,6 +190,7 @@ function go() {
 }
 
 function init() {
+	$("#openid_form").attr("action",serverUrl + "/openidAuth");
     document.addEventListener("deviceready", go, true);
 }
 
